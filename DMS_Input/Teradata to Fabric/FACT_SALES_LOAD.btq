@@ -1,0 +1,173 @@
+/*==============================================================
+  File Name   : FACT_SALES_LOAD.btq
+  Author      : Data Engineering Team
+  Purpose     : Load FACT_SALES from STG_SALES
+  Database    : Teradata
+==============================================================*/
+
+.LOGON ${TD_HOST}/${TD_USER},${TD_PWD};
+
+.SET SESSION CHARSET 'UTF8';
+.SET ERROROUT STDOUT;
+.SET WIDTH 254;
+.SET TITLEDASHES OFF;
+.SET SEPARATOR '|';
+
+-- ============================================================
+-- PARAMETERS
+-- ============================================================
+.SET LOAD_DATE = '&1';
+
+.IF "${LOAD_DATE}" = "" THEN .GOTO INVALID_PARAM;
+
+-- ============================================================
+-- STEP 1: CHECK SOURCE RECORD COUNT
+-- ============================================================
+DATABASE STAGING_DB;
+
+CREATE VOLATILE TABLE VT_SRC_COUNT AS
+(
+    SELECT 
+        COUNT(*) AS SRC_CNT
+    FROM STG_SALES
+    WHERE SALES_DATE = DATE '${LOAD_DATE}'
+) WITH DATA
+ON COMMIT PRESERVE ROWS;
+
+.IF ERRORCODE <> 0 THEN .GOTO SQL_ERROR;
+
+-- Capture count
+SELECT SRC_CNT FROM VT_SRC_COUNT;
+
+.IF ACTIVITYCOUNT = 0 THEN .GOTO NO_DATA;
+
+-- ============================================================
+-- STEP 2: REMOVE DUPLICATES -- ============================================================
+CREATE VOLATILE TABLE VT_DEDUP_SALES AS
+(
+    SELECT *
+    FROM STG_SALES
+    WHERE SALES_DATE = DATE '${LOAD_DATE}'
+    QUALIFY ROW_NUMBER() OVER
+    (
+        PARTITION BY ORDER_ID
+        ORDER BY UPDATE_TS DESC
+    ) = 1
+) WITH DATA
+ON COMMIT PRESERVE ROWS;
+
+.IF ERRORCODE <> 0 THEN .GOTO SQL_ERROR;
+
+-- ============================================================
+-- STEP 3: DELETE EXISTING FACT DATA -- ============================================================
+DATABASE DW_DB;
+
+DELETE FROM FACT_SALES
+WHERE SALES_DATE = DATE '${LOAD_DATE}';
+
+.IF ERRORCODE <> 0 THEN .GOTO SQL_ERROR;
+
+-- ============================================================
+-- STEP 4: INSERT INTO FACT TABLE
+-- ============================================================
+INSERT INTO FACT_SALES
+(
+    ORDER_ID,
+    CUSTOMER_ID,
+    PRODUCT_ID,
+    SALES_DATE,
+    SALES_AMOUNT,
+    LOAD_TS
+)
+SELECT
+    ORDER_ID,
+    CUSTOMER_ID,
+    PRODUCT_ID,
+    SALES_DATE,
+    SALES_AMOUNT,
+    CURRENT_TIMESTAMP
+FROM VT_DEDUP_SALES;
+
+.IF ERRORCODE <> 0 THEN .GOTO SQL_ERROR;
+
+-- ============================================================
+-- STEP 5: POST-LOAD VALIDATION
+-- ============================================================
+CREATE VOLATILE TABLE VT_TGT_COUNT AS
+(
+    SELECT COUNT(*) AS TGT_CNT
+    FROM FACT_SALES
+    WHERE SALES_DATE = DATE '${LOAD_DATE}'
+) WITH DATA
+ON COMMIT PRESERVE ROWS;
+
+.IF ERRORCODE <> 0 THEN .GOTO SQL_ERROR;
+
+-- Compare counts
+SELECT 
+    SRC_CNT,
+    TGT_CNT,
+    CASE 
+        WHEN SRC_CNT = TGT_CNT THEN 'MATCH'
+        ELSE 'MISMATCH'
+    END AS VALIDATION_STATUS
+FROM VT_SRC_COUNT, VT_TGT_COUNT;
+
+-- ============================================================
+-- STEP 6: LOG SUCCESS
+-- ============================================================
+DATABASE CONTROL_DB;
+
+INSERT INTO ETL_RUN_LOG
+(
+    JOB_NAME,
+    RUN_DATE,
+    STATUS,
+    RECORD_COUNT,
+    END_TS
+)
+SELECT
+    'FACT_SALES_LOAD',
+    DATE '${LOAD_DATE}',
+    'SUCCESS',
+    TGT_CNT,
+    CURRENT_TIMESTAMP
+FROM VT_TGT_COUNT;
+
+.LOGOFF;
+.QUIT 0;
+
+-- ============================================================
+-- ERROR HANDLING
+-- ============================================================
+
+.NO_DATA:
+    INSERT INTO CONTROL_DB.ETL_RUN_LOG
+    VALUES
+    (
+        'FACT_SALES_LOAD',
+        DATE '${LOAD_DATE}',
+        'NO_DATA',
+        0,
+        CURRENT_TIMESTAMP
+    );
+    .LOGOFF;
+    .QUIT 4;
+
+.SQL_ERROR:
+    INSERT INTO CONTROL_DB.ETL_RUN_LOG
+    VALUES
+    (
+        'FACT_SALES_LOAD',
+        DATE '${LOAD_DATE}',
+        'FAILED',
+        NULL,
+        CURRENT_TIMESTAMP
+    );
+    .LOGOFF;
+    .QUIT 8;
+
+.INVALID_PARAM:
+    .REMARK ' LOAD_DATE parameter missing';
+    .LOGOFF;
+    .QUIT 12;
