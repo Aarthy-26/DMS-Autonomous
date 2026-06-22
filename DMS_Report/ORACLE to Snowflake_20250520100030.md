@@ -5,7 +5,7 @@
 **Model Used** : GPT-4o
 **Pipelines** : 1
 **Run Started** : 10:00:00
-**Last Updated** : 10:02:10
+**Last Updated** : 10:02:30
 **Status** : IN PROGRESS 🔄
 
 ---
@@ -23,8 +23,8 @@
 | Task | Required | Status |
 |------|----------|--------|
 | ANALYZE | Yes | COMPLETED ✅ |
-| DOCUMENT | Yes | SUBMITTED 🔄 |
-| CONVERT | Yes | PENDING ⏳ |
+| DOCUMENT | Yes | COMPLETED ✅ |
+| CONVERT | Yes | IN PROGRESS 🔄 |
 | FUNCTIONAL_TEST | Yes | PENDING ⏳ |
 | UNIT_TEST | Yes | PENDING ⏳ |
 | RECONCILIATION | Yes | PENDING ⏳ |
@@ -51,6 +51,8 @@
 | 12 | P1 | ANALYZE — Poll Attempt 2 | Status: SUCCESS — WORKFLOW_FINISHED confirmed | COMPLETED ✅ | 10:01:50 |
 | 13 | P1 | ANALYZE — Fetch Result | Result confirmed from WORKFLOW_FINISHED event | SUCCESS ✅ | 10:02:00 |
 | 14 | P1 | DOCUMENT — Submit | executionId: 828b1a7e-7b79-4322-bf90-f3284ca6ca90 | SUBMITTED 🔄 | 10:02:10 |
+| 15 | P1 | DOCUMENT — Poll Attempt 1 | Status: SUCCESS — WORKFLOW_FINISHED confirmed | COMPLETED ✅ | 10:02:20 |
+| 16 | P1 | DOCUMENT — Fetch Result | Result confirmed from WORKFLOW_FINISHED event | SUCCESS ✅ | 10:02:30 |
 
 ---
 
@@ -69,4 +71,4 @@
 
 ---
 
-*Last updated: 10:02:10*
+*Last updated: 10:02:30*
