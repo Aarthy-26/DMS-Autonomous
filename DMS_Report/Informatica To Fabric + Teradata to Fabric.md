@@ -5,7 +5,7 @@
 **Model Used** : GPT-4o
 **Pipelines** : 2
 **Run Started** : 10:00:00
-**Last Updated** : 10:01:30
+**Last Updated** : 10:01:40
 **Status** : IN PROGRESS 🔄
 
 ---
@@ -15,7 +15,7 @@
 | Pipeline | Source | Target | Workbench | Status |
 |----------|--------|--------|-----------|--------|
 | P1 | INFORMATICA | Fabric | Informatica To Fabric (ID: 139) | IN PROGRESS 🔄 |
-| P2 | TERADATA | Fabric | Teradata to Fabric (ID: 140) | PENDING ⏳ |
+| P2 | TERADATA | Fabric | Teradata to Fabric (ID: 140) | IN PROGRESS 🔄 |
 
 ---
 
@@ -49,6 +49,7 @@
 | 9 | P1 | Fetch Domain File List (pre-upload) | WorkbenchId: 139 — 0 files found (empty, expected) | COMPLETED ✅ | 10:01:10 |
 | 10 | P1 | Upload File | Inventory_Stage_Load_Mapping.xml uploaded to domain: Sales, WorkbenchId: 139 | COMPLETED ✅ | 10:01:20 |
 | 11 | P1 | Poll Domain File List — Attempt 1 | File confirmed visible: Inventory_Stage_Load_Mapping (DomainId: 359, Status: UPLOADED) | COMPLETED ✅ | 10:01:30 |
+| 12 | P2 | Fetch Domain File List (pre-upload) | WorkbenchId: 140 — 0 files found (empty, expected) | COMPLETED ✅ | 10:01:40 |
 
 ---
 
@@ -66,4 +67,4 @@ None so far.
 
 ---
 
-*Last updated: 10:01:30*
+*Last updated: 10:01:40*
