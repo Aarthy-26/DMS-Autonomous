@@ -10,7 +10,7 @@
 
 **Run Started** : 07:04:37
 
-**Last Updated** : 07:04:50
+**Last Updated** : 07:04:52
 
 **Status** : IN PROGRESS 🔄
 
@@ -20,7 +20,7 @@
 
 | Pipeline | Source | Target | Workbench | Status |
 |----------|--------|--------|-----------|--------|
-| P1 | ORACLE | SNOWFLAKE | — | PENDING ⏳ |
+| P1 | ORACLE | SNOWFLAKE | — | IN PROGRESS 🔄 |
 
 ---
 
@@ -45,6 +45,7 @@
 |------|----------|--------|--------|--------|------|
 | 1 | — | Inputs validated | All 4 inputs confirmed | COMPLETED ✅ | 07:04:37 |
 | 2 | — | Generate Access Token | Token generated successfully | COMPLETED ✅ | 07:04:50 |
+| 3 | P1 | Load Initial Tech Options | Retrieved source and target tech list | COMPLETED ✅ | 07:04:52 |
 
 ---
 
@@ -62,4 +63,4 @@ None so far
 
 ---
 
-*Last updated: 07:04:50*
+*Last updated: 07:04:52*
