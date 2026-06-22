@@ -5,7 +5,7 @@
 **Model Used** : GPT-4o
 **Pipelines** : 2
 **Run Started** : 10:00:00
-**Last Updated** : 10:01:00
+**Last Updated** : 10:01:10
 **Status** : IN PROGRESS 🔄
 
 ---
@@ -15,7 +15,7 @@
 | Pipeline | Source | Target | Workbench | Status |
 |----------|--------|--------|-----------|--------|
 | P1 | INFORMATICA | Fabric | Informatica To Fabric (ID: 139) | IN PROGRESS 🔄 |
-| P2 | TERADATA | Fabric | Teradata to Fabric (ID: 140) | IN PROGRESS 🔄 |
+| P2 | TERADATA | Fabric | Teradata to Fabric (ID: 140) | PENDING ⏳ |
 
 ---
 
@@ -46,6 +46,7 @@
 | 6 | P2 | Load Initial Tech Options | Source & Target tech list loaded successfully | COMPLETED ✅ | 10:00:50 |
 | 7 | P2 | Load Mapped Target Tech | TERADATA target mapping loaded. Fabric available | COMPLETED ✅ | 10:00:55 |
 | 8 | P2 | Create Workbench | Workbench "Teradata to Fabric" created. WorkbenchId: 140 | COMPLETED ✅ | 10:01:00 |
+| 9 | P1 | Fetch Domain File List (pre-upload) | WorkbenchId: 139 — 0 files found (empty, expected) | COMPLETED ✅ | 10:01:10 |
 
 ---
 
@@ -63,4 +64,4 @@ None so far.
 
 ---
 
-*Last updated: 10:01:00*
+*Last updated: 10:01:10*
