@@ -5,7 +5,7 @@
 **Model Used** : GPT-4o
 **Pipelines** : 2
 **Run Started** : 10:00:00
-**Last Updated** : 10:00:40
+**Last Updated** : 10:01:00
 **Status** : IN PROGRESS 🔄
 
 ---
@@ -15,7 +15,7 @@
 | Pipeline | Source | Target | Workbench | Status |
 |----------|--------|--------|-----------|--------|
 | P1 | INFORMATICA | Fabric | Informatica To Fabric (ID: 139) | IN PROGRESS 🔄 |
-| P2 | TERADATA | Fabric | Teradata to Fabric | PENDING ⏳ |
+| P2 | TERADATA | Fabric | Teradata to Fabric (ID: 140) | IN PROGRESS 🔄 |
 
 ---
 
@@ -41,8 +41,11 @@
 | 1 | — | Inputs Validated | All 4 inputs confirmed. P1: INFORMATICA→Fabric, P2: TERADATA→Fabric | COMPLETED ✅ | 10:00:00 |
 | 2 | — | Generate Access Token | Token generated successfully | COMPLETED ✅ | 10:00:10 |
 | 3 | P1 | Load Initial Tech Options | Source & Target tech list loaded successfully | COMPLETED ✅ | 10:00:20 |
-| 4 | P1 | Load Mapped Target Tech | INFORMATICA target mapping loaded. Fabric available in target list | COMPLETED ✅ | 10:00:30 |
+| 4 | P1 | Load Mapped Target Tech | INFORMATICA target mapping loaded. Fabric available | COMPLETED ✅ | 10:00:30 |
 | 5 | P1 | Create Workbench | Workbench "Informatica To Fabric" created. WorkbenchId: 139 | COMPLETED ✅ | 10:00:40 |
+| 6 | P2 | Load Initial Tech Options | Source & Target tech list loaded successfully | COMPLETED ✅ | 10:00:50 |
+| 7 | P2 | Load Mapped Target Tech | TERADATA target mapping loaded. Fabric available | COMPLETED ✅ | 10:00:55 |
+| 8 | P2 | Create Workbench | Workbench "Teradata to Fabric" created. WorkbenchId: 140 | COMPLETED ✅ | 10:01:00 |
 
 ---
 
@@ -60,4 +63,4 @@ None so far.
 
 ---
 
-*Last updated: 10:00:40*
+*Last updated: 10:01:00*
