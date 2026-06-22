@@ -5,7 +5,7 @@
 **Model Used** : GPT-4o
 **Pipelines** : 2
 **Run Started** : 10:00:00
-**Last Updated** : 10:00:20
+**Last Updated** : 10:00:30
 **Status** : IN PROGRESS 🔄
 
 ---
@@ -14,8 +14,8 @@
 
 | Pipeline | Source | Target | Workbench | Status |
 |----------|--------|--------|-----------|--------|
-| P1 | INFORMATICA | FABRIC | Informatica To Fabric | PENDING ⏳ |
-| P2 | TERADATA | FABRIC | Teradata to Fabric | PENDING ⏳ |
+| P1 | INFORMATICA | Fabric | Informatica To Fabric | PENDING ⏳ |
+| P2 | TERADATA | Fabric | Teradata to Fabric | PENDING ⏳ |
 
 ---
 
@@ -38,9 +38,10 @@
 
 | Step | Pipeline | Action | Detail | Status | Time |
 |------|----------|--------|--------|--------|------|
-| 1 | — | Inputs Validated | All 4 inputs confirmed. P1: INFORMATICA→FABRIC, P2: TERADATA→FABRIC | COMPLETED ✅ | 10:00:00 |
+| 1 | — | Inputs Validated | All 4 inputs confirmed. P1: INFORMATICA→Fabric, P2: TERADATA→Fabric | COMPLETED ✅ | 10:00:00 |
 | 2 | — | Generate Access Token | Token generated successfully | COMPLETED ✅ | 10:00:10 |
 | 3 | P1 | Load Initial Tech Options | Source & Target tech list loaded successfully | COMPLETED ✅ | 10:00:20 |
+| 4 | P1 | Load Mapped Target Tech | INFORMATICA target mapping loaded. Fabric available in target list | COMPLETED ✅ | 10:00:30 |
 
 ---
 
@@ -58,4 +59,4 @@ None so far.
 
 ---
 
-*Last updated: 10:00:20*
+*Last updated: 10:00:30*
