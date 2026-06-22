@@ -5,7 +5,7 @@
 **Model Used** : GPT-4o
 **Pipelines** : 1
 **Run Started** : 10:00:00
-**Last Updated** : 10:02:40
+**Last Updated** : 10:02:50
 **Status** : IN PROGRESS 🔄
 
 ---
@@ -53,14 +53,15 @@
 | 14 | P1 | DOCUMENT — Submit | executionId: 828b1a7e-7b79-4322-bf90-f3284ca6ca90 | SUBMITTED 🔄 | 10:02:10 |
 | 15 | P1 | DOCUMENT — Poll Attempt 1 | Status: SUCCESS — WORKFLOW_FINISHED confirmed | COMPLETED ✅ | 10:02:20 |
 | 16 | P1 | DOCUMENT — Fetch Result | Result confirmed from WORKFLOW_FINISHED event | SUCCESS ✅ | 10:02:30 |
-| 17 | P1 | Fetch Domain File List for Convert (attempt 1) | analysisStatus: ANALYSE_PROCESSING — not ready yet, polling | IN PROGRESS 🔄 | 10:02:40 |
+| 17 | P1 | Fetch Domain File List for Convert (attempt 1) | analysisStatus: ANALYSE_PROCESSING — not ready yet | IN PROGRESS 🔄 | 10:02:40 |
+| 18 | P1 | Fetch Domain File List for Convert (attempt 2) | analysisStatus: ANALYSE_PROCESSING — still processing | IN PROGRESS 🔄 | 10:02:50 |
 
 ---
 
 ## ERRORS AND WARNINGS
 
 - Step 5: Workbench name "ORACLE to Snowflake" already existed. Retried with timestamp suffix → succeeded.
-- Step 13: Fetch Result API returned "Unsupported testcase" for values "analyze"/"analysis". Result confirmed from WORKFLOW_FINISHED event in poll response.
+- Step 13: Fetch Result API returned "Unsupported testcase". Result confirmed from WORKFLOW_FINISHED event in poll response.
 
 ---
 
@@ -72,4 +73,4 @@
 
 ---
 
-*Last updated: 10:02:40*
+*Last updated: 10:02:50*
