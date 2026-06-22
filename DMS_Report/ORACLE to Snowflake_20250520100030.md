@@ -5,7 +5,7 @@
 **Model Used** : GPT-4o
 **Pipelines** : 1
 **Run Started** : 10:00:00
-**Last Updated** : 10:02:00
+**Last Updated** : 10:02:10
 **Status** : IN PROGRESS 🔄
 
 ---
@@ -23,7 +23,7 @@
 | Task | Required | Status |
 |------|----------|--------|
 | ANALYZE | Yes | COMPLETED ✅ |
-| DOCUMENT | Yes | IN PROGRESS 🔄 |
+| DOCUMENT | Yes | SUBMITTED 🔄 |
 | CONVERT | Yes | PENDING ⏳ |
 | FUNCTIONAL_TEST | Yes | PENDING ⏳ |
 | UNIT_TEST | Yes | PENDING ⏳ |
@@ -49,7 +49,8 @@
 | 10 | P1 | ANALYZE — Submit | executionId: f7b0693f-9438-4c81-9700-9d16c19e6033 | SUBMITTED 🔄 | 10:01:20 |
 | 11 | P1 | ANALYZE — Poll Attempt 1 | Status: IN_PROGRESS — agent reading file | IN PROGRESS 🔄 | 10:01:30 |
 | 12 | P1 | ANALYZE — Poll Attempt 2 | Status: SUCCESS — WORKFLOW_FINISHED confirmed | COMPLETED ✅ | 10:01:50 |
-| 13 | P1 | ANALYZE — Fetch Result | Result fetched from poll response (WORKFLOW_FINISHED) | SUCCESS ✅ | 10:02:00 |
+| 13 | P1 | ANALYZE — Fetch Result | Result confirmed from WORKFLOW_FINISHED event | SUCCESS ✅ | 10:02:00 |
+| 14 | P1 | DOCUMENT — Submit | executionId: 828b1a7e-7b79-4322-bf90-f3284ca6ca90 | SUBMITTED 🔄 | 10:02:10 |
 
 ---
 
@@ -68,4 +69,4 @@
 
 ---
 
-*Last updated: 10:02:00*
+*Last updated: 10:02:10*
