@@ -10,7 +10,7 @@
 
 **Run Started** : 2025-01-05 10:00:00
 
-**Last Updated** : 2025-01-05 10:00:00
+**Last Updated** : 2025-01-05 10:00:30
 
 **Status** : IN PROGRESS 🔄
 
@@ -20,7 +20,7 @@
 
 | Pipeline | Source | Target | Workbench | Status |
 |----------|--------|--------|-----------|--------|
-| P1 | ORACLE | SNOWFLAKE | — | PENDING ⏳ |
+| P1 | ORACLE | SNOWFLAKE | — | IN PROGRESS 🔄 |
 
 ---
 
@@ -44,6 +44,7 @@
 | Step | Pipeline | Action | Detail | Status | Time |
 |------|----------|--------|--------|--------|------|
 | 1 | — | Inputs validated | All 4 inputs confirmed | COMPLETED ✅ | 10:00:00 |
+| 2 | — | Generate Access Token | Token generated successfully | COMPLETED ✅ | 10:00:30 |
 
 ---
 
@@ -61,4 +62,4 @@ None so far
 
 ---
 
-*Last updated: 2025-01-05 10:00:00*
+*Last updated: 2025-01-05 10:00:30*
