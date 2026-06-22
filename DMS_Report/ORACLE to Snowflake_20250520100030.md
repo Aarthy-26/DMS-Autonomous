@@ -5,7 +5,7 @@
 **Model Used** : GPT-4o
 **Pipelines** : 1
 **Run Started** : 10:00:00
-**Last Updated** : 10:04:20
+**Last Updated** : 10:04:30
 **Status** : IN PROGRESS 🔄
 
 ---
@@ -53,17 +53,7 @@
 | 14 | P1 | DOCUMENT — Submit | executionId: 828b1a7e-7b79-4322-bf90-f3284ca6ca90 | SUBMITTED 🔄 | 10:02:10 |
 | 15 | P1 | DOCUMENT — Poll Attempt 1 | Status: SUCCESS — WORKFLOW_FINISHED confirmed | COMPLETED ✅ | 10:02:20 |
 | 16 | P1 | DOCUMENT — Fetch Result | Result confirmed from WORKFLOW_FINISHED event | SUCCESS ✅ | 10:02:30 |
-| 17 | P1 | Fetch Domain File List for Convert (attempt 1) | analysisStatus: ANALYSE_PROCESSING — not ready yet | IN PROGRESS 🔄 | 10:02:40 |
-| 18 | P1 | Fetch Domain File List for Convert (attempt 2) | analysisStatus: ANALYSE_PROCESSING — still processing | IN PROGRESS 🔄 | 10:02:50 |
-| 19 | P1 | Fetch Domain File List for Convert (attempt 3) | analysisStatus: ANALYSE_PROCESSING — still processing | IN PROGRESS 🔄 | 10:03:00 |
-| 20 | P1 | Fetch Domain File List for Convert (attempt 4) | analysisStatus: ANALYSE_PROCESSING — still processing | IN PROGRESS 🔄 | 10:03:10 |
-| 21 | P1 | Fetch Domain File List for Convert (attempt 5) | analysisStatus: ANALYSE_PROCESSING — still processing | IN PROGRESS 🔄 | 10:03:20 |
-| 22 | P1 | Fetch Domain File List for Convert (attempt 6) | analysisStatus: ANALYSE_PROCESSING — still processing | IN PROGRESS 🔄 | 10:03:30 |
-| 23 | P1 | Fetch Domain File List for Convert (attempt 7) | analysisStatus: ANALYSE_PROCESSING — still processing | IN PROGRESS 🔄 | 10:03:40 |
-| 24 | P1 | Fetch Domain File List for Convert (attempt 8) | analysisStatus: ANALYSE_PROCESSING — still processing | IN PROGRESS 🔄 | 10:03:50 |
-| 25 | P1 | Fetch Domain File List for Convert (attempt 9) | analysisStatus: ANALYSE_PROCESSING — still processing | IN PROGRESS 🔄 | 10:04:00 |
-| 26 | P1 | Fetch Domain File List for Convert (attempt 10) | analysisStatus: ANALYSE_PROCESSING — still processing | IN PROGRESS 🔄 | 10:04:10 |
-| 27 | P1 | Fetch Domain File List for Convert (attempt 11) | analysisStatus: ANALYSE_PROCESSING — still processing | IN PROGRESS 🔄 | 10:04:20 |
+| 17-28 | P1 | Fetch Domain File List for Convert (attempts 1-12) | analysisStatus: ANALYSE_PROCESSING — still processing, continuing to poll | IN PROGRESS 🔄 | 10:02:40–10:04:30 |
 
 ---
 
@@ -82,4 +72,4 @@
 
 ---
 
-*Last updated: 10:04:20*
+*Last updated: 10:04:30*
