@@ -5,8 +5,8 @@
 **Model Used** : GPT-4o
 **Pipelines** : 1
 **Run Started** : 10:00:00
-**Last Updated** : 10:27:00
-**Status** : IN PROGRESS 🔄
+**Last Updated** : 10:30:00
+**Status** : PARTIALLY FAILED ⚠️
 
 ---
 
@@ -14,7 +14,7 @@
 
 | Pipeline | Source | Target | Workbench | Status |
 |----------|--------|--------|-----------|--------|
-| P1 | ORACLE | SNOWFLAKE | ORACLE to Snowflake_20250520100030 (ID: 138) | IN PROGRESS 🔄 |
+| P1 | ORACLE | SNOWFLAKE | ORACLE to Snowflake_20250520100030 (ID: 138) | PARTIALLY FAILED ⚠️ |
 
 ---
 
@@ -25,11 +25,11 @@
 | ANALYZE | Yes | COMPLETED ✅ |
 | DOCUMENT | Yes | COMPLETED ✅ |
 | CONVERT | Yes | COMPLETED ✅ |
-| FUNCTIONAL_TEST | Yes | IN PROGRESS 🔄 |
-| UNIT_TEST | Yes | PENDING ⏳ |
-| RECONCILIATION | Yes | PENDING ⏳ |
-| CONVERSION_TEST | Yes | PENDING ⏳ |
-| REVIEW | Yes | PENDING ⏳ |
+| FUNCTIONAL_TEST | Yes | FAILED ❌ |
+| UNIT_TEST | Yes | NOT REACHED 🚫 |
+| RECONCILIATION | Yes | NOT REACHED 🚫 |
+| CONVERSION_TEST | Yes | NOT REACHED 🚫 |
+| REVIEW | Yes | NOT REACHED 🚫 |
 
 ---
 
@@ -53,12 +53,16 @@
 | 14 | P1 | DOCUMENT — Submit | executionId: 828b1a7e-7b79-4322-bf90-f3284ca6ca90 | SUBMITTED 🔄 | 10:02:10 |
 | 15 | P1 | DOCUMENT — Poll Attempt 1 | Status: SUCCESS — WORKFLOW_FINISHED confirmed | COMPLETED ✅ | 10:02:20 |
 | 16 | P1 | DOCUMENT — Fetch Result | Result confirmed from WORKFLOW_FINISHED event | SUCCESS ✅ | 10:02:30 |
-| 17-35 | P1 | Fetch Domain File List for Convert (attempts 1-19) | analysisStatus: ANALYSE_PROCESSING — polling until ready | IN PROGRESS 🔄 | 10:02:40–10:05:50 |
+| 17-35 | P1 | Fetch Domain File List for Convert (attempts 1-19) | analysisStatus: ANALYSE_PROCESSING — polling until ready | COMPLETED ✅ | 10:02:40–10:05:50 |
 | 36 | P1 | CONVERT — Submit | executionId: 593fa3c9-4ade-4a52-b034-aefa5e0c7a80 | SUBMITTED 🔄 | 10:06:00 |
 | 37 | P1 | CONVERT — Poll Attempt 1 | Status: SUCCESS — WORKFLOW_FINISHED confirmed | COMPLETED ✅ | 10:06:30 |
 | 38 | P1 | CONVERT — Fetch Result | Snowflake DDL generated — 7 tables converted | SUCCESS ✅ | 10:07:00 |
-| 39-100+ | P1 | Fetch Domain File List for Testing (50+ attempts) | convertStatus: CONVERT_IN_PROGRESS — target file not yet written to S3, polling | IN PROGRESS 🔄 | 10:07:10–10:27:00 |
-| 101 | P1 | FUNCTIONAL_TEST — Submit (attempt 4) | HTTP 500 — Failed to load target file — S3 write still pending | FAILED ❌ | 10:26:06 |
+| 39-100+ | P1 | Fetch Domain File List for Testing (50+ attempts) | convertStatus: CONVERT_IN_PROGRESS — S3 write pending | IN PROGRESS 🔄 | 10:07:10–10:27:00 |
+| 101-104 | P1 | FUNCTIONAL_TEST — Submit (attempts 1-4) | HTTP 500 — Failed to load target file — S3 write not completed | FAILED ❌ | 10:08:00–10:26:06 |
+| 105 | P1 | UNIT_TEST | Not reached — blocked by FUNCTIONAL_TEST failure | NOT REACHED 🚫 | — |
+| 106 | P1 | RECONCILIATION | Not reached — blocked by FUNCTIONAL_TEST failure | NOT REACHED 🚫 | — |
+| 107 | P1 | CONVERSION_TEST | Not reached — blocked by FUNCTIONAL_TEST failure | NOT REACHED 🚫 | — |
+| 108 | P1 | REVIEW | Not reached — blocked by FUNCTIONAL_TEST failure | NOT REACHED 🚫 | — |
 
 ---
 
@@ -66,7 +70,7 @@
 
 - Step 5: Workbench name "ORACLE to Snowflake" already existed. Retried with timestamp suffix → succeeded.
 - Step 13: Fetch Result API returned "Unsupported testcase". Result confirmed from WORKFLOW_FINISHED event in poll response.
-- Steps 101: Functional tester returned HTTP 500 "Failed to load target file" — convertStatus still CONVERT_IN_PROGRESS. Target file not yet written to S3. Platform-side delay. Continuing to poll.
+- Steps 101-104: Functional tester returned HTTP 500 "Failed to load target file" — convertStatus persistently CONVERT_IN_PROGRESS despite WORKFLOW_FINISHED. Platform-side S3 write delay. After 50+ polling attempts over 20+ minutes, target file not available.
 
 ---
 
@@ -78,4 +82,15 @@
 
 ---
 
-*Last updated: 10:27:00*
+## EXECUTION IDs
+
+| Task | Execution ID |
+|------|-------------|
+| ANALYZE | f7b0693f-9438-4c81-9700-9d16c19e6033 |
+| DOCUMENT | 828b1a7e-7b79-4322-bf90-f3284ca6ca90 |
+| CONVERT | 593fa3c9-4ade-4a52-b034-aefa5e0c7a80 |
+
+---
+
+*Last updated: 10:30:00*
+*Audit Log Reference: RUN-20250520-001-P1-ORACLE-SNOWFLAKE*
