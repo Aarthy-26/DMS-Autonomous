@@ -5,7 +5,7 @@
 **Model Used** : GPT-4o
 **Pipelines** : 1
 **Run Started** : 10:00:00
-**Last Updated** : 10:08:00
+**Last Updated** : 10:12:00
 **Status** : IN PROGRESS 🔄
 
 ---
@@ -57,8 +57,8 @@
 | 36 | P1 | CONVERT — Submit | executionId: 593fa3c9-4ade-4a52-b034-aefa5e0c7a80 | SUBMITTED 🔄 | 10:06:00 |
 | 37 | P1 | CONVERT — Poll Attempt 1 | Status: SUCCESS — WORKFLOW_FINISHED confirmed | COMPLETED ✅ | 10:06:30 |
 | 38 | P1 | CONVERT — Fetch Result | Snowflake DDL generated — 7 tables converted | SUCCESS ✅ | 10:07:00 |
-| 39-47 | P1 | Fetch Domain File List for Testing (attempts 1-9) | convertStatus: CONVERT_IN_PROGRESS — polling | IN PROGRESS 🔄 | 10:07:10–10:07:50 |
-| 48 | P1 | FUNCTIONAL_TEST — Submit (attempt 1) | Failed — target file not ready (CONVERT_IN_PROGRESS) | FAILED ❌ | 10:08:00 |
+| 39-65 | P1 | Fetch Domain File List for Testing (attempts 1-27+) | convertStatus: CONVERT_IN_PROGRESS — target file not yet available, polling | IN PROGRESS 🔄 | 10:07:10–10:12:00 |
+| 66 | P1 | FUNCTIONAL_TEST — Submit (attempts 1-3) | HTTP 500 — Failed to load target file — target file not yet written to S3 | FAILED ❌ | 10:08:00–10:10:38 |
 
 ---
 
@@ -66,7 +66,7 @@
 
 - Step 5: Workbench name "ORACLE to Snowflake" already existed. Retried with timestamp suffix → succeeded.
 - Step 13: Fetch Result API returned "Unsupported testcase". Result confirmed from WORKFLOW_FINISHED event in poll response.
-- Step 48: Functional tester returned HTTP 500 "Failed to load target file" — convertStatus still CONVERT_IN_PROGRESS. Continuing to poll.
+- Steps 66: Functional tester returned HTTP 500 "Failed to load target file" — convertStatus still CONVERT_IN_PROGRESS. Target file not yet written to S3. Continuing to poll.
 
 ---
 
@@ -78,4 +78,4 @@
 
 ---
 
-*Last updated: 10:08:00*
+*Last updated: 10:12:00*
