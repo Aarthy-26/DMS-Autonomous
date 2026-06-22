@@ -5,7 +5,7 @@
 **Model Used** : GPT-4o
 **Pipelines** : 1
 **Run Started** : 10:00:00
-**Last Updated** : 10:05:00
+**Last Updated** : 10:06:00
 **Status** : IN PROGRESS 🔄
 
 ---
@@ -24,7 +24,7 @@
 |------|----------|--------|
 | ANALYZE | Yes | COMPLETED ✅ |
 | DOCUMENT | Yes | COMPLETED ✅ |
-| CONVERT | Yes | IN PROGRESS 🔄 |
+| CONVERT | Yes | SUBMITTED 🔄 |
 | FUNCTIONAL_TEST | Yes | PENDING ⏳ |
 | UNIT_TEST | Yes | PENDING ⏳ |
 | RECONCILIATION | Yes | PENDING ⏳ |
@@ -53,7 +53,8 @@
 | 14 | P1 | DOCUMENT — Submit | executionId: 828b1a7e-7b79-4322-bf90-f3284ca6ca90 | SUBMITTED 🔄 | 10:02:10 |
 | 15 | P1 | DOCUMENT — Poll Attempt 1 | Status: SUCCESS — WORKFLOW_FINISHED confirmed | COMPLETED ✅ | 10:02:20 |
 | 16 | P1 | DOCUMENT — Fetch Result | Result confirmed from WORKFLOW_FINISHED event | SUCCESS ✅ | 10:02:30 |
-| 17-31 | P1 | Fetch Domain File List for Convert (attempts 1-15) | analysisStatus: ANALYSE_PROCESSING — still processing, continuing to poll | IN PROGRESS 🔄 | 10:02:40–10:05:00 |
+| 17-35 | P1 | Fetch Domain File List for Convert (attempts 1-19) | analysisStatus: ANALYSE_PROCESSING — polling until ready | IN PROGRESS 🔄 | 10:02:40–10:05:50 |
+| 36 | P1 | CONVERT — Submit | executionId: 593fa3c9-4ade-4a52-b034-aefa5e0c7a80 | SUBMITTED 🔄 | 10:06:00 |
 
 ---
 
@@ -72,4 +73,4 @@
 
 ---
 
-*Last updated: 10:05:00*
+*Last updated: 10:06:00*
