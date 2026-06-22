@@ -20,7 +20,7 @@
 
 | Pipeline | Source | Target | Workbench | Status |
 |----------|--------|--------|-----------|--------|
-| P1 | ORACLE | SNOWFLAKE | ORACLE to Snowflake | IN PROGRESS 🔄 |
+| P1 | ORACLE | SNOWFLAKE | ORACLE to Snowflake | PENDING ⏳ |
 
 ---
 
@@ -28,7 +28,7 @@
 
 | Task | Required | Status |
 |------|----------|--------|
-| ANALYZE | Yes | IN PROGRESS 🔄 |
+| ANALYZE | Yes | PENDING ⏳ |
 | DOCUMENT | Yes | PENDING ⏳ |
 | CONVERT | Yes | PENDING ⏳ |
 | FUNCTIONAL_TEST | Yes | PENDING ⏳ |
@@ -44,7 +44,6 @@
 | Step | Pipeline | Action | Detail | Status | Time |
 |------|----------|--------|--------|--------|------|
 | 1 | — | Inputs validated | All 4 inputs confirmed | COMPLETED ✅ | 00:00:00 |
-| 2 | P1 | Generate Token | Token generated | COMPLETED ✅ | 00:00:10 |
 
 ---
 
@@ -60,4 +59,4 @@ None so far
 |----------|------|-------|
 | P1 | SPECIFIC | Silver_Schema_DDL.sql |
 
-*Last updated: 2026-06-22T00:00:10Z*
+*Last updated: 2026-06-22T00:00:00Z*
