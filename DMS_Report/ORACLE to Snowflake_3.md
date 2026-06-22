@@ -10,7 +10,7 @@
 
 **Run Started** : 07:04:37
 
-**Last Updated** : 07:06:39
+**Last Updated** : 07:08:36
 
 **Status** : IN PROGRESS 🔄
 
@@ -55,6 +55,7 @@
 | 10 | P1 | Poll Domain File List | Attempt 1 - 2 files visible (domainIds: 354, 355) | COMPLETED ✅ | 07:06:33 |
 | 11 | P1 | Fetch Domain Names | Domain: Sales | COMPLETED ✅ | 07:06:36 |
 | 12 | P1 | ANALYZE - Submit | domainId: 354, executionId: 78115dba-a067-492b-8c09-a3670f9e9b2e | SUBMITTED 🔄 | 07:06:39 |
+| 13 | P1 | ANALYZE - Poll | Attempt 1 - status: IN_PROGRESS | IN PROGRESS 🔄 | 07:08:36 |
 
 ---
 
@@ -72,4 +73,4 @@
 
 ---
 
-*Last updated: 07:06:39*
+*Last updated: 07:08:36*
