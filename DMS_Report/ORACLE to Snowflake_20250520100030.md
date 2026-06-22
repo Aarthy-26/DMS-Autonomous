@@ -5,7 +5,7 @@
 **Model Used** : GPT-4o
 **Pipelines** : 1
 **Run Started** : 10:00:00
-**Last Updated** : 10:01:30
+**Last Updated** : 10:02:00
 **Status** : IN PROGRESS 🔄
 
 ---
@@ -22,8 +22,8 @@
 
 | Task | Required | Status |
 |------|----------|--------|
-| ANALYZE | Yes | IN PROGRESS 🔄 |
-| DOCUMENT | Yes | PENDING ⏳ |
+| ANALYZE | Yes | COMPLETED ✅ |
+| DOCUMENT | Yes | IN PROGRESS 🔄 |
 | CONVERT | Yes | PENDING ⏳ |
 | FUNCTIONAL_TEST | Yes | PENDING ⏳ |
 | UNIT_TEST | Yes | PENDING ⏳ |
@@ -48,12 +48,15 @@
 | 9 | P1 | Fetch Domain File List (post-upload, attempt 1) | Silver_Schema_DDL found — domainId: 358, status: UPLOADED | COMPLETED ✅ | 10:01:10 |
 | 10 | P1 | ANALYZE — Submit | executionId: f7b0693f-9438-4c81-9700-9d16c19e6033 | SUBMITTED 🔄 | 10:01:20 |
 | 11 | P1 | ANALYZE — Poll Attempt 1 | Status: IN_PROGRESS — agent reading file | IN PROGRESS 🔄 | 10:01:30 |
+| 12 | P1 | ANALYZE — Poll Attempt 2 | Status: SUCCESS — WORKFLOW_FINISHED confirmed | COMPLETED ✅ | 10:01:50 |
+| 13 | P1 | ANALYZE — Fetch Result | Result fetched from poll response (WORKFLOW_FINISHED) | SUCCESS ✅ | 10:02:00 |
 
 ---
 
 ## ERRORS AND WARNINGS
 
 - Step 5: Workbench name "ORACLE to Snowflake" already existed. Retried with timestamp suffix → succeeded.
+- Step 13: Fetch Result API returned "Unsupported testcase" for values "analyze"/"analysis". Result confirmed from WORKFLOW_FINISHED event in poll response.
 
 ---
 
@@ -65,4 +68,4 @@
 
 ---
 
-*Last updated: 10:01:30*
+*Last updated: 10:02:00*
