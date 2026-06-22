@@ -5,7 +5,7 @@
 **Model Used** : GPT-4o
 **Pipelines** : 1
 **Run Started** : 10:00:00
-**Last Updated** : 10:07:00
+**Last Updated** : 10:07:10
 **Status** : IN PROGRESS 🔄
 
 ---
@@ -25,7 +25,7 @@
 | ANALYZE | Yes | COMPLETED ✅ |
 | DOCUMENT | Yes | COMPLETED ✅ |
 | CONVERT | Yes | COMPLETED ✅ |
-| FUNCTIONAL_TEST | Yes | PENDING ⏳ |
+| FUNCTIONAL_TEST | Yes | IN PROGRESS 🔄 |
 | UNIT_TEST | Yes | PENDING ⏳ |
 | RECONCILIATION | Yes | PENDING ⏳ |
 | CONVERSION_TEST | Yes | PENDING ⏳ |
@@ -57,6 +57,7 @@
 | 36 | P1 | CONVERT — Submit | executionId: 593fa3c9-4ade-4a52-b034-aefa5e0c7a80 | SUBMITTED 🔄 | 10:06:00 |
 | 37 | P1 | CONVERT — Poll Attempt 1 | Status: SUCCESS — WORKFLOW_FINISHED confirmed | COMPLETED ✅ | 10:06:30 |
 | 38 | P1 | CONVERT — Fetch Result | Snowflake DDL generated — 7 tables converted | SUCCESS ✅ | 10:07:00 |
+| 39 | P1 | Fetch Domain File List for Testing (attempt 1) | convertStatus: CONVERT_IN_PROGRESS — polling | IN PROGRESS 🔄 | 10:07:10 |
 
 ---
 
@@ -75,4 +76,4 @@
 
 ---
 
-*Last updated: 10:07:00*
+*Last updated: 10:07:10*
