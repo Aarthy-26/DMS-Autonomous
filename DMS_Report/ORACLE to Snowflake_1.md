@@ -10,7 +10,7 @@
 
 **Run Started** : 2025-01-06 00:00:00
 
-**Last Updated** : 2025-01-06 00:07:00
+**Last Updated** : 2025-01-06 00:08:00
 
 **Status** : IN PROGRESS 🔄
 
@@ -50,6 +50,7 @@
 | 5 | P1 | Create Workbench | Workbench "ORACLE to Snowflake_1" created (ID: 136) | COMPLETED ✅ | 00:05:00 |
 | 6 | P1 | Fetch Domain File List (pre-upload) | No files found - ready for upload | COMPLETED ✅ | 00:06:00 |
 | 7 | P1 | Upload Files | 2 files uploaded: Silver_Schema_DDL.sql, UpdateCrewAircraft.sql | COMPLETED ✅ | 00:07:00 |
+| 8 | P1 | Poll Domain File List | 2 files visible: Silver_Schema_DDL (ID: 356), UpdateCrewAircraft (ID: 357) | COMPLETED ✅ | 00:08:00 |
 
 ---
 
@@ -67,4 +68,4 @@
 
 ---
 
-*Last updated: 2025-01-06 00:07:00*
+*Last updated: 2025-01-06 00:08:00*
