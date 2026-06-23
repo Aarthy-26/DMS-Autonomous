@@ -1,12 +1,12 @@
 # DMS AGENT EXECUTION REPORT
 
-**Run ID**       : RUN-20250725-001
-**Date**         : 2025-07-25
-**Model Used**   : Claude Sonnet 4.5
+**Run ID**       : RUN-20240220-001
+**Date**         : 2024-02-20
+**Model Used**   : Claude
 **Pipelines**    : 1
-**Run Started**  : 2025-07-25 00:00:00
-**Last Updated** : 2025-07-25 00:00:27
-**Status**       : PARTIALLY FAILED ⚠️
+**Run Started**  : 2024-02-20 10:45:30
+**Last Updated** : 2024-02-20 10:45:35
+**Status**       : IN PROGRESS 🔄
 
 ---
 
@@ -14,7 +14,7 @@
 
 | Pipeline | Source | Target | Workbench | Status |
 |----------|--------|--------|-----------|--------|
-| P1 | ORACLE | SNOWFLAKE | ORACLE to Snowflake (WB: 128) | PARTIALLY FAILED ⚠️ |
+| P1 | ORACLE | SNOWFLAKE | — | PENDING ⏳ |
 
 ---
 
@@ -22,14 +22,14 @@
 
 | Task | Required | Status |
 |------|----------|--------|
-| ANALYZE | Yes | COMPLETED ✅ |
-| DOCUMENT | Yes | COMPLETED ✅ |
-| CONVERT | Yes | COMPLETED ✅ |
-| FUNCTIONAL_TEST | Yes | FAILED ❌ |
-| UNIT_TEST | Yes | NOT REACHED 🚫 |
-| RECONCILIATION | Yes | NOT REACHED 🚫 |
-| CONVERSION_TEST | Yes | NOT REACHED 🚫 |
-| REVIEW | Yes | NOT REACHED 🚫 |
+| ANALYSE | Yes | PENDING ⏳ |
+| DOCUMENT | Yes | PENDING ⏳ |
+| CONVERT | Yes | PENDING ⏳ |
+| FUNCTIONAL_TEST | Yes | PENDING ⏳ |
+| UNIT_TEST | Yes | PENDING ⏳ |
+| RECONCILIATION | Yes | PENDING ⏳ |
+| CONVERSION_TEST | Yes | PENDING ⏳ |
+| REVIEW | Yes | PENDING ⏳ |
 
 ---
 
@@ -37,7 +37,7 @@
 
 | File | Resolved Mapping | Source |
 |------|-----------------|--------|
-| Silver_Schema_DDL.sql | Use Language= Python | File-level |
+| Silver_Schema_DDL.txt | Use Language= Python | File-level |
 
 ---
 
@@ -45,49 +45,14 @@
 
 | Step | Pipeline | Action | Request Payload | Response | HTTP Status | Status | Time |
 |------|----------|--------|-----------------|----------|-------------|--------|------|
-| 1 | — | Inputs validated | All 4 inputs confirmed | All inputs present and valid | — | COMPLETED ✅ | 00:00:00 |
-| 2 | P1 | Generate Token | refreshToken=[REFRESH-TOKEN-MASKED] | {"accessToken":"[ACCESS-TOKEN-MASKED]","userName":"Aarthy Jr","email":"aarthy.jr@ascendion.com","expiresIn":4076} | 200 | COMPLETED ✅ | 00:00:01 |
-| 3 | P1 | Fetch Domain File List (pre-upload) | {"screen":"analyze","workBenchId":128,"limit":50,"offset":0} | {"data":[],"status":"SUCCESS"} | 200 | COMPLETED ✅ | 00:00:03 |
-| 4 | P1 | Upload File (attempt 1) | file=Silver_Schema_DDL.sql, domainName=ORACLE to Snowflake | {"errors":[{"status":500,"code":"ERR-5000","message":"An unexpected error occurred"}],"status":"FAILURE"} | 500 | FAILED ❌ | 00:00:04 |
-| 5 | P1 | Fetch Domain Names | GET /domain/128 | {"data":{"workBenchId":128,"workBenchName":null,"domainList":[]},"status":"SUCCESS"} | 200 | COMPLETED ✅ | 00:00:05 |
-| 6 | P1 | Upload File (attempt 2) | file=Silver_Schema_DDL.sql, domainName=Silver_Schema_DDL | {"errors":[{"status":500,"code":"ERR-5000","message":"An unexpected error occurred"}],"status":"FAILURE"} | 500 | FAILED ❌ | 00:00:06 |
-| 7 | P1 | Upload File (attempt 3) | file=Silver_Schema_DDL.sql, domainName=oracle_snowflake | {"errors":[{"status":500,"code":"ERR-5000","message":"An unexpected error occurred"}],"status":"FAILURE"} | 500 | FAILED ❌ | 00:00:07 |
-| 8 | P1 | Fetch Domain File List (poll attempt 1) | {"screen":"analyze","workBenchId":128,"limit":50,"offset":0} | {"data":[],"status":"SUCCESS"} | 200 | COMPLETED ✅ | 00:00:08 |
-| 9 | P1 | Upload File (attempt 4) | file=Silver_Schema_DDL.sql, domainName=ORACLE_SNOWFLAKE | {"errors":[{"status":500,"code":"ERR-5000","message":"An unexpected error occurred"}],"status":"FAILURE"} | 500 | FAILED ❌ | 00:00:09 |
-| 10 | P1 | Upload File (attempt 5) | file=Silver_Schema_DDL.sql, domainName=silver | Uploaded: ['DMS_Input/ORACLE to Snowflake/Silver_Schema_DDL.sql'] | 200 | COMPLETED ✅ | 00:00:10 |
-| 11 | P1 | Fetch Domain File List (poll attempt 2 - file confirmed) | {"screen":"analyze","workBenchId":128,"limit":50,"offset":0} | {"data":[{"id":928,"objectName":"Silver_Schema_DDL","domainName":"silver","fileType":".sql","status":"UPLOADED"}],"status":"SUCCESS"} | 200 | COMPLETED ✅ | 00:00:11 |
-| 12 | P1 | ANALYZE — Submit | {"email":"aarthy.jr@ascendion.com","workBenchId":128,"domainIds":[928],"platform":"aws"} | {"data":{"message":"Workflow submitted successfully","success":true,"executionId":"f1168d75-ab5b-43e5-8533-e6b650420c2d"},"status":"SUCCESS"} | 200 | SUBMITTED 🔄 | 00:00:12 |
-| 13 | P1 | ANALYZE — Poll attempt 1 | executionId=f1168d75-ab5b-43e5-8533-e6b650420c2d | WORKFLOW_COMPLETED — status=SUCCESS | 200 | COMPLETED ✅ | 00:00:13 |
-| 14 | P1 | ANALYZE — Fetch Result | executionId=f1168d75-ab5b-43e5-8533-e6b650420c2d, domainId=928 | {"errors":[{"status":400,"code":"ERR-400","message":"Unsupported testcase: analyze"}]} — Result confirmed in poll | 400 | NOTE: Result in poll ✅ | 00:00:14 |
-| 15 | P1 | DOCUMENT — Submit | {"email":"aarthy.jr@ascendion.com","workBenchId":128,"domainIds":[928],"platform":"aws"} | {"data":{"message":"Workflow submitted successfully","success":true,"executionId":"cee61659-eb8b-4f9f-bf3b-04d5bfb9cfcd"},"status":"SUCCESS"} | 200 | SUBMITTED 🔄 | 00:00:15 |
-| 16 | P1 | DOCUMENT — Poll attempt 1 | executionId=cee61659-eb8b-4f9f-bf3b-04d5bfb9cfcd | WORKFLOW_COMPLETED — status=SUCCESS | 200 | COMPLETED ✅ | 00:00:16 |
-| 17 | P1 | Fetch Domain File List for convert | {"screen":"convert","workBenchId":128,"limit":50,"offset":0} | {"data":[{"id":928,"objectName":"Silver_Schema_DDL","domainName":"silver","analysisStatus":"ANALYSE_PROCESSING","docStatus":"DOCUMENT_IN_PROGRESS","status":"UPLOADED"}],"status":"SUCCESS"} | 200 | COMPLETED ✅ | 00:00:17 |
-| 18 | P1 | Mapping API | {"additionalPrompt":"Use Language= Python","mapId":[928],"mappingEnabled":"true","sourceName":"ORACLE","targetName":"SNOWFLAKE","workbenchId":128,"workbenchName":"ORACLE to Snowflake"} | {"errors":[{"status":400,"code":"ERR-5001","message":"Malformed JSON request"}],"status":"FAILURE"} — Non-blocking | 400 | FAILED ❌ (non-blocking) | 00:00:18 |
-| 19 | P1 | CONVERT — Submit | {"email":"aarthy.jr@ascendion.com","workBenchId":128,"domainIds":[928],"objectNames":["Silver_Schema_DDL"],"platform":"aws"} | {"data":{"executionId":"00b5a468-b045-4861-8521-705fda926669","success":true,"message":"Workflow submitted successfully"},"status":"SUCCESS"} | 200 | SUBMITTED 🔄 | 00:00:19 |
-| 20 | P1 | CONVERT — Poll attempt 1 | executionId=00b5a468-b045-4861-8521-705fda926669 | WORKFLOW_COMPLETED — status=SUCCESS | 200 | COMPLETED ✅ | 00:00:20 |
-| 21 | P1 | Fetch Domain File List for testing (poll attempt 1) | {"screen":"testbuild","workBenchId":128,"limit":50,"offset":0} | {"data":[{"id":928,"convertStatus":"CONVERT_IN_PROGRESS","docStatus":"DOCUMENTED","status":"DOCUMENTED"}],"status":"SUCCESS"} | 200 | IN PROGRESS 🔄 | 00:00:20 |
-| 22 | P1 | Fetch Domain File List for testing (poll attempt 2) | {"screen":"testbuild","workBenchId":128,"limit":50,"offset":0} | {"data":[{"id":928,"convertStatus":"CONVERT_IN_PROGRESS","docStatus":"DOCUMENTED","status":"DOCUMENTED"}],"status":"SUCCESS"} | 200 | IN PROGRESS 🔄 | 00:00:22 |
-| 23 | P1 | Fetch Domain File List for testing (poll attempt 3) | {"screen":"testbuild","workBenchId":128,"limit":50,"offset":0} | {"data":[{"id":928,"convertStatus":"CONVERT_IN_PROGRESS","docStatus":"DOCUMENTED","status":"DOCUMENTED"}],"status":"SUCCESS"} | 200 | IN PROGRESS 🔄 | 00:00:23 |
-| 24 | P1 | Fetch Domain File List for testing (poll attempt 4) | {"screen":"testbuild","workBenchId":128,"limit":50,"offset":0} | {"data":[],"status":"SUCCESS"} — Domain no longer visible | 200 | NOTE ⚠️ | 00:00:24 |
-| 25 | P1 | Fetch Domain File List for testing (poll attempt 5) | {"screen":"testbuild","workBenchId":128,"limit":50,"offset":0} | {"data":[],"status":"SUCCESS"} | 200 | NOTE ⚠️ | 00:00:25 |
-| 26 | P1 | Fetch Domain File List (analyze screen check) | {"screen":"analyze","workBenchId":128,"limit":50,"offset":0} | {"data":[],"status":"SUCCESS"} — Domain 928 no longer in workbench | 200 | NOTE ⚠️ | 00:00:26 |
-| 27 | P1 | CONVERT — Fetch Result | executionId=00b5a468-b045-4861-8521-705fda926669, domainId=928 | {"errors":[{"status":400,"code":"ERR-400","message":"Domain not found"}],"status":"FAILURE"} | 400 | FAILED ❌ | 00:00:26 |
-| 28 | P1 | FUNCTIONAL_TEST — Submit | {"email":"aarthy.jr@ascendion.com","workBenchId":128,"domainIds":[928],"objectNames":["Silver_Schema_DDL"],"platform":"aws"} | {"errors":[{"status":400,"code":"ERR-400","message":"Domain Id not found"}],"status":"FAILURE"} | 400 | FAILED ❌ | 00:00:27 |
+| 1 | — | Inputs validated | All 4 inputs confirmed | — | — | COMPLETED ✅ | 10:45:30 |
+| 2 | P1 | Generate Token | refreshToken=[REFRESH-TOKEN-MASKED] | {"data":{"accessToken":"[ACCESS-TOKEN-MASKED]","refreshToken":"[REFRESH-TOKEN-MASKED]","userName":"Aarthy Jr","email":"aarthy.jr@ascendion.com","expiresIn":4144},"status":"SUCCESS"} | 200 | COMPLETED ✅ | 10:45:35 |
 
 ---
 
 ## ERRORS AND WARNINGS
 
-| Step | Pipeline | Action | Request | Error Response | HTTP Status | Time |
-|------|----------|--------|---------|---------------|-------------|------|
-| 4 | P1 | Upload File (attempt 1) | domainName=ORACLE to Snowflake | {"errors":[{"status":500,"code":"ERR-5000","message":"An unexpected error occurred"}],"status":"FAILURE"} | 500 | 00:00:04 |
-| 6 | P1 | Upload File (attempt 2) | domainName=Silver_Schema_DDL | {"errors":[{"status":500,"code":"ERR-5000","message":"An unexpected error occurred"}],"status":"FAILURE"} | 500 | 00:00:06 |
-| 7 | P1 | Upload File (attempt 3) | domainName=oracle_snowflake | {"errors":[{"status":500,"code":"ERR-5000","message":"An unexpected error occurred"}],"status":"FAILURE"} | 500 | 00:00:07 |
-| 9 | P1 | Upload File (attempt 4) | domainName=ORACLE_SNOWFLAKE | {"errors":[{"status":500,"code":"ERR-5000","message":"An unexpected error occurred"}],"status":"FAILURE"} | 500 | 00:00:09 |
-| 14 | P1 | ANALYZE — Fetch Result | testcase=analyze | {"errors":[{"status":400,"code":"ERR-400","message":"Unsupported testcase: analyze"}]} — Non-blocking | 400 | 00:00:14 |
-| 18 | P1 | Mapping API | mapId=[928], additionalPrompt="Use Language= Python" | {"errors":[{"status":400,"code":"ERR-5001","message":"Malformed JSON request"}],"status":"FAILURE"} — Non-blocking | 400 | 00:00:18 |
-| 27 | P1 | CONVERT — Fetch Result | executionId=00b5a468-b045-4861-8521-705fda926669, domainId=928 | {"errors":[{"status":400,"code":"ERR-400","message":"Domain not found"}],"status":"FAILURE"} | 400 | 00:00:26 |
-| 28 | P1 | FUNCTIONAL_TEST — Submit | domainIds=[928] | {"errors":[{"status":400,"code":"ERR-400","message":"Domain Id not found"}],"status":"FAILURE"} | 400 | 00:00:27 |
+None so far
 
 ---
 
@@ -95,14 +60,8 @@
 
 | Pipeline | Mode | Files |
 |----------|------|-------|
-| P1 | SPECIFIC | Silver_Schema_DDL.sql — UPLOADED ✅ (domainId=928, domainName=silver) |
+| P1 | SPECIFIC | Silver_Schema_DDL.txt |
 
 ---
 
-## ROOT CAUSE ANALYSIS
-
-The domain ID 928 (Silver_Schema_DDL) was successfully uploaded, analyzed, documented, and converted. However, after the CONVERT workflow completed (WORKFLOW_COMPLETED status=SUCCESS confirmed), the domain disappeared from the workbench. The testbuild file list returned empty, and subsequent API calls for FUNCTIONAL_TEST, UNIT_TEST, RECONCILIATION, CONVERSION_TEST, and REVIEW all failed with "Domain Id not found". This is a platform-side issue where the domain record was removed from the workbench after conversion completed.
-
----
-
-*Last updated: 2025-07-25 00:00:27*
+*Last updated: 2024-02-20 10:45:35*
