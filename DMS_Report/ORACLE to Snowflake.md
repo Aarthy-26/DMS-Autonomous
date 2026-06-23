@@ -5,7 +5,7 @@
 **Model Used** : GPT-4o
 **Pipelines** : 1
 **Run Started** : 00:00:00
-**Last Updated** : 00:00:00
+**Last Updated** : 00:01:00
 **Status** : IN PROGRESS 🔄
 
 ---
@@ -14,7 +14,7 @@
 
 | Pipeline | Source | Target | Workbench | Status |
 |----------|--------|--------|-----------|--------|
-| P1 | ORACLE | SNOWFLAKE | ORACLE to Snowflake | PENDING ⏳ |
+| P1 | ORACLE | SNOWFLAKE | ORACLE to Snowflake | IN PROGRESS 🔄 |
 
 ---
 
@@ -38,6 +38,7 @@
 | Step | Pipeline | Action | Detail | Status | Time |
 |------|----------|--------|--------|--------|------|
 | 1 | — | Inputs validated | All 4 inputs confirmed | COMPLETED ✅ | 00:00:00 |
+| 2 | P1 | Generate Access Token | Token generated successfully | COMPLETED ✅ | 00:01:00 |
 
 ---
 
@@ -55,4 +56,4 @@ None so far
 
 ---
 
-*Last updated: 00:00:00*
+*Last updated: 00:01:00*
