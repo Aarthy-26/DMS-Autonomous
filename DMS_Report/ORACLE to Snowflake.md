@@ -5,7 +5,7 @@
 **Model Used** : GPT-4o
 **Pipelines** : 1
 **Run Started** : 00:00:01
-**Last Updated** : 00:02:00
+**Last Updated** : 00:03:30
 **Status** : IN PROGRESS 🔄
 
 ---
@@ -40,7 +40,8 @@
 | 1 | — | Inputs Validated | All 4 inputs confirmed | COMPLETED ✅ | 00:00:01 |
 | 2 | P1 | Generate Access Token | Token generated successfully | COMPLETED ✅ | 00:01:00 |
 | 3 | P1 | Fetch Domain File List (pre-upload) | screen=analyze, WB=128 — 0 files found | COMPLETED ✅ | 00:02:00 |
-| 4 | P1 | Upload File | Uploading Silver_Schema_DDL.txt — IN PROGRESS | IN PROGRESS 🔄 | 00:02:05 |
+| 4 | P1 | Upload File | Silver_Schema_DDL.txt uploaded successfully | COMPLETED ✅ | 00:02:30 |
+| 5 | P1 | Fetch Domain File List (post-upload poll attempt 1) | Silver_Schema_DDL.txt confirmed — domainId=931, status=UPLOADED | COMPLETED ✅ | 00:03:30 |
 
 ---
 
@@ -52,10 +53,10 @@ None so far.
 
 ## UPLOAD SUMMARY
 
-| Pipeline | Mode | Files |
-|----------|------|-------|
-| P1 | SPECIFIC | Silver_Schema_DDL.txt |
+| Pipeline | Mode | Files | Domain ID |
+|----------|------|-------|-----------|
+| P1 | SPECIFIC | Silver_Schema_DDL.txt | 931 |
 
 ---
 
-*Last updated: 00:02:05*
+*Last updated: 00:03:30*
