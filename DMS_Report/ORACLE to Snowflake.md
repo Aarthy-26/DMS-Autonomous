@@ -5,7 +5,7 @@
 **Model Used**   : Claude Sonnet 4.5
 **Pipelines**    : 1
 **Run Started**  : 2025-07-25 00:00:00
-**Last Updated** : 2025-07-25 00:00:03
+**Last Updated** : 2025-07-25 00:00:05
 **Status**       : IN PROGRESS 🔄
 
 ---
@@ -48,12 +48,16 @@
 | 1 | — | Inputs validated | All 4 inputs confirmed | All inputs present and valid | — | COMPLETED ✅ | 00:00:00 |
 | 2 | P1 | Generate Token | refreshToken=[REFRESH-TOKEN-MASKED] | {"accessToken":"[ACCESS-TOKEN-MASKED]","userName":"Aarthy Jr","email":"aarthy.jr@ascendion.com","expiresIn":4076} | 200 | COMPLETED ✅ | 00:00:01 |
 | 3 | P1 | Fetch Domain File List (pre-upload) | {"screen":"analyze","workBenchId":128,"limit":50,"offset":0,"status":[...]} | {"data":[],"status":"SUCCESS"} | 200 | COMPLETED ✅ | 00:00:03 |
+| 4 | P1 | Upload File (attempt 1) | file=Silver_Schema_DDL.sql, domainName=ORACLE to Snowflake, workBenchId=128 | {"errors":[{"status":500,"code":"ERR-5000","message":"An unexpected error occurred"}],"status":"FAILURE"} | 500 | FAILED ❌ | 00:00:04 |
+| 5 | P1 | Fetch Domain Names | GET /domain/128 | {"data":{"workBenchId":128,"workBenchName":null,"domainList":[]},"status":"SUCCESS"} | 200 | COMPLETED ✅ | 00:00:05 |
 
 ---
 
 ## ERRORS AND WARNINGS
 
-None so far.
+| Step | Pipeline | Action | Request | Error Response | HTTP Status | Time |
+|------|----------|--------|---------|---------------|-------------|------|
+| 4 | P1 | Upload File (attempt 1) | file=Silver_Schema_DDL.sql, domainName=ORACLE to Snowflake | {"errors":[{"status":500,"code":"ERR-5000","message":"An unexpected error occurred","requestId":"e0e433dc74a958739c03ddae532cefcf"}],"status":"FAILURE"} | 500 | 00:00:04 |
 
 ---
 
@@ -65,4 +69,4 @@ None so far.
 
 ---
 
-*Last updated: 2025-07-25 00:00:03*
+*Last updated: 2025-07-25 00:00:05*
