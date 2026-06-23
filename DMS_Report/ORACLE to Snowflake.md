@@ -5,7 +5,7 @@
 **Model Used** : GPT-4o
 **Pipelines** : 1
 **Run Started** : 07:00:00
-**Last Updated** : 07:25:00
+**Last Updated** : 07:28:00
 **Status** : IN PROGRESS 🔄
 
 ---
@@ -28,8 +28,8 @@
 | FUNCTIONAL_TEST | Yes | COMPLETED ✅ |
 | UNIT_TEST | Yes | FAILED ❌ |
 | RECONCILIATION | Yes | COMPLETED ✅ |
-| CONVERSION_TEST | Yes | IN PROGRESS 🔄 |
-| REVIEW | Yes | PENDING ⏳ |
+| CONVERSION_TEST | Yes | COMPLETED ✅ |
+| REVIEW | Yes | IN PROGRESS 🔄 |
 
 ---
 
@@ -70,9 +70,13 @@
 | 31 | P1 | UNIT_TEST — Submit | HTTP 500 — Failed to load source/target files | FAILED ❌ | 07:18:00 |
 | 32 | P1 | RECONCILIATION — Submit | executionId: 00d0f3ce-cc9d-4340-8611-91c225cd8ad3 | SUBMITTED 🔄 | 07:20:00 |
 | 33 | P1 | RECONCILIATION — Poll Attempt 1 | Status: IN_PROGRESS | IN PROGRESS 🔄 | 07:21:00 |
-| 34 | P1 | RECONCILIATION — Poll Attempt 2 | Status: COMPLETED (WORKFLOW_FINISHED) | COMPLETED ✅ | 07:22:00 |
+| 34 | P1 | RECONCILIATION — Poll Attempt 2 | Status: COMPLETED | COMPLETED ✅ | 07:22:00 |
 | 35 | P1 | CONVERSION_TEST — Submit | executionId: bb9909f0-12ad-4b75-8ca6-caffc0d41ee1 | SUBMITTED 🔄 | 07:24:00 |
-| 36 | P1 | CONVERSION_TEST — Poll Attempt 1 | Polling status | IN PROGRESS 🔄 | 07:25:00 |
+| 36 | P1 | CONVERSION_TEST — Poll Attempt 1 | Status: IN_PROGRESS | IN PROGRESS 🔄 | 07:25:00 |
+| 37 | P1 | CONVERSION_TEST — Poll Attempt 2 | Status: COMPLETED (WORKFLOW_FINISHED) | COMPLETED ✅ | 07:26:00 |
+| 38 | P1 | CONVERSION_TEST — Fetch Result | Conversion Test Request success | SUCCESS ✅ | 07:26:30 |
+| 39 | P1 | REVIEW — Submit | executionId: 64d96527-03e6-40ce-801a-fe066a8e468f | SUBMITTED 🔄 | 07:27:00 |
+| 40 | P1 | REVIEW — Poll Attempt 1 | Polling status | IN PROGRESS 🔄 | 07:28:00 |
 
 ---
 
@@ -93,4 +97,4 @@
 
 ---
 
-*Last updated: 07:25:00*
+*Last updated: 07:28:00*
