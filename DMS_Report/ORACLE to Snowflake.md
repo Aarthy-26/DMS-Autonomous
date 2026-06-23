@@ -5,7 +5,7 @@
 **Model Used** : GPT-4o
 **Pipelines** : 1
 **Run Started** : 00:00:00
-**Last Updated** : 00:06:00
+**Last Updated** : 00:08:00
 **Status** : IN PROGRESS 🔄
 
 ---
@@ -22,8 +22,8 @@
 
 | Task | Required | Status |
 |------|----------|--------|
-| ANALYSE | Yes | IN PROGRESS 🔄 |
-| DOCUMENT | Yes | PENDING ⏳ |
+| ANALYSE | Yes | COMPLETED ✅ |
+| DOCUMENT | Yes | IN PROGRESS 🔄 |
 | CONVERT | Yes | PENDING ⏳ |
 | FUNCTIONAL_TEST | Yes | PENDING ⏳ |
 | UNIT_TEST | Yes | PENDING ⏳ |
@@ -46,12 +46,15 @@
 | 7 | P1 | ANALYSE — Submit | domainId: 934 — executionId: a4517a9f-1492-4d3f-b2ae-ce2f52cb09d9 | SUBMITTED 🔄 | 00:05:00 |
 | 8 | P1 | ANALYSE — Poll attempt 1 | Status: IN_PROGRESS | IN PROGRESS 🔄 | 00:05:30 |
 | 9 | P1 | ANALYSE — Poll attempt 2 | Status: IN_PROGRESS — Agent reading file | IN PROGRESS 🔄 | 00:06:00 |
+| 10 | P1 | ANALYSE — Poll attempt 3 | Status: SUCCESS — WORKFLOW_COMPLETED | COMPLETED ✅ | 00:07:00 |
+| 11 | P1 | ANALYSE — Fetch Result | Analysis completed successfully | SUCCESS ✅ | 00:07:30 |
+| 12 | P1 | DOCUMENT — Submit | domainId: 934 | SUBMITTED 🔄 | 00:08:00 |
 
 ---
 
 ## ERRORS AND WARNINGS
 
-None so far
+- Fetch Result attempt 1: testcase=analysis → HTTP 400 (Unsupported testcase). Retried with testcase=analyse → SUCCESS ✅
 
 ---
 
@@ -63,4 +66,4 @@ None so far
 
 ---
 
-*Last updated: 00:06:00*
+*Last updated: 00:08:00*
