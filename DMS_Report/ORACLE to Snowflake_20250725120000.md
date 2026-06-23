@@ -5,7 +5,7 @@
 **Model Used**   : GPT-4o
 **Pipelines**    : 1
 **Run Started**  : 12:00:00
-**Last Updated** : 12:00:00
+**Last Updated** : 12:00:10
 **Status**       : IN PROGRESS 🔄
 
 ---
@@ -14,7 +14,7 @@
 
 | Pipeline | Source | Target | Workbench | Status |
 |----------|--------|--------|-----------|--------|
-| P1 | ORACLE | SNOWFLAKE | ORACLE to Snowflake_20250725120000 | PENDING ⏳ |
+| P1 | ORACLE | SNOWFLAKE | ORACLE to Snowflake_20250725120000 | IN PROGRESS 🔄 |
 
 ---
 
@@ -54,6 +54,7 @@
 | Step | Pipeline | Action | Request Payload | Response | HTTP Status | Status | Time |
 |------|----------|--------|-----------------|----------|-------------|--------|------|
 | 1 | — | Inputs validated | — | All 4 inputs confirmed | — | COMPLETED ✅ | 12:00:00 |
+| 2 | P1 | Generate Token | refreshToken=[REFRESH-TOKEN-MASKED] | {"accessToken":"[ACCESS-TOKEN-MASKED]","email":"aarthy.jr@ascendion.com","userName":"Aarthy Jr","expiresIn":5027,"status":"SUCCESS"} | 200 | COMPLETED ✅ | 12:00:10 |
 
 ---
 
@@ -63,4 +64,4 @@ None so far.
 
 ---
 
-*Last updated: 12:00:00*
+*Last updated: 12:00:10*
