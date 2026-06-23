@@ -5,7 +5,7 @@
 **Model Used** : GPT-4o
 **Pipelines** : 1
 **Run Started** : 00:00:00
-**Last Updated** : 00:20:00
+**Last Updated** : 00:21:00
 **Status** : IN PROGRESS 🔄
 
 ---
@@ -61,7 +61,8 @@
 | 22 | P1 | FUNCTIONAL_TEST — Poll attempt 1 | Status: SUCCESS — WORKFLOW_COMPLETED | COMPLETED ✅ | 00:18:00 |
 | 23 | P1 | FUNCTIONAL_TEST — Fetch Result | Functional Test Request success | SUCCESS ✅ | 00:19:00 |
 | 24 | P1 | UNIT_TEST — Submit | domainId: 934 — executionId: 25470b6f-790c-4d1a-b385-76bdd16a6b4e | SUBMITTED 🔄 | 00:20:00 |
-| 25 | P1 | UNIT_TEST — Poll attempt 1 | executionId: 25470b6f-790c-4d1a-b385-76bdd16a6b4e | IN PROGRESS 🔄 | 00:20:00 |
+| 25 | P1 | UNIT_TEST — Poll attempt 1 | Status: IN_PROGRESS — Agent reading files | IN PROGRESS 🔄 | 00:20:30 |
+| 26 | P1 | UNIT_TEST — Poll attempt 2 | Status: IN_PROGRESS — Agent processing | IN PROGRESS 🔄 | 00:21:00 |
 
 ---
 
@@ -80,4 +81,4 @@
 
 ---
 
-*Last updated: 00:20:00*
+*Last updated: 00:21:00*
