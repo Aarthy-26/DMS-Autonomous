@@ -5,7 +5,7 @@
 **Model Used**   : GPT-4o
 **Pipelines**    : 1
 **Run Started**  : 12:00:00
-**Last Updated** : 12:00:40
+**Last Updated** : 12:00:50
 **Status**       : IN PROGRESS 🔄
 
 ---
@@ -58,6 +58,7 @@
 | 3 | P1 | Load Initial Tech Options | GET /dms/tech/list | {"source":["SQL Server","HIVE","SNOWFLAKE","INFORMATICA","ORACLE",...],"target":["PYSPARK","SNOWFLAKE","BIGQUERY",...],"status":"SUCCESS"} | 200 | COMPLETED ✅ | 12:00:20 |
 | 4 | P1 | Load Mapped Target Tech | sourceTechName=ORACLE | {"data":["SNOWFLAKE","DB2"],"status":"SUCCESS"} | 200 | COMPLETED ✅ | 12:00:30 |
 | 5 | P1 | Create Workbench | {"email":"aarthy.jr@ascendion.com","workBench":{"workBenchName":"ORACLE to Snowflake_20250725120000","sourceTech":"ORACLE","targetTech":"SNOWFLAKE","description":"ORACLE to SNOWFLAKE migration workbench"}} | {"data":{"message":"workbench saved successfully","workbenchId":150},"status":"SUCCESS"} | 200 | COMPLETED ✅ | 12:00:40 |
+| 6 | P1 | Fetch Domain File List (pre-upload) | {"screen":"analyze","workBenchId":150,"limit":100,"offset":0,"status":[...]} | {"data":[],"status":"SUCCESS"} — No files yet, proceeding to upload | 200 | COMPLETED ✅ | 12:00:50 |
 
 ---
 
@@ -67,4 +68,4 @@ None so far.
 
 ---
 
-*Last updated: 12:00:40*
+*Last updated: 12:00:50*
