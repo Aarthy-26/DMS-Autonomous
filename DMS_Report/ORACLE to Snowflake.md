@@ -5,7 +5,7 @@
 **Model Used** : GPT-4o
 **Pipelines** : 1
 **Run Started** : 00:00:00
-**Last Updated** : 00:14:00
+**Last Updated** : 00:16:00
 **Status** : IN PROGRESS 🔄
 
 ---
@@ -24,8 +24,8 @@
 |------|----------|--------|
 | ANALYSE | Yes | COMPLETED ✅ |
 | DOCUMENT | Yes | COMPLETED ✅ |
-| CONVERT | Yes | IN PROGRESS 🔄 |
-| FUNCTIONAL_TEST | Yes | PENDING ⏳ |
+| CONVERT | Yes | COMPLETED ✅ |
+| FUNCTIONAL_TEST | Yes | IN PROGRESS 🔄 |
 | UNIT_TEST | Yes | PENDING ⏳ |
 | RECONCILIATION | Yes | PENDING ⏳ |
 | CONVERSION_TEST | Yes | PENDING ⏳ |
@@ -54,7 +54,9 @@
 | 15 | P1 | DOCUMENT — Fetch Result | Document generated successfully | SUCCESS ✅ | 00:11:00 |
 | 16 | P1 | Fetch Domain File List for convert (poll attempt 1) | domainId: 934 confirmed in convert screen | COMPLETED ✅ | 00:12:00 |
 | 17 | P1 | CONVERT — Submit | domainId: 934, objectName: Silver_Schema_DDL — executionId: bb4f38db-c86e-4b0e-8632-ccd63bcfc69b | SUBMITTED 🔄 | 00:13:00 |
-| 18 | P1 | CONVERT — Poll attempt 1 | executionId: bb4f38db-c86e-4b0e-8632-ccd63bcfc69b | IN PROGRESS 🔄 | 00:14:00 |
+| 18 | P1 | CONVERT — Poll attempt 1 | Status: SUCCESS — WORKFLOW_COMPLETED | COMPLETED ✅ | 00:14:00 |
+| 19 | P1 | CONVERT — Fetch Result | Convert Request success | SUCCESS ✅ | 00:15:00 |
+| 20 | P1 | Fetch Domain File List for testing (poll attempt 1) | screen=testbuild, WorkbenchId: 128 | IN PROGRESS 🔄 | 00:16:00 |
 
 ---
 
@@ -72,4 +74,4 @@
 
 ---
 
-*Last updated: 00:14:00*
+*Last updated: 00:16:00*
