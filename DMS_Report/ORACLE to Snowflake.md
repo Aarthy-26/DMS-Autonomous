@@ -5,7 +5,7 @@
 **Model Used**   : Claude Sonnet 4.5
 **Pipelines**    : 1
 **Run Started**  : 2025-07-25 00:00:00
-**Last Updated** : 2025-07-25 00:00:15
+**Last Updated** : 2025-07-25 00:00:16
 **Status**       : IN PROGRESS 🔄
 
 ---
@@ -23,8 +23,8 @@
 | Task | Required | Status |
 |------|----------|--------|
 | ANALYZE | Yes | COMPLETED ✅ |
-| DOCUMENT | Yes | SUBMITTED 🔄 |
-| CONVERT | Yes | PENDING ⏳ |
+| DOCUMENT | Yes | COMPLETED ✅ |
+| CONVERT | Yes | IN PROGRESS 🔄 |
 | FUNCTIONAL_TEST | Yes | PENDING ⏳ |
 | UNIT_TEST | Yes | PENDING ⏳ |
 | RECONCILIATION | Yes | PENDING ⏳ |
@@ -60,6 +60,7 @@
 | 13 | P1 | ANALYZE — Poll attempt 1 | executionId=f1168d75-ab5b-43e5-8533-e6b650420c2d | WORKFLOW_COMPLETED — status=SUCCESS | 200 | COMPLETED ✅ | 00:00:13 |
 | 14 | P1 | ANALYZE — Fetch Result | executionId=f1168d75-ab5b-43e5-8533-e6b650420c2d, domainId=928 | {"errors":[{"status":400,"code":"ERR-400","message":"Unsupported testcase: analyze"}]} — Result confirmed in poll | 400 | NOTE: Result in poll ✅ | 00:00:14 |
 | 15 | P1 | DOCUMENT — Submit | {"email":"aarthy.jr@ascendion.com","workBenchId":128,"domainIds":[928],"platform":"aws"} | {"data":{"message":"Workflow submitted successfully","success":true,"executionId":"cee61659-eb8b-4f9f-bf3b-04d5bfb9cfcd"},"status":"SUCCESS"} | 200 | SUBMITTED 🔄 | 00:00:15 |
+| 16 | P1 | DOCUMENT — Poll attempt 1 | executionId=cee61659-eb8b-4f9f-bf3b-04d5bfb9cfcd | WORKFLOW_COMPLETED — status=SUCCESS | 200 | COMPLETED ✅ | 00:00:16 |
 
 ---
 
@@ -83,4 +84,4 @@
 
 ---
 
-*Last updated: 2025-07-25 00:00:15*
+*Last updated: 2025-07-25 00:00:16*
