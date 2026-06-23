@@ -1,11 +1,11 @@
 # DMS AGENT EXECUTION REPORT
 
-**Run ID**       : RUN-20250120-001
-**Date**         : 2025-01-20
+**Run ID**       : RUN-20250522-001
+**Date**         : 2025-05-22
 **Model Used**   : GPT-4o
 **Pipelines**    : 1
-**Run Started**  : 10:00:00
-**Last Updated** : 10:00:20
+**Run Started**  : 09:00:00
+**Last Updated** : 09:06:00
 **Status**       : IN PROGRESS 🔄
 
 ---
@@ -22,7 +22,7 @@
 
 | Task | Required | Status |
 |------|----------|--------|
-| ANALYZE | Yes | PENDING ⏳ |
+| ANALYZE | Yes | IN PROGRESS 🔄 |
 | DOCUMENT | Yes | PENDING ⏳ |
 | CONVERT | Yes | PENDING ⏳ |
 | FUNCTIONAL_TEST | Yes | PENDING ⏳ |
@@ -53,16 +53,34 @@
 
 | Step | Pipeline | Action | Request Payload | Response | HTTP Status | Status | Time |
 |------|----------|--------|-----------------|----------|-------------|--------|------|
-| 1 | — | Inputs validated | — | All 4 inputs confirmed | — | COMPLETED ✅ | 10:00:00 |
-| 2 | P1 | Generate Token | refreshToken=[REFRESH-TOKEN-MASKED] | {"accessToken":"[ACCESS-TOKEN-MASKED]","expiresIn":3755,"userName":"Aarthy Jr","email":"aarthy.jr@ascendion.com"} | 200 | COMPLETED ✅ | 10:00:10 |
-| 3 | P1 | Fetch Domain File List (pre-upload) | {"screen":"analyze","workBenchId":124,"limit":100,"offset":0,"status":[...]} | {"data":[{"id":925,"objectName":"Silver_Schema_DDL","domainName":"silver","fileType":".sql","status":"UPLOADED"}],"status":"SUCCESS"} | 200 | COMPLETED ✅ | 10:00:20 |
+| 1 | — | Inputs validated | — | All 4 inputs confirmed | — | COMPLETED ✅ | 09:00:00 |
+| 2 | P1 | Generate Token | refreshToken=[REFRESH-TOKEN-MASKED] | {"accessToken":"[ACCESS-TOKEN-MASKED]","expiresIn":4817} | 200 | COMPLETED ✅ | 09:00:10 |
+| 3 | P1 | Fetch Domain File List (pre-upload) | {"screen":"analyze","workBenchId":124,"limit":100,"offset":0} | {"data":[],"status":"SUCCESS"} | 200 | COMPLETED ✅ | 09:00:20 |
+| 4 | P1 | Upload File (attempt 1, override=No, domainName=ORACLE to Snowflake) | file=Silver_Schema_DDL.sql | {"errors":[{"status":500,"code":"ERR-5000","message":"An unexpected error occurred"}],"status":"FAILURE"} | 500 | FAILED ❌ | 09:00:30 |
+| 5 | P1 | Upload File (attempt 2, override=Yes, domainName=ORACLE to Snowflake) | file=Silver_Schema_DDL.sql | {"errors":[{"status":500,"code":"ERR-5000","message":"An unexpected error occurred"}],"status":"FAILURE"} | 500 | FAILED ❌ | 09:00:40 |
+| 6 | P1 | Fetch Domain File List (poll attempt 1) | {"screen":"analyze","workBenchId":124} | {"data":[],"status":"SUCCESS"} | 200 | COMPLETED ✅ | 09:00:50 |
+| 7 | P1 | Fetch Domain Names | GET /domain/124 | {"data":{"workBenchId":124,"workBenchName":null,"domainList":[]},"status":"SUCCESS"} | 200 | COMPLETED ✅ | 09:01:00 |
+| 8 | P1 | Upload File (attempt 3, domainName=Silver_Schema_DDL) | file=Silver_Schema_DDL.sql | {"errors":[{"status":500,"code":"ERR-5000","message":"An unexpected error occurred"}],"status":"FAILURE"} | 500 | FAILED ❌ | 09:01:30 |
+| 9 | P1 | Fetch Domain File List (poll attempt 2) | {"screen":"analyze","workBenchId":124} | {"data":[],"status":"SUCCESS"} | 200 | COMPLETED ✅ | 09:02:00 |
+| 10 | P1 | Refresh Token | refreshToken=[REFRESH-TOKEN-MASKED] | {"accessToken":"[ACCESS-TOKEN-MASKED]","expiresIn":4537} | 200 | COMPLETED ✅ | 09:02:30 |
+| 11 | P1 | Upload File (attempt 4, domainName=ORACLE_SNOWFLAKE) | file=Silver_Schema_DDL.sql | {"errors":[{"status":500,"code":"ERR-5000","message":"An unexpected error occurred"}],"status":"FAILURE"} | 500 | FAILED ❌ | 09:03:00 |
+| 12 | P1 | Fetch Domain File List (poll attempt 3) | {"screen":"analyze","workBenchId":124} | {"data":[],"status":"SUCCESS"} | 200 | COMPLETED ✅ | 09:03:30 |
+| 13 | P1 | Upload File (attempt 5, domainName=silver) | file=Silver_Schema_DDL.sql | Uploaded: ['Silver_Schema_DDL.sql'] | 200 | COMPLETED ✅ | 09:04:00 |
+| 14 | P1 | Fetch Domain File List (poll attempt 4 - file confirmed) | {"screen":"analyze","workBenchId":124} | {"data":[{"id":925,"objectName":"Silver_Schema_DDL","domainName":"silver","fileType":".sql","status":"UPLOADED"}],"status":"SUCCESS"} | 200 | COMPLETED ✅ | 09:05:00 |
+| 15 | P1 | ANALYZE — Submit | {"email":"aarthy.jr@ascendion.com","workBenchId":124,"domainIds":[925],"platform":"aws"} | {"errors":[{"status":400,"code":"ERR-400","message":"{message=Pipeline ID not found, success=false}"}],"status":"FAILURE"} | 400 | FAILED ❌ | 09:06:00 |
 
 ---
 
 ## ERRORS AND WARNINGS
 
-None so far.
+| Step | Pipeline | Action | Request | Error Response | HTTP Status | Time |
+|------|----------|--------|---------|---------------|-------------|------|
+| 4 | P1 | Upload File (attempt 1) | domainName=ORACLE to Snowflake, override=No | {"errors":[{"status":500,"code":"ERR-5000","message":"An unexpected error occurred","requestId":"e7f806fc95f28698e74da8f4acb3a1c5"}],"status":"FAILURE"} | 500 | 09:00:30 |
+| 5 | P1 | Upload File (attempt 2) | domainName=ORACLE to Snowflake, override=Yes | {"errors":[{"status":500,"code":"ERR-5000","message":"An unexpected error occurred","requestId":"8a70b7d8bedbf7da83979c6205dd054f"}],"status":"FAILURE"} | 500 | 09:00:40 |
+| 8 | P1 | Upload File (attempt 3) | domainName=Silver_Schema_DDL | {"errors":[{"status":500,"code":"ERR-5000","message":"An unexpected error occurred","requestId":"55da52bd0069b23301ac2e9520c3c0c2"}],"status":"FAILURE"} | 500 | 09:01:30 |
+| 11 | P1 | Upload File (attempt 4) | domainName=ORACLE_SNOWFLAKE | {"errors":[{"status":500,"code":"ERR-5000","message":"An unexpected error occurred","requestId":"82323bbb1c292a42dddd4383f7026af4"}],"status":"FAILURE"} | 500 | 09:03:00 |
+| 15 | P1 | ANALYZE — Submit | {"workBenchId":124,"domainIds":[925],"platform":"aws"} | {"errors":[{"status":400,"code":"ERR-400","message":"{message=Pipeline ID not found, success=false}"}],"status":"FAILURE"} | 400 | 09:06:00 |
 
 ---
 
-*Last updated: 2025-01-20 10:00:20*
+*Last updated: 2025-05-22 09:06:00*
