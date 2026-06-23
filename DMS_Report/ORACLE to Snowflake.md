@@ -5,7 +5,7 @@
 **Model Used** : GPT-4o
 **Pipelines** : 1
 **Run Started** : 00:00:00
-**Last Updated** : 00:12:00
+**Last Updated** : 00:13:00
 **Status** : IN PROGRESS 🔄
 
 ---
@@ -52,7 +52,8 @@
 | 13 | P1 | DOCUMENT — Poll attempt 1 | Status: IN_PROGRESS | IN PROGRESS 🔄 | 00:09:00 |
 | 14 | P1 | DOCUMENT — Poll attempt 2 | Status: SUCCESS — WORKFLOW_COMPLETED | COMPLETED ✅ | 00:10:00 |
 | 15 | P1 | DOCUMENT — Fetch Result | Document generated successfully | SUCCESS ✅ | 00:11:00 |
-| 16 | P1 | Fetch Domain File List for convert (poll attempt 1) | screen=convert, WorkbenchId: 128 | IN PROGRESS 🔄 | 00:12:00 |
+| 16 | P1 | Fetch Domain File List for convert (poll attempt 1) | domainId: 934 confirmed in convert screen | COMPLETED ✅ | 00:12:00 |
+| 17 | P1 | CONVERT — Submit | domainId: 934, objectName: Silver_Schema_DDL | SUBMITTED 🔄 | 00:13:00 |
 
 ---
 
@@ -70,4 +71,4 @@
 
 ---
 
-*Last updated: 00:12:00*
+*Last updated: 00:13:00*
