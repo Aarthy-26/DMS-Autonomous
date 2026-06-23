@@ -5,7 +5,7 @@
 **Model Used**   : GPT-4o
 **Pipelines**    : 1
 **Run Started**  : 09:00:00
-**Last Updated** : 09:00:10
+**Last Updated** : 09:00:20
 **Status**       : IN PROGRESS 🔄
 
 ---
@@ -14,7 +14,7 @@
 
 | Pipeline | Source | Target | Workbench | Status |
 |----------|--------|--------|-----------|--------|
-| P1 | ORACLE | SNOWFLAKE | ORACLE to Snowflake | IN PROGRESS 🔄 |
+| P1 | ORACLE | SNOWFLAKE | ORACLE to Snowflake (WB: 124) | IN PROGRESS 🔄 |
 
 ---
 
@@ -55,6 +55,7 @@
 |------|----------|--------|-----------------|----------|-------------|--------|------|
 | 1 | — | Inputs validated | — | All 4 inputs confirmed | — | COMPLETED ✅ | 09:00:00 |
 | 2 | P1 | Generate Token | refreshToken=[REFRESH-TOKEN-MASKED] | {"accessToken":"[ACCESS-TOKEN-MASKED]","expiresIn":4817,"userName":"Aarthy Jr","email":"aarthy.jr@ascendion.com"} | 200 | COMPLETED ✅ | 09:00:10 |
+| 3 | P1 | Fetch Domain File List (pre-upload) | {"screen":"analyze","workBenchId":124,"limit":100,"offset":0} | {"data":[],"status":"SUCCESS"} | 200 | COMPLETED ✅ | 09:00:20 |
 
 ---
 
@@ -64,4 +65,4 @@ None so far.
 
 ---
 
-*Last updated: 2025-05-22 09:00:10*
+*Last updated: 2025-05-22 09:00:20*
