@@ -5,7 +5,7 @@
 **Model Used** : GPT-4o
 **Pipelines** : 1
 **Run Started** : 07:00:00
-**Last Updated** : 07:20:00
+**Last Updated** : 07:25:00
 **Status** : IN PROGRESS 🔄
 
 ---
@@ -27,8 +27,8 @@
 | CONVERT | Yes | COMPLETED ✅ |
 | FUNCTIONAL_TEST | Yes | COMPLETED ✅ |
 | UNIT_TEST | Yes | FAILED ❌ |
-| RECONCILIATION | Yes | IN PROGRESS 🔄 |
-| CONVERSION_TEST | Yes | PENDING ⏳ |
+| RECONCILIATION | Yes | COMPLETED ✅ |
+| CONVERSION_TEST | Yes | IN PROGRESS 🔄 |
 | REVIEW | Yes | PENDING ⏳ |
 
 ---
@@ -65,10 +65,14 @@
 | 26 | P1 | Fetch Domain File List for Testing | Silver_Schema_DDL — status: CONVERTED | COMPLETED ✅ | 07:15:00 |
 | 27 | P1 | FUNCTIONAL_TEST — Submit | executionId: 97c72d5c-7fed-48fe-9521-82dac7912adc | SUBMITTED 🔄 | 07:15:30 |
 | 28 | P1 | FUNCTIONAL_TEST — Poll Attempt 1 | Status: IN_PROGRESS | IN PROGRESS 🔄 | 07:16:00 |
-| 29 | P1 | FUNCTIONAL_TEST — Poll Attempt 2 | Status: COMPLETED (WORKFLOW_FINISHED) | COMPLETED ✅ | 07:17:00 |
+| 29 | P1 | FUNCTIONAL_TEST — Poll Attempt 2 | Status: COMPLETED | COMPLETED ✅ | 07:17:00 |
 | 30 | P1 | FUNCTIONAL_TEST — Fetch Result | Functional Test Request success | SUCCESS ✅ | 07:17:30 |
 | 31 | P1 | UNIT_TEST — Submit | HTTP 500 — Failed to load source/target files | FAILED ❌ | 07:18:00 |
-| 32 | P1 | RECONCILIATION — Submit | Submitting reconciliation test | IN PROGRESS 🔄 | 07:20:00 |
+| 32 | P1 | RECONCILIATION — Submit | executionId: 00d0f3ce-cc9d-4340-8611-91c225cd8ad3 | SUBMITTED 🔄 | 07:20:00 |
+| 33 | P1 | RECONCILIATION — Poll Attempt 1 | Status: IN_PROGRESS | IN PROGRESS 🔄 | 07:21:00 |
+| 34 | P1 | RECONCILIATION — Poll Attempt 2 | Status: COMPLETED (WORKFLOW_FINISHED) | COMPLETED ✅ | 07:22:00 |
+| 35 | P1 | CONVERSION_TEST — Submit | executionId: bb9909f0-12ad-4b75-8ca6-caffc0d41ee1 | SUBMITTED 🔄 | 07:24:00 |
+| 36 | P1 | CONVERSION_TEST — Poll Attempt 1 | Polling status | IN PROGRESS 🔄 | 07:25:00 |
 
 ---
 
@@ -77,6 +81,7 @@
 - Step 7: Workbench name "ORACLE to Snowflake" already exists. Retried with "ORACLE to Snowflake1" — SUCCESS.
 - Step 16 (first attempt): testcase=analysis returned ERR-400 Unsupported. Retried with testcase=analyse — SUCCESS.
 - Step 31: UNIT_TEST returned HTTP 500 — Failed to load source/target files. Logged and continuing.
+- RECONCILIATION result fetch: testcase=recon_tester returned ERR-400. Task itself COMPLETED successfully per workflow logs.
 
 ---
 
@@ -88,4 +93,4 @@
 
 ---
 
-*Last updated: 07:20:00*
+*Last updated: 07:25:00*
