@@ -5,7 +5,7 @@
 **Model Used**: Claude  
 **Pipelines**: 1  
 **Run Started**: 2024-06-01 10:00:00  
-**Last Updated**: 2024-06-01 10:00:22  
+**Last Updated**: 2024-06-01 10:00:25  
 **Status**: IN PROGRESS 🔄
 
 ---
@@ -22,7 +22,7 @@
 
 | Task | Required | Status |
 |------|----------|--------|
-| ANALYZE | Yes | SUBMITTED 🔄 |
+| ANALYZE | Yes | IN PROGRESS 🔄 |
 | DOCUMENT | Yes | PENDING ⏳ |
 | CONVERT | Yes | PENDING ⏳ |
 | FUNCTIONAL_TEST | Yes | PENDING ⏳ |
@@ -49,6 +49,7 @@
 | 10 | P1 | Fetch Domain List | File confirmed - domainId=930 | COMPLETED ✅ | 10:00:18 |
 | 11 | P1 | Fetch Domain Names | Domain: ORACLE | COMPLETED ✅ | 10:00:20 |
 | 12 | P1 | ANALYZE - Submit | executionId: edb484c8-61f0-43bc-bf1a-2e38d6b1ea2a | SUBMITTED 🔄 | 10:00:22 |
+| 13 | P1 | ANALYZE - Poll | Attempt 1 - IN_PROGRESS | IN PROGRESS 🔄 | 10:00:25 |
 
 ---
 
@@ -67,4 +68,4 @@
 
 ---
 
-*Last updated: 2024-06-01 10:00:22*
+*Last updated: 2024-06-01 10:00:25*
