@@ -5,7 +5,7 @@
 **Model Used** : GPT-4o
 **Pipelines** : 1
 **Run Started** : 00:00:00
-**Last Updated** : 00:09:00
+**Last Updated** : 00:12:00
 **Status** : IN PROGRESS 🔄
 
 ---
@@ -23,8 +23,8 @@
 | Task | Required | Status |
 |------|----------|--------|
 | ANALYSE | Yes | COMPLETED ✅ |
-| DOCUMENT | Yes | IN PROGRESS 🔄 |
-| CONVERT | Yes | PENDING ⏳ |
+| DOCUMENT | Yes | COMPLETED ✅ |
+| CONVERT | Yes | IN PROGRESS 🔄 |
 | FUNCTIONAL_TEST | Yes | PENDING ⏳ |
 | UNIT_TEST | Yes | PENDING ⏳ |
 | RECONCILIATION | Yes | PENDING ⏳ |
@@ -49,7 +49,10 @@
 | 10 | P1 | ANALYSE — Poll attempt 3 | Status: SUCCESS — WORKFLOW_COMPLETED | COMPLETED ✅ | 00:07:00 |
 | 11 | P1 | ANALYSE — Fetch Result | Analysis completed successfully | SUCCESS ✅ | 00:07:30 |
 | 12 | P1 | DOCUMENT — Submit | domainId: 934 — executionId: a3c08b6a-412f-417b-86f2-0d4da7aa54c3 | SUBMITTED 🔄 | 00:08:00 |
-| 13 | P1 | DOCUMENT — Poll attempt 1 | executionId: a3c08b6a-412f-417b-86f2-0d4da7aa54c3 | IN PROGRESS 🔄 | 00:09:00 |
+| 13 | P1 | DOCUMENT — Poll attempt 1 | Status: IN_PROGRESS | IN PROGRESS 🔄 | 00:09:00 |
+| 14 | P1 | DOCUMENT — Poll attempt 2 | Status: SUCCESS — WORKFLOW_COMPLETED | COMPLETED ✅ | 00:10:00 |
+| 15 | P1 | DOCUMENT — Fetch Result | Document generated successfully | SUCCESS ✅ | 00:11:00 |
+| 16 | P1 | Fetch Domain File List for convert (poll attempt 1) | screen=convert, WorkbenchId: 128 | IN PROGRESS 🔄 | 00:12:00 |
 
 ---
 
@@ -67,4 +70,4 @@
 
 ---
 
-*Last updated: 00:09:00*
+*Last updated: 00:12:00*
