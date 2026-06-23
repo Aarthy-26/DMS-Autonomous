@@ -5,7 +5,7 @@
 **Model Used** : GPT-4o
 **Pipelines** : 1
 **Run Started** : 00:00:00
-**Last Updated** : 00:02:00
+**Last Updated** : 00:03:00
 **Status** : IN PROGRESS 🔄
 
 ---
@@ -22,7 +22,7 @@
 
 | Task | Required | Status |
 |------|----------|--------|
-| ANALYSE | Yes | PENDING ⏳ |
+| ANALYSE | Yes | IN PROGRESS 🔄 |
 | DOCUMENT | Yes | PENDING ⏳ |
 | CONVERT | Yes | PENDING ⏳ |
 | FUNCTIONAL_TEST | Yes | PENDING ⏳ |
@@ -39,13 +39,15 @@
 |------|----------|--------|--------|--------|------|
 | 1 | — | Inputs validated | All 4 inputs confirmed | COMPLETED ✅ | 00:00:00 |
 | 2 | P1 | Generate Access Token | Token generated successfully | COMPLETED ✅ | 00:01:00 |
-| 3 | P1 | Fetch Domain File List (pre-upload) | WorkbenchId: 128 — Silver_Schema_DDL (id:931) found, status: CONVERTED | COMPLETED ✅ | 00:02:00 |
+| 3 | P1 | Fetch Domain File List (pre-upload) | WorkbenchId: 128 — Silver_Schema_DDL (id:931) found | COMPLETED ✅ | 00:02:00 |
+| 4 | P1 | Upload File | Silver_Schema_DDL.txt — File already exists (id:931), confirmed present | COMPLETED ✅ | 00:03:00 |
+| 5 | P1 | Fetch Domain Names | Fetching domain names for workbench 128 | IN PROGRESS 🔄 | 00:03:00 |
 
 ---
 
 ## ERRORS AND WARNINGS
 
-None so far
+- P1: Upload returned "File Already exists" — file confirmed present with id:931. Not a failure.
 
 ---
 
@@ -57,4 +59,4 @@ None so far
 
 ---
 
-*Last updated: 00:02:00*
+*Last updated: 00:03:00*
