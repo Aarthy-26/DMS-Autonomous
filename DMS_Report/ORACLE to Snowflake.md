@@ -5,7 +5,7 @@
 **Model Used**   : Claude Sonnet 4.5
 **Pipelines**    : 1
 **Run Started**  : 2025-07-25 00:00:00
-**Last Updated** : 2025-07-25 00:00:10
+**Last Updated** : 2025-07-25 00:00:11
 **Status**       : IN PROGRESS 🔄
 
 ---
@@ -22,7 +22,7 @@
 
 | Task | Required | Status |
 |------|----------|--------|
-| ANALYZE | Yes | PENDING ⏳ |
+| ANALYZE | Yes | IN PROGRESS 🔄 |
 | DOCUMENT | Yes | PENDING ⏳ |
 | CONVERT | Yes | PENDING ⏳ |
 | FUNCTIONAL_TEST | Yes | PENDING ⏳ |
@@ -47,14 +47,15 @@
 |------|----------|--------|-----------------|----------|-------------|--------|------|
 | 1 | — | Inputs validated | All 4 inputs confirmed | All inputs present and valid | — | COMPLETED ✅ | 00:00:00 |
 | 2 | P1 | Generate Token | refreshToken=[REFRESH-TOKEN-MASKED] | {"accessToken":"[ACCESS-TOKEN-MASKED]","userName":"Aarthy Jr","email":"aarthy.jr@ascendion.com","expiresIn":4076} | 200 | COMPLETED ✅ | 00:00:01 |
-| 3 | P1 | Fetch Domain File List (pre-upload) | {"screen":"analyze","workBenchId":128,"limit":50,"offset":0,"status":[...]} | {"data":[],"status":"SUCCESS"} | 200 | COMPLETED ✅ | 00:00:03 |
+| 3 | P1 | Fetch Domain File List (pre-upload) | {"screen":"analyze","workBenchId":128,"limit":50,"offset":0} | {"data":[],"status":"SUCCESS"} | 200 | COMPLETED ✅ | 00:00:03 |
 | 4 | P1 | Upload File (attempt 1) | file=Silver_Schema_DDL.sql, domainName=ORACLE to Snowflake, workBenchId=128 | {"errors":[{"status":500,"code":"ERR-5000","message":"An unexpected error occurred","requestId":"e0e433dc74a958739c03ddae532cefcf"}],"status":"FAILURE"} | 500 | FAILED ❌ | 00:00:04 |
 | 5 | P1 | Fetch Domain Names | GET /domain/128 | {"data":{"workBenchId":128,"workBenchName":null,"domainList":[]},"status":"SUCCESS"} | 200 | COMPLETED ✅ | 00:00:05 |
 | 6 | P1 | Upload File (attempt 2) | file=Silver_Schema_DDL.sql, domainName=Silver_Schema_DDL, workBenchId=128 | {"errors":[{"status":500,"code":"ERR-5000","message":"An unexpected error occurred","requestId":"fc1f0d39c72bdf49fe515ba4ed75dc24"}],"status":"FAILURE"} | 500 | FAILED ❌ | 00:00:06 |
 | 7 | P1 | Upload File (attempt 3) | file=Silver_Schema_DDL.sql, domainName=oracle_snowflake, workBenchId=128 | {"errors":[{"status":500,"code":"ERR-5000","message":"An unexpected error occurred","requestId":"586a5403955343bdee4ebb1c0e7fcb49"}],"status":"FAILURE"} | 500 | FAILED ❌ | 00:00:07 |
-| 8 | P1 | Fetch Domain File List (poll attempt 1) | {"screen":"analyze","workBenchId":128,"limit":50,"offset":0,"status":[...]} | {"data":[],"status":"SUCCESS"} | 200 | COMPLETED ✅ | 00:00:08 |
+| 8 | P1 | Fetch Domain File List (poll attempt 1) | {"screen":"analyze","workBenchId":128,"limit":50,"offset":0} | {"data":[],"status":"SUCCESS"} | 200 | COMPLETED ✅ | 00:00:08 |
 | 9 | P1 | Upload File (attempt 4) | file=Silver_Schema_DDL.sql, domainName=ORACLE_SNOWFLAKE, workBenchId=128 | {"errors":[{"status":500,"code":"ERR-5000","message":"An unexpected error occurred","requestId":"585b659c509f00671b0dd8ded9497ba2"}],"status":"FAILURE"} | 500 | FAILED ❌ | 00:00:09 |
 | 10 | P1 | Upload File (attempt 5) | file=Silver_Schema_DDL.sql, domainName=silver, workBenchId=128 | Uploaded: ['DMS_Input/ORACLE to Snowflake/Silver_Schema_DDL.sql'] | 200 | COMPLETED ✅ | 00:00:10 |
+| 11 | P1 | Fetch Domain File List (poll attempt 2 - file confirmed) | {"screen":"analyze","workBenchId":128,"limit":50,"offset":0} | {"data":[{"id":928,"objectName":"Silver_Schema_DDL","domainName":"silver","fileType":".sql","status":"UPLOADED","analysisStatus":null}],"status":"SUCCESS"} | 200 | COMPLETED ✅ | 00:00:11 |
 
 ---
 
@@ -73,8 +74,8 @@
 
 | Pipeline | Mode | Files |
 |----------|------|-------|
-| P1 | SPECIFIC | Silver_Schema_DDL.sql — UPLOADED ✅ (domainName=silver) |
+| P1 | SPECIFIC | Silver_Schema_DDL.sql — UPLOADED ✅ (domainId=928, domainName=silver) |
 
 ---
 
-*Last updated: 2025-07-25 00:00:10*
+*Last updated: 2025-07-25 00:00:11*
