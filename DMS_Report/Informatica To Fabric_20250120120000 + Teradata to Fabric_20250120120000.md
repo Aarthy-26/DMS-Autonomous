@@ -5,7 +5,7 @@
 **Model Used**   : GPT-4
 **Pipelines**    : 2
 **Run Started**  : 12:00:00
-**Last Updated** : 12:06:00
+**Last Updated** : 12:07:00
 **Status**       : IN PROGRESS 🔄
 
 ---
@@ -64,6 +64,7 @@
 | 6 | P1 | Create Workbench | {"workBenchName":"Informatica To Fabric_20250120120000","sourceTech":"INFORMATICA","targetTech":"Fabric"} | {"message":"workbench saved successfully","workbenchId":144} | 200 | COMPLETED ✅ | 12:00:25 |
 | 7 | P2 | Create Workbench | {"workBenchName":"Teradata to Fabric_20250120120000","sourceTech":"TERADATA","targetTech":"Fabric"} | {"message":"workbench saved successfully","workbenchId":145} | 200 | COMPLETED ✅ | 12:00:30 |
 | 8 | P1 | Fetch Domain File List (pre-upload) | {"screen":"analyze","workBenchId":144,"limit":100,"offset":0} | {"data":[],"status":"SUCCESS"} | 200 | COMPLETED ✅ | 12:06:00 |
+| 9 | P1 | Upload File | email=aarthy.jr@ascendion.com&domainName=Sales&workBenchId=144&override=No&platform=aws | Inventory_Stage_Load_Mapping.xml uploaded successfully | 200 | COMPLETED ✅ | 12:07:00 |
 
 ---
 
@@ -73,4 +74,4 @@ None so far.
 
 ---
 
-*Last updated: 12:06:00*
+*Last updated: 12:07:00*
