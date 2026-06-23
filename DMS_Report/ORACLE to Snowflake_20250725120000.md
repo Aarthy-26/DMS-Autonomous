@@ -5,7 +5,7 @@
 **Model Used**   : GPT-4o
 **Pipelines**    : 1
 **Run Started**  : 12:00:00
-**Last Updated** : 12:03:10
+**Last Updated** : 12:03:20
 **Status**       : IN PROGRESS 🔄
 
 ---
@@ -70,6 +70,7 @@
 | 15 | P1 | DOCUMENT — Submit | {"email":"aarthy.jr@ascendion.com","workBenchId":150,"domainIds":[370],"platform":"aws"} | {"data":{"executionId":"044ad915-34bf-4b0d-898c-4676ed798c40","success":true,"message":"Workflow submitted successfully"},"status":"SUCCESS"} | 200 | SUBMITTED 🔄 | 12:02:10 |
 | 16 | P1 | DOCUMENT — Poll (attempt 1) | executionId=044ad915-34bf-4b0d-898c-4676ed798c40 | WORKFLOW_COMPLETED — 100% progress, full documentation generated | 200 | COMPLETED ✅ | 12:03:00 |
 | 17 | P1 | Fetch Domain File List for convert (attempt 1) | {"screen":"convert","workBenchId":150,"limit":100,"offset":0,"status":[...]} | {"data":[{"id":370,"analysisStatus":"ANALYSE_PROCESSING","docStatus":"DOCUMENT_IN_PROGRESS"}],"status":"SUCCESS"} — Still processing | 200 | IN PROGRESS 🔄 | 12:03:10 |
+| 18 | P1 | Fetch Domain File List for convert (attempt 2) | {"screen":"convert","workBenchId":150,"limit":100,"offset":0,"status":[...]} | {"data":[{"id":370,"analysisStatus":"ANALYSE_PROCESSING","docStatus":"DOCUMENT_IN_PROGRESS"}],"status":"SUCCESS"} — Still processing | 200 | IN PROGRESS 🔄 | 12:03:20 |
 
 ---
 
@@ -83,4 +84,4 @@
 
 ---
 
-*Last updated: 12:03:10*
+*Last updated: 12:03:20*
