@@ -5,7 +5,7 @@
 **Model Used** : GPT-4o
 **Pipelines** : 1
 **Run Started** : 00:00:00
-**Last Updated** : 00:15:00
+**Last Updated** : 00:16:00
 **Status** : IN PROGRESS 🔄
 
 ---
@@ -54,7 +54,8 @@
 | 15 | P1 | CONVERT — Poll Attempt 1 | Status: SUCCESS — WORKFLOW_COMPLETED | COMPLETED ✅ | 00:13:00 |
 | 16 | P1 | CONVERT — Fetch Result | domainId:931 — Convert Request success | SUCCESS ✅ | 00:14:00 |
 | 17 | P1 | Fetch Domain File List (testbuild screen) | Silver_Schema_DDL (id:931) — convertStatus: CONVERTED ✅ | COMPLETED ✅ | 00:15:00 |
-| 18 | P1 | FUNCTIONAL_TEST — Submit | Triggering functional test for domainId: 931 | IN PROGRESS 🔄 | 00:15:00 |
+| 18 | P1 | FUNCTIONAL_TEST — Submit | executionId: 0d470838-e61d-4590-aad2-49f56121bcfc | SUBMITTED 🔄 | 00:16:00 |
+| 19 | P1 | FUNCTIONAL_TEST — Poll Attempt 1 | Polling executionId: 0d470838-e61d-4590-aad2-49f56121bcfc | IN PROGRESS 🔄 | 00:16:00 |
 
 ---
 
@@ -73,4 +74,4 @@
 
 ---
 
-*Last updated: 00:15:00*
+*Last updated: 00:16:00*
