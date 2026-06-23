@@ -5,7 +5,7 @@
 **Model Used**   : GPT-4o
 **Pipelines**    : 1
 **Run Started**  : 12:00:00
-**Last Updated** : 12:01:20
+**Last Updated** : 12:01:30
 **Status**       : IN PROGRESS 🔄
 
 ---
@@ -22,7 +22,7 @@
 
 | Task | Required | Status |
 |------|----------|--------|
-| ANALYZE | Yes | PENDING ⏳ |
+| ANALYZE | Yes | SUBMITTED 🔄 |
 | DOCUMENT | Yes | PENDING ⏳ |
 | CONVERT | Yes | PENDING ⏳ |
 | FUNCTIONAL_TEST | Yes | PENDING ⏳ |
@@ -62,6 +62,7 @@
 | 7 | P1 | Upload File | email=aarthy.jr@ascendion.com&domainName=Sales&workBenchId=150&override=No&platform=aws | files=["Silver_Schema_DDL.sql"] — 1 file uploaded successfully | 200 | COMPLETED ✅ | 12:01:00 |
 | 8 | P1 | Fetch Domain File List (post-upload, attempt 1) | {"screen":"analyze","workBenchId":150,"limit":100,"offset":0,"status":[...]} | {"data":[{"id":370,"objectName":"Silver_Schema_DDL","domainName":"Sales","fileType":".sql","status":"UPLOADED"}],"status":"SUCCESS"} | 200 | COMPLETED ✅ | 12:01:10 |
 | 9 | P1 | Fetch Domain Names | GET /dms/domain/150 | {"data":{"workBenchId":150,"domainList":["Sales"]},"status":"SUCCESS"} | 200 | COMPLETED ✅ | 12:01:20 |
+| 10 | P1 | ANALYZE — Submit | {"email":"aarthy.jr@ascendion.com","workBenchId":150,"domainIds":[370],"platform":"aws"} | {"data":{"executionId":"165557e5-3859-42c2-8da0-459a1b16631d","success":true,"message":"Workflow submitted successfully"},"status":"SUCCESS"} | 200 | SUBMITTED 🔄 | 12:01:30 |
 
 ---
 
@@ -71,4 +72,4 @@ None so far.
 
 ---
 
-*Last updated: 12:01:20*
+*Last updated: 12:01:30*
