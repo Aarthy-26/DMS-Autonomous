@@ -5,7 +5,7 @@
 **Model Used**   : Claude Sonnet 4.5
 **Pipelines**    : 1
 **Run Started**  : 2025-07-25 00:00:00
-**Last Updated** : 2025-07-25 00:00:18
+**Last Updated** : 2025-07-25 00:00:19
 **Status**       : IN PROGRESS 🔄
 
 ---
@@ -24,7 +24,7 @@
 |------|----------|--------|
 | ANALYZE | Yes | COMPLETED ✅ |
 | DOCUMENT | Yes | COMPLETED ✅ |
-| CONVERT | Yes | IN PROGRESS 🔄 |
+| CONVERT | Yes | SUBMITTED 🔄 |
 | FUNCTIONAL_TEST | Yes | PENDING ⏳ |
 | UNIT_TEST | Yes | PENDING ⏳ |
 | RECONCILIATION | Yes | PENDING ⏳ |
@@ -62,7 +62,8 @@
 | 15 | P1 | DOCUMENT — Submit | {"email":"aarthy.jr@ascendion.com","workBenchId":128,"domainIds":[928],"platform":"aws"} | {"data":{"message":"Workflow submitted successfully","success":true,"executionId":"cee61659-eb8b-4f9f-bf3b-04d5bfb9cfcd"},"status":"SUCCESS"} | 200 | SUBMITTED 🔄 | 00:00:15 |
 | 16 | P1 | DOCUMENT — Poll attempt 1 | executionId=cee61659-eb8b-4f9f-bf3b-04d5bfb9cfcd | WORKFLOW_COMPLETED — status=SUCCESS | 200 | COMPLETED ✅ | 00:00:16 |
 | 17 | P1 | Fetch Domain File List for convert | {"screen":"convert","workBenchId":128,"limit":50,"offset":0} | {"data":[{"id":928,"objectName":"Silver_Schema_DDL","domainName":"silver","analysisStatus":"ANALYSE_PROCESSING","docStatus":"DOCUMENT_IN_PROGRESS","status":"UPLOADED"}],"status":"SUCCESS"} | 200 | COMPLETED ✅ | 00:00:17 |
-| 18 | P1 | Mapping API | {"additionalPrompt":"Use Language= Python","mapId":[928],"mappingEnabled":"true","sourceName":"ORACLE","targetName":"SNOWFLAKE","workbenchId":128,"workbenchName":"ORACLE to Snowflake"} | {"errors":[{"status":400,"code":"ERR-5001","message":"Malformed JSON request"}],"status":"FAILURE"} — Non-blocking, proceeding to CONVERT | 400 | FAILED ❌ (non-blocking) | 00:00:18 |
+| 18 | P1 | Mapping API | {"additionalPrompt":"Use Language= Python","mapId":[928],"mappingEnabled":"true","sourceName":"ORACLE","targetName":"SNOWFLAKE","workbenchId":128,"workbenchName":"ORACLE to Snowflake"} | {"errors":[{"status":400,"code":"ERR-5001","message":"Malformed JSON request"}],"status":"FAILURE"} — Non-blocking | 400 | FAILED ❌ (non-blocking) | 00:00:18 |
+| 19 | P1 | CONVERT — Submit | {"email":"aarthy.jr@ascendion.com","workBenchId":128,"domainIds":[928],"objectNames":["Silver_Schema_DDL"],"platform":"aws"} | {"data":{"executionId":"00b5a468-b045-4861-8521-705fda926669","success":true,"message":"Workflow submitted successfully"},"status":"SUCCESS"} | 200 | SUBMITTED 🔄 | 00:00:19 |
 
 ---
 
@@ -87,4 +88,4 @@
 
 ---
 
-*Last updated: 2025-07-25 00:00:18*
+*Last updated: 2025-07-25 00:00:19*
