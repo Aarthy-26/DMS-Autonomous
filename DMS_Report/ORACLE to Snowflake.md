@@ -5,7 +5,7 @@
 **Model Used** : GPT-4o
 **Pipelines** : 1
 **Run Started** : 07:00:00
-**Last Updated** : 07:08:00
+**Last Updated** : 07:10:00
 **Status** : IN PROGRESS 🔄
 
 ---
@@ -53,7 +53,9 @@
 | 14 | P1 | ANALYSE — Poll Attempt 2 | Status: IN_PROGRESS | IN PROGRESS 🔄 | 07:05:00 |
 | 15 | P1 | ANALYSE — Poll Attempt 3 | Status: COMPLETED (WORKFLOW_FINISHED) | COMPLETED ✅ | 07:06:00 |
 | 16 | P1 | ANALYSE — Fetch Result | Analysis completed successfully | SUCCESS ✅ | 07:07:00 |
-| 17 | P1 | DOCUMENT — Submit | domainId: 372 | IN PROGRESS 🔄 | 07:08:00 |
+| 17 | P1 | DOCUMENT — Submit | executionId: d993a96c-5ea7-4899-ae31-f803aebecf15 | SUBMITTED 🔄 | 07:08:00 |
+| 18 | P1 | DOCUMENT — Poll Attempt 1 | Status: IN_PROGRESS | IN PROGRESS 🔄 | 07:09:00 |
+| 19 | P1 | DOCUMENT — Poll Attempt 2 | Status: IN_PROGRESS | IN PROGRESS 🔄 | 07:10:00 |
 
 ---
 
@@ -72,4 +74,4 @@
 
 ---
 
-*Last updated: 07:08:00*
+*Last updated: 07:10:00*
