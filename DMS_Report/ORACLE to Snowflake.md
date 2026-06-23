@@ -5,7 +5,7 @@
 **Model Used**   : Claude Sonnet 4.5
 **Pipelines**    : 1
 **Run Started**  : 2025-07-25 00:00:00
-**Last Updated** : 2025-07-25 00:00:17
+**Last Updated** : 2025-07-25 00:00:18
 **Status**       : IN PROGRESS 🔄
 
 ---
@@ -62,6 +62,7 @@
 | 15 | P1 | DOCUMENT — Submit | {"email":"aarthy.jr@ascendion.com","workBenchId":128,"domainIds":[928],"platform":"aws"} | {"data":{"message":"Workflow submitted successfully","success":true,"executionId":"cee61659-eb8b-4f9f-bf3b-04d5bfb9cfcd"},"status":"SUCCESS"} | 200 | SUBMITTED 🔄 | 00:00:15 |
 | 16 | P1 | DOCUMENT — Poll attempt 1 | executionId=cee61659-eb8b-4f9f-bf3b-04d5bfb9cfcd | WORKFLOW_COMPLETED — status=SUCCESS | 200 | COMPLETED ✅ | 00:00:16 |
 | 17 | P1 | Fetch Domain File List for convert | {"screen":"convert","workBenchId":128,"limit":50,"offset":0} | {"data":[{"id":928,"objectName":"Silver_Schema_DDL","domainName":"silver","analysisStatus":"ANALYSE_PROCESSING","docStatus":"DOCUMENT_IN_PROGRESS","status":"UPLOADED"}],"status":"SUCCESS"} | 200 | COMPLETED ✅ | 00:00:17 |
+| 18 | P1 | Mapping API | {"additionalPrompt":"Use Language= Python","mapId":[928],"mappingEnabled":"true","sourceName":"ORACLE","targetName":"SNOWFLAKE","workbenchId":128,"workbenchName":"ORACLE to Snowflake"} | {"errors":[{"status":400,"code":"ERR-5001","message":"Malformed JSON request"}],"status":"FAILURE"} — Non-blocking, proceeding to CONVERT | 400 | FAILED ❌ (non-blocking) | 00:00:18 |
 
 ---
 
@@ -74,6 +75,7 @@
 | 7 | P1 | Upload File (attempt 3) | domainName=oracle_snowflake | {"errors":[{"status":500,"code":"ERR-5000","message":"An unexpected error occurred"}],"status":"FAILURE"} | 500 | 00:00:07 |
 | 9 | P1 | Upload File (attempt 4) | domainName=ORACLE_SNOWFLAKE | {"errors":[{"status":500,"code":"ERR-5000","message":"An unexpected error occurred"}],"status":"FAILURE"} | 500 | 00:00:09 |
 | 14 | P1 | ANALYZE — Fetch Result | testcase=analyze | {"errors":[{"status":400,"code":"ERR-400","message":"Unsupported testcase: analyze"}]} — Non-blocking | 400 | 00:00:14 |
+| 18 | P1 | Mapping API | mapId=[928], additionalPrompt="Use Language= Python" | {"errors":[{"status":400,"code":"ERR-5001","message":"Malformed JSON request"}],"status":"FAILURE"} — Non-blocking | 400 | 00:00:18 |
 
 ---
 
@@ -85,4 +87,4 @@
 
 ---
 
-*Last updated: 2025-07-25 00:00:17*
+*Last updated: 2025-07-25 00:00:18*
