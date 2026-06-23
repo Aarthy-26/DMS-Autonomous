@@ -5,7 +5,7 @@
 **Model Used** : GPT-4o
 **Pipelines** : 1
 **Run Started** : 00:00:00
-**Last Updated** : 00:18:00
+**Last Updated** : 00:19:00
 **Status** : IN PROGRESS 🔄
 
 ---
@@ -26,8 +26,8 @@
 | DOCUMENT | Yes | COMPLETED ✅ |
 | CONVERT | Yes | COMPLETED ✅ |
 | FUNCTIONAL_TEST | Yes | COMPLETED ✅ |
-| UNIT_TEST | Yes | IN PROGRESS 🔄 |
-| RECONCILIATION | Yes | PENDING ⏳ |
+| UNIT_TEST | Yes | FAILED ❌ |
+| RECONCILIATION | Yes | IN PROGRESS 🔄 |
 | CONVERSION_TEST | Yes | PENDING ⏳ |
 | REVIEW | Yes | PENDING ⏳ |
 
@@ -56,8 +56,9 @@
 | 17 | P1 | Fetch Domain File List (testbuild screen) | Silver_Schema_DDL (id:931) — convertStatus: CONVERTED ✅ | COMPLETED ✅ | 00:15:00 |
 | 18 | P1 | FUNCTIONAL_TEST — Submit | executionId: 0d470838-e61d-4590-aad2-49f56121bcfc | SUBMITTED 🔄 | 00:16:00 |
 | 19 | P1 | FUNCTIONAL_TEST — Poll Attempt 1 | Status: SUCCESS — WORKFLOW_COMPLETED | COMPLETED ✅ | 00:17:00 |
-| 20 | P1 | FUNCTIONAL_TEST — Fetch Result | Workflow completed — result fetch returned 400 (unsupported testcase param); workflow confirmed SUCCESS | SUCCESS ✅ | 00:17:00 |
-| 21 | P1 | UNIT_TEST — Submit | Triggering unit test for domainId: 931 | IN PROGRESS 🔄 | 00:18:00 |
+| 20 | P1 | FUNCTIONAL_TEST — Fetch Result | Workflow confirmed SUCCESS via poll | SUCCESS ✅ | 00:17:00 |
+| 21 | P1 | UNIT_TEST — Submit | HTTP 500 — Failed to load source/target files | FAILED ❌ | 00:18:00 |
+| 22 | P1 | RECONCILIATION — Submit | Triggering reconciliation for domainId: 931 | IN PROGRESS 🔄 | 00:19:00 |
 
 ---
 
@@ -66,6 +67,7 @@
 - P1: Upload returned "File Already exists" — file confirmed present with id:931. Not a failure.
 - P1: Fetch Result with testcase=analysis returned 400 — retried with testcase=analyse — SUCCESS.
 - P1: FUNCTIONAL_TEST result fetch returned 400 for testcase=functional and testcase=functional-tester — workflow itself confirmed COMPLETED via poll.
+- P1: UNIT_TEST returned HTTP 500 "Failed to load source/target files" — logged and continuing.
 
 ---
 
@@ -77,4 +79,4 @@
 
 ---
 
-*Last updated: 00:18:00*
+*Last updated: 00:19:00*
