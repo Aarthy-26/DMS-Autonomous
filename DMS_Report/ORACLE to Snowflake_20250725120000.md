@@ -5,7 +5,7 @@
 **Model Used**   : GPT-4o
 **Pipelines**    : 1
 **Run Started**  : 12:00:00
-**Last Updated** : 12:01:00
+**Last Updated** : 12:01:10
 **Status**       : IN PROGRESS 🔄
 
 ---
@@ -60,6 +60,7 @@
 | 5 | P1 | Create Workbench | {"email":"aarthy.jr@ascendion.com","workBench":{"workBenchName":"ORACLE to Snowflake_20250725120000","sourceTech":"ORACLE","targetTech":"SNOWFLAKE","description":"ORACLE to SNOWFLAKE migration workbench"}} | {"data":{"message":"workbench saved successfully","workbenchId":150},"status":"SUCCESS"} | 200 | COMPLETED ✅ | 12:00:40 |
 | 6 | P1 | Fetch Domain File List (pre-upload) | {"screen":"analyze","workBenchId":150,"limit":100,"offset":0,"status":[...]} | {"data":[],"status":"SUCCESS"} — No files yet | 200 | COMPLETED ✅ | 12:00:50 |
 | 7 | P1 | Upload File | email=aarthy.jr@ascendion.com&domainName=Sales&workBenchId=150&override=No&platform=aws | files=["Silver_Schema_DDL.sql"] — 1 file uploaded successfully | 200 | COMPLETED ✅ | 12:01:00 |
+| 8 | P1 | Fetch Domain File List (post-upload, attempt 1) | {"screen":"analyze","workBenchId":150,"limit":100,"offset":0,"status":[...]} | {"data":[{"id":370,"objectName":"Silver_Schema_DDL","domainName":"Sales","fileType":".sql","status":"UPLOADED","analysisStatus":null}],"status":"SUCCESS"} | 200 | COMPLETED ✅ | 12:01:10 |
 
 ---
 
@@ -69,4 +70,4 @@ None so far.
 
 ---
 
-*Last updated: 12:01:00*
+*Last updated: 12:01:10*
