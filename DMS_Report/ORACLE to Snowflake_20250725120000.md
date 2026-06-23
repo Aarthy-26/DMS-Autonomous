@@ -5,7 +5,7 @@
 **Model Used**   : GPT-4o
 **Pipelines**    : 1
 **Run Started**  : 12:00:00
-**Last Updated** : 12:04:20
+**Last Updated** : 12:04:30
 **Status**       : IN PROGRESS 🔄
 
 ---
@@ -69,14 +69,7 @@
 | 14 | P1 | ANALYZE — Fetch Result (attempt 3) | no testcase | {"errors":[{"message":"Required parameter testcase missing"}],"status":"FAILURE"} | 400 | FAILED ❌ | 12:02:00 |
 | 15 | P1 | DOCUMENT — Submit | {"email":"aarthy.jr@ascendion.com","workBenchId":150,"domainIds":[370],"platform":"aws"} | {"data":{"executionId":"044ad915-34bf-4b0d-898c-4676ed798c40","success":true,"message":"Workflow submitted successfully"},"status":"SUCCESS"} | 200 | SUBMITTED 🔄 | 12:02:10 |
 | 16 | P1 | DOCUMENT — Poll (attempt 1) | executionId=044ad915-34bf-4b0d-898c-4676ed798c40 | WORKFLOW_COMPLETED — 100% progress, full documentation generated | 200 | COMPLETED ✅ | 12:03:00 |
-| 17 | P1 | Fetch Domain File List for convert (attempt 1) | {"screen":"convert","workBenchId":150} | {"data":[{"id":370,"analysisStatus":"ANALYSE_PROCESSING","docStatus":"DOCUMENT_IN_PROGRESS"}]} | 200 | IN PROGRESS 🔄 | 12:03:10 |
-| 18 | P1 | Fetch Domain File List for convert (attempt 2) | {"screen":"convert","workBenchId":150} | {"data":[{"id":370,"analysisStatus":"ANALYSE_PROCESSING","docStatus":"DOCUMENT_IN_PROGRESS"}]} | 200 | IN PROGRESS 🔄 | 12:03:20 |
-| 19 | P1 | Fetch Domain File List for convert (attempt 3) | {"screen":"convert","workBenchId":150} | {"data":[{"id":370,"analysisStatus":"ANALYSE_PROCESSING","docStatus":"DOCUMENT_IN_PROGRESS"}]} | 200 | IN PROGRESS 🔄 | 12:03:30 |
-| 20 | P1 | Fetch Domain File List for convert (attempt 4) | {"screen":"convert","workBenchId":150} | {"data":[{"id":370,"analysisStatus":"ANALYSE_PROCESSING","docStatus":"DOCUMENT_IN_PROGRESS"}]} | 200 | IN PROGRESS 🔄 | 12:03:40 |
-| 21 | P1 | Fetch Domain File List for convert (attempt 5) | {"screen":"convert","workBenchId":150} | {"data":[{"id":370,"analysisStatus":"ANALYSE_PROCESSING","docStatus":"DOCUMENT_IN_PROGRESS"}]} | 200 | IN PROGRESS 🔄 | 12:03:50 |
-| 22 | P1 | Fetch Domain File List for convert (attempt 6) | {"screen":"convert","workBenchId":150} | {"data":[{"id":370,"analysisStatus":"ANALYSE_PROCESSING","docStatus":"DOCUMENT_IN_PROGRESS"}]} | 200 | IN PROGRESS 🔄 | 12:04:00 |
-| 23 | P1 | Fetch Domain File List for convert (attempt 7) | {"screen":"convert","workBenchId":150} | {"data":[{"id":370,"analysisStatus":"ANALYSE_PROCESSING","docStatus":"DOCUMENT_IN_PROGRESS"}]} | 200 | IN PROGRESS 🔄 | 12:04:10 |
-| 24 | P1 | Fetch Domain File List for convert (attempt 8) | {"screen":"convert","workBenchId":150} | {"data":[{"id":370,"analysisStatus":"ANALYSE_PROCESSING","docStatus":"DOCUMENT_IN_PROGRESS"}]} | 200 | IN PROGRESS 🔄 | 12:04:20 |
+| 17-25 | P1 | Fetch Domain File List for convert (attempts 1-9) | {"screen":"convert","workBenchId":150} | {"data":[{"id":370,"analysisStatus":"ANALYSE_PROCESSING","docStatus":"DOCUMENT_IN_PROGRESS"}]} — Polling, not a failure per rules | 200 | IN PROGRESS 🔄 | 12:03:10–12:04:30 |
 
 ---
 
@@ -90,4 +83,4 @@
 
 ---
 
-*Last updated: 12:04:20*
+*Last updated: 12:04:30*
