@@ -5,7 +5,7 @@
 **Model Used** : GPT-4o
 **Pipelines** : 1
 **Run Started** : 00:00:01
-**Last Updated** : 00:01:00
+**Last Updated** : 00:02:00
 **Status** : IN PROGRESS 🔄
 
 ---
@@ -14,7 +14,7 @@
 
 | Pipeline | Source | Target | Workbench | Status |
 |----------|--------|--------|-----------|--------|
-| P1 | ORACLE | SNOWFLAKE | ORACLE to Snowflake | IN PROGRESS 🔄 |
+| P1 | ORACLE | SNOWFLAKE | ORACLE to Snowflake (WB ID: 128) | IN PROGRESS 🔄 |
 
 ---
 
@@ -39,6 +39,8 @@
 |------|----------|--------|--------|--------|------|
 | 1 | — | Inputs Validated | All 4 inputs confirmed | COMPLETED ✅ | 00:00:01 |
 | 2 | P1 | Generate Access Token | Token generated successfully | COMPLETED ✅ | 00:01:00 |
+| 3 | P1 | Fetch Domain File List (pre-upload) | screen=analyze, WB=128 — 0 files found | COMPLETED ✅ | 00:02:00 |
+| 4 | P1 | Upload File | Uploading Silver_Schema_DDL.txt — IN PROGRESS | IN PROGRESS 🔄 | 00:02:05 |
 
 ---
 
@@ -56,4 +58,4 @@ None so far.
 
 ---
 
-*Last updated: 00:01:00*
+*Last updated: 00:02:05*
