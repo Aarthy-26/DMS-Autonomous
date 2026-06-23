@@ -5,7 +5,7 @@
 **Model Used**   : GPT-4
 **Pipelines**    : 2
 **Run Started**  : 12:00:00
-**Last Updated** : 12:12:00
+**Last Updated** : 12:13:00
 **Status**       : IN PROGRESS 🔄
 
 ---
@@ -23,7 +23,7 @@
 
 | Task | Required | Status |
 |------|----------|--------|
-| ANALYZE | Yes | PENDING ⏳ |
+| ANALYZE | Yes | IN PROGRESS 🔄 |
 | DOCUMENT | Yes | PENDING ⏳ |
 | CONVERT | Yes | PENDING ⏳ |
 | FUNCTIONAL_TEST | Yes | PENDING ⏳ |
@@ -70,6 +70,8 @@
 | 12 | P2 | Upload File | email=aarthy.jr@ascendion.com&domainName=Sales&workBenchId=145&override=No&platform=aws | FACT_SALES_LOAD.btq uploaded successfully | 200 | COMPLETED ✅ | 12:10:00 |
 | 13 | P2 | Poll Domain File List (attempt 1) | {"screen":"analyze","workBenchId":145,"limit":100,"offset":0} | 502 Bad Gateway | 502 | IN PROGRESS 🔄 | 12:11:00 |
 | 14 | P2 | Poll Domain File List (attempt 2) | {"screen":"analyze","workBenchId":145,"limit":100,"offset":0} | {"data":[{"id":365,"objectName":"FACT_SALES_LOAD","status":"UPLOADED","domainName":"Sales","fileType":".btq"}],"status":"SUCCESS"} | 200 | COMPLETED ✅ | 12:12:00 |
+| 15 | P1 | Fetch Domain Names | GET /domain/144 | {"domainList":["Sales"],"workBenchId":144} | 200 | COMPLETED ✅ | 12:12:30 |
+| 16 | P1 | ANALYZE — Submit (attempt 1) | {"email":"aarthy.jr@ascendion.com","workBenchId":144,"domainIds":[364],"platform":"aws"} | {"errors":[{"status":400,"code":"ERR-400","message":"{success=false, message=Pipeline ID not found}"}],"status":"FAILURE"} | 400 | FAILED ❌ | 12:13:00 |
 
 ---
 
@@ -78,7 +80,8 @@
 | Step | Pipeline | Action | Request | Error Response | HTTP Status | Time |
 |------|----------|--------|---------|---------------|-------------|------|
 | 13 | P2 | Poll Domain File List (attempt 1) | {"screen":"analyze","workBenchId":145} | 502 Bad Gateway - retried successfully | 502 | 12:11:00 |
+| 16 | P1 | ANALYZE — Submit (attempt 1) | {"workBenchId":144,"domainIds":[364],"platform":"aws"} | {"message":"Pipeline ID not found"} — retrying | 400 | 12:13:00 |
 
 ---
 
-*Last updated: 12:12:00*
+*Last updated: 12:13:00*
