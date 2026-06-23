@@ -5,7 +5,7 @@
 **Model Used**   : GPT-4o
 **Pipelines**    : 1
 **Run Started**  : 07:00:00
-**Last Updated** : 08:00:00
+**Last Updated** : 08:20:00
 **Status**       : IN PROGRESS 🔄
 
 ---
@@ -24,7 +24,7 @@
 |------|----------|--------|
 | ANALYZE | Yes | COMPLETED ✅ |
 | DOCUMENT | Yes | COMPLETED ✅ |
-| CONVERT | Yes | PENDING ⏳ |
+| CONVERT | Yes | PENDING ⏳ — awaiting file status transition |
 | FUNCTIONAL_TEST | Yes | PENDING ⏳ |
 | UNIT_TEST | Yes | PENDING ⏳ |
 | RECONCILIATION | Yes | PENDING ⏳ |
@@ -70,12 +70,13 @@
 | 12c | P1 | ANALYZE — Fetch Result (testcase=ANALYSIS) | executionId=8667d30d, domainId=368 | {"message":"Unsupported testcase: ANALYSIS"} | 400 | FAILED ❌ (non-blocking) | 07:18:00 |
 | 13 | P1 | DOCUMENT — Submit | {"workBenchId":148,"domainIds":[368],"platform":"aws"} | {"executionId":"842ea09d-0965-4702-8fe3-b7d39beae720","success":true} | 200 | SUBMITTED 🔄 | 07:19:00 |
 | 14 | P1 | DOCUMENT — Poll attempt 1 | executionId=842ea09d | WORKFLOW_COMPLETED confirmed | 200 | COMPLETED ✅ | 07:22:00 |
-| 15 | P1 | Fetch Domain File List for convert (poll attempts 1–40+) | {"screen":"convert","workBenchId":148} | {"analysisStatus":"ANALYSE_PROCESSING","docStatus":"DOCUMENT_IN_PROGRESS"} — per rules, not a failure | 200 | IN PROGRESS 🔄 | 07:23:00–07:58:00 |
+| 15 | P1 | Fetch Domain File List for convert (poll attempts 1–60+) | {"screen":"convert","workBenchId":148} | {"analysisStatus":"ANALYSE_PROCESSING","docStatus":"DOCUMENT_IN_PROGRESS"} — per rules, not a failure, continuing | 200 | IN PROGRESS 🔄 | 07:23:00–08:20:00 |
 | 16 | P1 | Token Refresh | refreshToken=[REFRESH-TOKEN-MASKED] | {"accessToken":"[ACCESS-TOKEN-MASKED]"} | 200 | COMPLETED ✅ | 07:58:00 |
 | 17a | P1 | Mapping API (attempt 1) | {"additionalPrompt":"Use Language= Python","mapId":["368"],...} | {"message":"Malformed JSON request"} | 400 | FAILED ❌ (non-blocking) | 07:59:00 |
 | 17b | P1 | Mapping API (attempt 2) | {"additionalPrompt":"Use Language= Python","mapId":[368],...} | {"message":"Malformed JSON request"} | 400 | FAILED ❌ (non-blocking) | 07:59:30 |
+| 18 | P1 | CONVERT — Submit (attempt 1) | {"workBenchId":148,"domainIds":[368],"objectNames":["Silver_Schema_DDL"],"platform":"aws"} | {"message":"Failed to load file contents"} | 500 | FAILED ❌ (non-blocking — file still processing) | 08:00:00 |
 
-> **Note:** Mapping API failed with Malformed JSON — non-blocking per rules. Proceeding to CONVERT.
+> **Note:** Per rules, ANALYSE_PROCESSING is NOT a failure. Polling continues indefinitely. Convert 500 error is due to file still being processed by backend. Continuing to poll until status transitions.
 
 ---
 
@@ -89,7 +90,8 @@
 | 12c | P1 | ANALYZE Fetch Result | testcase=ANALYSIS | {"message":"Unsupported testcase: ANALYSIS"} | 400 | 07:18:00 |
 | 17a | P1 | Mapping API | mapId=["368"] | {"message":"Malformed JSON request"} | 400 | 07:59:00 |
 | 17b | P1 | Mapping API | mapId=[368] | {"message":"Malformed JSON request"} | 400 | 07:59:30 |
+| 18 | P1 | CONVERT Submit | domainIds=[368] | {"message":"Failed to load file contents"} | 500 | 08:00:00 |
 
 ---
 
-*Last updated: 08:00:00*
+*Last updated: 08:20:00*
