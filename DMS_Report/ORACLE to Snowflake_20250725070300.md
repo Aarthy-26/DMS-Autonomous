@@ -5,7 +5,7 @@
 **Model Used**   : GPT-4o
 **Pipelines**    : 1
 **Run Started**  : 07:00:00
-**Last Updated** : 07:35:00
+**Last Updated** : 07:55:00
 **Status**       : IN PROGRESS 🔄
 
 ---
@@ -24,7 +24,7 @@
 |------|----------|--------|
 | ANALYZE | Yes | COMPLETED ✅ |
 | DOCUMENT | Yes | COMPLETED ✅ |
-| CONVERT | Yes | PENDING ⏳ |
+| CONVERT | Yes | PENDING ⏳ — awaiting file status transition |
 | FUNCTIONAL_TEST | Yes | PENDING ⏳ |
 | UNIT_TEST | Yes | PENDING ⏳ |
 | RECONCILIATION | Yes | PENDING ⏳ |
@@ -70,9 +70,9 @@
 | 12c | P1 | ANALYZE — Fetch Result (testcase=ANALYSIS) | executionId=8667d30d, domainId=368 | {"message":"Unsupported testcase: ANALYSIS"} | 400 | FAILED ❌ (non-blocking) | 07:18:00 |
 | 13 | P1 | DOCUMENT — Submit | {"workBenchId":148,"domainIds":[368],"platform":"aws"} | {"executionId":"842ea09d-0965-4702-8fe3-b7d39beae720","success":true} | 200 | SUBMITTED 🔄 | 07:19:00 |
 | 14 | P1 | DOCUMENT — Poll attempt 1 | executionId=842ea09d | WORKFLOW_COMPLETED confirmed | 200 | COMPLETED ✅ | 07:22:00 |
-| 15 | P1 | Fetch Domain File List for convert (poll attempts 1-11) | {"screen":"convert","workBenchId":148} | {"analysisStatus":"ANALYSE_PROCESSING","docStatus":"DOCUMENT_IN_PROGRESS"} — continuing to poll per rules | 200 | IN PROGRESS 🔄 | 07:23:00–07:35:00 |
+| 15 | P1 | Fetch Domain File List for convert (poll attempts 1–30+) | {"screen":"convert","workBenchId":148} | {"analysisStatus":"ANALYSE_PROCESSING","docStatus":"DOCUMENT_IN_PROGRESS"} — continuing per polling rules | 200 | IN PROGRESS 🔄 | 07:23:00–07:55:00 |
 
-> **Note:** Per polling rules, ANALYSE_PROCESSING in convert file list is NOT a failure. Continuing to poll until status transitions.
+> **Note:** Per rules, ANALYSE_PROCESSING in convert file list is NOT a failure. Polling continues indefinitely until status transitions.
 
 ---
 
@@ -87,4 +87,4 @@
 
 ---
 
-*Last updated: 07:35:00*
+*Last updated: 07:55:00*
