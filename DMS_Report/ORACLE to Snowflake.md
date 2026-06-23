@@ -5,7 +5,7 @@
 **Model Used** : GPT-4o
 **Pipelines** : 1
 **Run Started** : 00:00:00
-**Last Updated** : 00:03:00
+**Last Updated** : 00:04:00
 **Status** : IN PROGRESS 🔄
 
 ---
@@ -41,7 +41,8 @@
 | 2 | P1 | Generate Access Token | Token generated successfully | COMPLETED ✅ | 00:01:00 |
 | 3 | P1 | Fetch Domain File List (pre-upload) | WorkbenchId: 128 — Silver_Schema_DDL (id:931) found | COMPLETED ✅ | 00:02:00 |
 | 4 | P1 | Upload File | Silver_Schema_DDL.txt — File already exists (id:931), confirmed present | COMPLETED ✅ | 00:03:00 |
-| 5 | P1 | Fetch Domain Names | Fetching domain names for workbench 128 | IN PROGRESS 🔄 | 00:03:00 |
+| 5 | P1 | Fetch Domain Names | Domains: ORACLE, Sales — ORACLE confirmed | COMPLETED ✅ | 00:04:00 |
+| 6 | P1 | ANALYSE — Submit | Triggering analysis for domainId: 931 | IN PROGRESS 🔄 | 00:04:00 |
 
 ---
 
@@ -59,4 +60,4 @@
 
 ---
 
-*Last updated: 00:03:00*
+*Last updated: 00:04:00*
