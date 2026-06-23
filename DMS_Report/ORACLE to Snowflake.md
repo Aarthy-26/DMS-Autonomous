@@ -5,7 +5,7 @@
 **Model Used**   : GPT-4o
 **Pipelines**    : 1
 **Run Started**  : 10:00:00
-**Last Updated** : 10:00:40
+**Last Updated** : 10:00:50
 **Status**       : IN PROGRESS 🔄
 
 ---
@@ -22,7 +22,7 @@
 
 | Task | Required | Status |
 |------|----------|--------|
-| ANALYZE | Yes | PENDING ⏳ |
+| ANALYZE | Yes | IN PROGRESS 🔄 |
 | DOCUMENT | Yes | PENDING ⏳ |
 | CONVERT | Yes | PENDING ⏳ |
 | FUNCTIONAL_TEST | Yes | PENDING ⏳ |
@@ -58,6 +58,8 @@
 | 3 | P1 | Fetch Domain File List (pre-upload) | {"screen":"analyze","workBenchId":124,"limit":100,"offset":0} | {"data":[{"id":925,"objectName":"Silver_Schema_DDL","domainName":"silver","fileType":".sql","status":"UPLOADED"}],"status":"SUCCESS"} | 200 | COMPLETED ✅ | 10:00:20 |
 | 4 | P1 | Upload File | file=Silver_Schema_DDL.sql, domainName=silver, workBenchId=124, override=No, platform=aws | {"data":{"existingFiles":"Silver_Schema_DDL","message":"File Already exists"},"status":"SUCCESS"} — File confirmed present with id=925 | 208 | COMPLETED ✅ | 10:00:30 |
 | 5 | P1 | Fetch Domain Names | GET /domain/124 | {"data":{"workBenchId":124,"domainList":["silver"]},"status":"SUCCESS"} | 200 | COMPLETED ✅ | 10:00:40 |
+| 6 | P1 | ANALYZE — Submit (Attempt 1) | {"email":"aarthy.jr@ascendion.com","workBenchId":124,"domainIds":[925],"platform":"aws"} | {"errors":[{"status":400,"code":"ERR-400","message":"{success=false, message=Pipeline ID not found}"}],"status":"FAILURE"} | 400 | FAILED ❌ | 10:00:50 |
+| 7 | P1 | ANALYZE — Submit (Retry 1) | Retrying with domainIds=[925], workBenchId=124 | — | — | PENDING ⏳ | 10:00:50 |
 
 ---
 
@@ -66,7 +68,8 @@
 | Step | Pipeline | Action | Request | Error Response | HTTP Status | Time |
 |------|----------|--------|---------|---------------|-------------|------|
 | 4 | P1 | Upload File | Silver_Schema_DDL.sql | File Already exists (non-blocking — file confirmed present with id=925) | 208 | 10:00:30 |
+| 6 | P1 | ANALYZE — Submit | {"workBenchId":124,"domainIds":[925],"platform":"aws"} | {"errors":[{"code":"ERR-400","message":"Pipeline ID not found"}],"status":"FAILURE"} | 400 | 10:00:50 |
 
 ---
 
-*Last updated: 2025-01-20 10:00:40*
+*Last updated: 2025-01-20 10:00:50*
