@@ -5,7 +5,7 @@
 **Model Used**: Claude  
 **Pipelines**: 1  
 **Run Started**: 2024-06-01 10:00:00  
-**Last Updated**: 2024-06-01 10:00:15  
+**Last Updated**: 2024-06-01 10:00:18  
 **Status**: IN PROGRESS 🔄
 
 ---
@@ -46,6 +46,7 @@
 | 7 | P1 | Load Initial Tech | Attempt 2 - HTTP 500 | FAILED ❌ | 10:00:10 |
 | 8 | P1 | Fetch Domain List | Pre-upload check | COMPLETED ✅ | 10:00:12 |
 | 9 | P1 | Upload File | Silver_Schema_DDL.txt | COMPLETED ✅ | 10:00:15 |
+| 10 | P1 | Fetch Domain List | File confirmed - domainId=930 | COMPLETED ✅ | 10:00:18 |
 
 ---
 
@@ -58,10 +59,10 @@
 
 ## UPLOAD SUMMARY
 
-| Pipeline | Mode | Files |
-|----------|------|-------|
-| P1 | SPECIFIC | Silver_Schema_DDL.txt ✅ |
+| Pipeline | Mode | Files | Domain ID |
+|----------|------|-------|-----------|
+| P1 | SPECIFIC | Silver_Schema_DDL.txt | 930 ✅ |
 
 ---
 
-*Last updated: 2024-06-01 10:00:15*
+*Last updated: 2024-06-01 10:00:18*
