@@ -5,7 +5,7 @@
 **Model Used**   : GPT-4o
 **Pipelines**    : 1
 **Run Started**  : 12:00:00
-**Last Updated** : 12:04:30
+**Last Updated** : 12:04:40
 **Status**       : IN PROGRESS 🔄
 
 ---
@@ -69,7 +69,7 @@
 | 14 | P1 | ANALYZE — Fetch Result (attempt 3) | no testcase | {"errors":[{"message":"Required parameter testcase missing"}],"status":"FAILURE"} | 400 | FAILED ❌ | 12:02:00 |
 | 15 | P1 | DOCUMENT — Submit | {"email":"aarthy.jr@ascendion.com","workBenchId":150,"domainIds":[370],"platform":"aws"} | {"data":{"executionId":"044ad915-34bf-4b0d-898c-4676ed798c40","success":true,"message":"Workflow submitted successfully"},"status":"SUCCESS"} | 200 | SUBMITTED 🔄 | 12:02:10 |
 | 16 | P1 | DOCUMENT — Poll (attempt 1) | executionId=044ad915-34bf-4b0d-898c-4676ed798c40 | WORKFLOW_COMPLETED — 100% progress, full documentation generated | 200 | COMPLETED ✅ | 12:03:00 |
-| 17-25 | P1 | Fetch Domain File List for convert (attempts 1-9) | {"screen":"convert","workBenchId":150} | {"data":[{"id":370,"analysisStatus":"ANALYSE_PROCESSING","docStatus":"DOCUMENT_IN_PROGRESS"}]} — Polling, not a failure per rules | 200 | IN PROGRESS 🔄 | 12:03:10–12:04:30 |
+| 17-26 | P1 | Fetch Domain File List for convert (attempts 1-10) | {"screen":"convert","workBenchId":150} | {"data":[{"id":370,"analysisStatus":"ANALYSE_PROCESSING","docStatus":"DOCUMENT_IN_PROGRESS"}]} — Polling per rules (ANALYSE_PROCESSING is not a failure) | 200 | IN PROGRESS 🔄 | 12:03:10–12:04:40 |
 
 ---
 
@@ -83,4 +83,4 @@
 
 ---
 
-*Last updated: 12:04:30*
+*Last updated: 12:04:40*
