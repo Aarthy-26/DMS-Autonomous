@@ -5,7 +5,7 @@
 **Model Used** : GPT-4o
 **Pipelines** : 1
 **Run Started** : 00:00:01
-**Last Updated** : 00:04:00
+**Last Updated** : 00:06:00
 **Status** : IN PROGRESS 🔄
 
 ---
@@ -43,12 +43,16 @@
 | 4 | P1 | Upload File | Silver_Schema_DDL.txt uploaded successfully | COMPLETED ✅ | 00:02:30 |
 | 5 | P1 | Fetch Domain File List (post-upload poll attempt 1) | Silver_Schema_DDL.txt confirmed — domainId=931, status=UPLOADED | COMPLETED ✅ | 00:03:30 |
 | 6 | P1 | ANALYZE — Submit | domainId=931, executionId=f69043a9-56f6-4636-8731-febbc1190747 | SUBMITTED 🔄 | 00:04:00 |
+| 7 | P1 | ANALYZE — Poll attempt 1 | status=IN_PROGRESS | IN PROGRESS 🔄 | 00:04:30 |
+| 8 | P1 | ANALYZE — Poll attempt 2 | status=COMPLETED (WORKFLOW_COMPLETED confirmed in logs) | COMPLETED ✅ | 00:05:00 |
+| 9 | P1 | Fetch Execution Result (analyze) | Workflow COMPLETED — analysisStatus=ANALYSE_PROCESSING (backend updating) | IN PROGRESS 🔄 | 00:05:30 |
+| 10 | P1 | Fetch Domain File List (poll attempt 1 — waiting for ANALYZED) | analysisStatus=ANALYSE_PROCESSING — continuing poll | IN PROGRESS 🔄 | 00:06:00 |
 
 ---
 
 ## ERRORS AND WARNINGS
 
-None so far.
+- Fetch Execution Result: testcase=analyze and testcase=analysis both returned 400 (Unsupported testcase). Result confirmed via workflow logs directly.
 
 ---
 
@@ -60,4 +64,4 @@ None so far.
 
 ---
 
-*Last updated: 00:04:00*
+*Last updated: 00:06:00*
