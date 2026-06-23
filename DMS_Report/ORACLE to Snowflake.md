@@ -5,7 +5,7 @@
 **Model Used** : GPT-4o
 **Pipelines** : 1
 **Run Started** : 00:00:00
-**Last Updated** : 00:09:00
+**Last Updated** : 00:11:00
 **Status** : IN PROGRESS 🔄
 
 ---
@@ -23,8 +23,8 @@
 | Task | Required | Status |
 |------|----------|--------|
 | ANALYSE | Yes | COMPLETED ✅ |
-| DOCUMENT | Yes | IN PROGRESS 🔄 |
-| CONVERT | Yes | PENDING ⏳ |
+| DOCUMENT | Yes | COMPLETED ✅ |
+| CONVERT | Yes | IN PROGRESS 🔄 |
 | FUNCTIONAL_TEST | Yes | PENDING ⏳ |
 | UNIT_TEST | Yes | PENDING ⏳ |
 | RECONCILIATION | Yes | PENDING ⏳ |
@@ -47,7 +47,10 @@
 | 8 | P1 | ANALYSE — Poll Attempt 2 | Status: SUCCESS — WORKFLOW_COMPLETED | COMPLETED ✅ | 00:07:00 |
 | 9 | P1 | ANALYSE — Fetch Result | domainId:931 — Analysis completed successfully | SUCCESS ✅ | 00:08:00 |
 | 10 | P1 | DOCUMENT — Submit | executionId: a2407530-d67c-4905-9ca7-8418b5a4b813 | SUBMITTED 🔄 | 00:09:00 |
-| 11 | P1 | DOCUMENT — Poll Attempt 1 | Polling executionId: a2407530-d67c-4905-9ca7-8418b5a4b813 | IN PROGRESS 🔄 | 00:09:00 |
+| 11 | P1 | DOCUMENT — Poll Attempt 1 | Status: SUCCESS — WORKFLOW_COMPLETED | COMPLETED ✅ | 00:10:00 |
+| 12 | P1 | DOCUMENT — Fetch Result | domainId:931 — Document generated successfully | SUCCESS ✅ | 00:10:00 |
+| 13 | P1 | Fetch Domain File List (convert screen) | Silver_Schema_DDL (id:931) — status: DOCUMENTED, analysisStatus: ANALYZED ✅ | COMPLETED ✅ | 00:11:00 |
+| 14 | P1 | CONVERT — Submit | Triggering convert for domainId: 931, objectName: Silver_Schema_DDL | IN PROGRESS 🔄 | 00:11:00 |
 
 ---
 
@@ -66,4 +69,4 @@
 
 ---
 
-*Last updated: 00:09:00*
+*Last updated: 00:11:00*
