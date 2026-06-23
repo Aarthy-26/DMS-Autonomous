@@ -1,12 +1,12 @@
 # DMS AGENT EXECUTION REPORT
 
-**Run ID** : RUN-20250520-001
-**Date** : 2025-05-20
-**Model Used** : GPT-4o
-**Pipelines** : 1
-**Run Started** : 10:00:00
-**Last Updated** : 10:00:30
-**Status** : IN PROGRESS 🔄
+**Run ID**       : RUN-20250725-001
+**Date**         : 2025-07-25
+**Model Used**   : GPT-4o
+**Pipelines**    : 1
+**Run Started**  : 07:00:00
+**Last Updated** : 07:00:00
+**Status**       : IN PROGRESS 🔄
 
 ---
 
@@ -14,7 +14,7 @@
 
 | Pipeline | Source | Target | Workbench | Status |
 |----------|--------|--------|-----------|--------|
-| P1 | ORACLE | SNOWFLAKE | — | PENDING ⏳ |
+| P1 | ORACLE | SNOWFLAKE | ORACLE to Snowflake | PENDING ⏳ |
 
 ---
 
@@ -33,20 +33,11 @@
 
 ---
 
-## EXECUTION LOG
+## FILE MAPPING SUMMARY
 
-| Step | Pipeline | Action | Detail | Status | Time |
-|------|----------|--------|--------|--------|------|
-| 1 | — | Inputs Validated | All 4 inputs confirmed | COMPLETED ✅ | 10:00:00 |
-| 2 | P1 | Generate Access Token | Token generated successfully | COMPLETED ✅ | 10:00:10 |
-| 3 | P1 | Load Initial Tech Options | Source: ORACLE found, Target: SNOWFLAKE found | COMPLETED ✅ | 10:00:20 |
-| 4 | P1 | Load Mapped Target Tech | ORACLE → [SNOWFLAKE, DB2] — SNOWFLAKE confirmed valid | COMPLETED ✅ | 10:00:30 |
-
----
-
-## ERRORS AND WARNINGS
-
-None so far.
+| File | Resolved Mapping | Source |
+|------|-----------------|--------|
+| Silver_Schema_DDL.sql | Use Language= Python | File-level |
 
 ---
 
@@ -58,4 +49,18 @@ None so far.
 
 ---
 
-*Last updated: 10:00:30*
+## EXECUTION LOG
+
+| Step | Pipeline | Action | Request Payload | Response | HTTP Status | Status | Time |
+|------|----------|--------|-----------------|----------|-------------|--------|------|
+| 1 | — | Inputs validated | — | All 4 inputs confirmed | — | COMPLETED ✅ | 07:00:00 |
+
+---
+
+## ERRORS AND WARNINGS
+
+None so far.
+
+---
+
+*Last updated: 07:00:00*
