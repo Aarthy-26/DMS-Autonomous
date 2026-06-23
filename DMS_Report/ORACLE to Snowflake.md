@@ -5,7 +5,7 @@
 **Model Used** : GPT-4o
 **Pipelines** : 1
 **Run Started** : 00:00:00
-**Last Updated** : 00:28:00
+**Last Updated** : 00:31:00
 **Status** : IN PROGRESS 🔄
 
 ---
@@ -28,8 +28,8 @@
 | FUNCTIONAL_TEST | Yes | COMPLETED ✅ |
 | UNIT_TEST | Yes | COMPLETED ✅ |
 | RECONCILIATION | Yes | COMPLETED ✅ |
-| CONVERSION_TEST | Yes | IN PROGRESS 🔄 |
-| REVIEW | Yes | PENDING ⏳ |
+| CONVERSION_TEST | Yes | COMPLETED ✅ |
+| REVIEW | Yes | IN PROGRESS 🔄 |
 
 ---
 
@@ -70,7 +70,10 @@
 | 31 | P1 | RECONCILIATION — Poll attempt 2 | Status: SUCCESS — WORKFLOW_COMPLETED | COMPLETED ✅ | 00:25:00 |
 | 32 | P1 | RECONCILIATION — Fetch Result | Recon Test Request success | SUCCESS ✅ | 00:26:00 |
 | 33 | P1 | CONVERSION_TEST — Submit | domainId: 934 — executionId: 3d4d0fa4-0e70-4748-ae53-ba43a488784d | SUBMITTED 🔄 | 00:27:00 |
-| 34 | P1 | CONVERSION_TEST — Poll attempt 1 | executionId: 3d4d0fa4-0e70-4748-ae53-ba43a488784d | IN PROGRESS 🔄 | 00:28:00 |
+| 34 | P1 | CONVERSION_TEST — Poll attempt 1 | Status: SUCCESS — WORKFLOW_COMPLETED | COMPLETED ✅ | 00:28:00 |
+| 35 | P1 | CONVERSION_TEST — Fetch Result | Conversion Test Request success | SUCCESS ✅ | 00:29:00 |
+| 36 | P1 | REVIEW — Submit | domainId: 934 — executionId: 48e28fe7-5e84-44a9-ab3c-036b4dcc91e6 | SUBMITTED 🔄 | 00:30:00 |
+| 37 | P1 | REVIEW — Poll attempt 1 | executionId: 48e28fe7-5e84-44a9-ab3c-036b4dcc91e6 | IN PROGRESS 🔄 | 00:31:00 |
 
 ---
 
@@ -90,4 +93,4 @@
 
 ---
 
-*Last updated: 00:28:00*
+*Last updated: 00:31:00*
