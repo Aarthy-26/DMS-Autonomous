@@ -5,7 +5,7 @@
 **Model Used**   : GPT-4o
 **Pipelines**    : 1
 **Run Started**  : 07:00:00
-**Last Updated** : 07:04:00
+**Last Updated** : 07:05:00
 **Status**       : IN PROGRESS 🔄
 
 ---
@@ -59,6 +59,7 @@
 | 4 | P1 | Load Mapped Target Tech | sourceTechName=ORACLE | {"data":["SNOWFLAKE","DB2"],"status":"SUCCESS"} | 200 | COMPLETED ✅ | 07:03:00 |
 | 5a | P1 | Create Workbench (attempt 1) | {"workBenchName":"ORACLE to Snowflake","sourceTech":"ORACLE","targetTech":"SNOWFLAKE"} | {"errors":[{"code":"ERR-400","message":"workbench Already exist with same name"}]} | 400 | FAILED ❌ | 07:03:30 |
 | 5b | P1 | Create Workbench (attempt 2 — with timestamp) | {"workBenchName":"ORACLE to Snowflake_20250725070300","sourceTech":"ORACLE","targetTech":"SNOWFLAKE"} | {"message":"workbench saved successfully","workbenchId":148} | 200 | COMPLETED ✅ | 07:04:00 |
+| 6 | P1 | Fetch Domain File List (pre-upload) | {"screen":"analyze","workBenchId":148,"limit":10,"offset":0} | {"data":[],"status":"SUCCESS"} | 200 | COMPLETED ✅ — No files yet | 07:05:00 |
 
 ---
 
@@ -70,4 +71,4 @@
 
 ---
 
-*Last updated: 07:04:00*
+*Last updated: 07:05:00*
