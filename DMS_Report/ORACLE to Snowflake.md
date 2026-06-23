@@ -5,7 +5,7 @@
 **Model Used** : GPT-4o
 **Pipelines** : 1
 **Run Started** : 07:00:00
-**Last Updated** : 07:15:00
+**Last Updated** : 07:16:00
 **Status** : IN PROGRESS 🔄
 
 ---
@@ -25,7 +25,7 @@
 | ANALYSE | Yes | COMPLETED ✅ |
 | DOCUMENT | Yes | COMPLETED ✅ |
 | CONVERT | Yes | COMPLETED ✅ |
-| FUNCTIONAL_TEST | Yes | PENDING ⏳ |
+| FUNCTIONAL_TEST | Yes | IN PROGRESS 🔄 |
 | UNIT_TEST | Yes | PENDING ⏳ |
 | RECONCILIATION | Yes | PENDING ⏳ |
 | CONVERSION_TEST | Yes | PENDING ⏳ |
@@ -55,14 +55,16 @@
 | 16 | P1 | ANALYSE — Fetch Result | Analysis completed successfully | SUCCESS ✅ | 07:07:00 |
 | 17 | P1 | DOCUMENT — Submit | executionId: d993a96c-5ea7-4899-ae31-f803aebecf15 | SUBMITTED 🔄 | 07:08:00 |
 | 18 | P1 | DOCUMENT — Poll Attempt 1 | Status: IN_PROGRESS | IN PROGRESS 🔄 | 07:09:00 |
-| 19 | P1 | DOCUMENT — Poll Attempt 2 | Status: SUCCESS (WORKFLOW_FINISHED) | COMPLETED ✅ | 07:10:00 |
+| 19 | P1 | DOCUMENT — Poll Attempt 2 | Status: COMPLETED | COMPLETED ✅ | 07:10:00 |
 | 20 | P1 | DOCUMENT — Fetch Result | Document generated successfully | SUCCESS ✅ | 07:11:00 |
 | 21 | P1 | Fetch Domain File List for Convert | Silver_Schema_DDL visible — status: ANALYZED | COMPLETED ✅ | 07:11:30 |
 | 22 | P1 | CONVERT — Submit | executionId: 3ab7aa9d-c73d-4f20-a621-d67e2f9e17c5 | SUBMITTED 🔄 | 07:12:00 |
 | 23 | P1 | CONVERT — Poll Attempt 1 | Status: IN_PROGRESS | IN PROGRESS 🔄 | 07:13:00 |
-| 24 | P1 | CONVERT — Poll Attempt 2 | Status: COMPLETED (WORKFLOW_FINISHED) | COMPLETED ✅ | 07:14:00 |
+| 24 | P1 | CONVERT — Poll Attempt 2 | Status: COMPLETED | COMPLETED ✅ | 07:14:00 |
 | 25 | P1 | CONVERT — Fetch Result | Convert Request success | SUCCESS ✅ | 07:14:30 |
-| 26 | P1 | Fetch Domain File List for Testing | Polling testbuild screen | IN PROGRESS 🔄 | 07:15:00 |
+| 26 | P1 | Fetch Domain File List for Testing | Silver_Schema_DDL — status: CONVERTED | COMPLETED ✅ | 07:15:00 |
+| 27 | P1 | FUNCTIONAL_TEST — Submit | executionId: 97c72d5c-7fed-48fe-9521-82dac7912adc | SUBMITTED 🔄 | 07:15:30 |
+| 28 | P1 | FUNCTIONAL_TEST — Poll Attempt 1 | Polling status | IN PROGRESS 🔄 | 07:16:00 |
 
 ---
 
@@ -81,4 +83,4 @@
 
 ---
 
-*Last updated: 07:15:00*
+*Last updated: 07:16:00*
