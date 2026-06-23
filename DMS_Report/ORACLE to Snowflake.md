@@ -5,7 +5,7 @@
 **Model Used** : GPT-4o
 **Pipelines** : 1
 **Run Started** : 00:00:00
-**Last Updated** : 00:24:00
+**Last Updated** : 00:28:00
 **Status** : IN PROGRESS 🔄
 
 ---
@@ -27,8 +27,8 @@
 | CONVERT | Yes | COMPLETED ✅ |
 | FUNCTIONAL_TEST | Yes | COMPLETED ✅ |
 | UNIT_TEST | Yes | COMPLETED ✅ |
-| RECONCILIATION | Yes | IN PROGRESS 🔄 |
-| CONVERSION_TEST | Yes | PENDING ⏳ |
+| RECONCILIATION | Yes | COMPLETED ✅ |
+| CONVERSION_TEST | Yes | IN PROGRESS 🔄 |
 | REVIEW | Yes | PENDING ⏳ |
 
 ---
@@ -66,7 +66,11 @@
 | 27 | P1 | UNIT_TEST — Poll attempt 3 | Status: SUCCESS — WORKFLOW_COMPLETED | COMPLETED ✅ | 00:22:00 |
 | 28 | P1 | UNIT_TEST — Fetch Result | Unit-Test Request success | SUCCESS ✅ | 00:23:00 |
 | 29 | P1 | RECONCILIATION — Submit | domainId: 934 — executionId: 92f25f2a-b39b-463f-88c8-6f9a0aba31f0 | SUBMITTED 🔄 | 00:24:00 |
-| 30 | P1 | RECONCILIATION — Poll attempt 1 | executionId: 92f25f2a-b39b-463f-88c8-6f9a0aba31f0 | IN PROGRESS 🔄 | 00:24:00 |
+| 30 | P1 | RECONCILIATION — Poll attempt 1 | Status: IN_PROGRESS | IN PROGRESS 🔄 | 00:24:30 |
+| 31 | P1 | RECONCILIATION — Poll attempt 2 | Status: SUCCESS — WORKFLOW_COMPLETED | COMPLETED ✅ | 00:25:00 |
+| 32 | P1 | RECONCILIATION — Fetch Result | Recon Test Request success | SUCCESS ✅ | 00:26:00 |
+| 33 | P1 | CONVERSION_TEST — Submit | domainId: 934 — executionId: 3d4d0fa4-0e70-4748-ae53-ba43a488784d | SUBMITTED 🔄 | 00:27:00 |
+| 34 | P1 | CONVERSION_TEST — Poll attempt 1 | executionId: 3d4d0fa4-0e70-4748-ae53-ba43a488784d | IN PROGRESS 🔄 | 00:28:00 |
 
 ---
 
@@ -74,6 +78,7 @@
 
 - Fetch Result attempt 1: testcase=analysis → HTTP 400. Retried with testcase=analyse → SUCCESS ✅
 - Fetch Result attempt 1: testcase=functional → HTTP 400. Retried with testcase=functional_tester → SUCCESS ✅
+- Fetch Result attempt 1: testcase=recon_tester → HTTP 400. Retried with testcase=reconciliation → SUCCESS ✅
 
 ---
 
@@ -85,4 +90,4 @@
 
 ---
 
-*Last updated: 00:24:00*
+*Last updated: 00:28:00*
