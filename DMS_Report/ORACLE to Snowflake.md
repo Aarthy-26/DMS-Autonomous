@@ -4,8 +4,8 @@
 **Date** : 2025-07-25
 **Model Used** : GPT-4o
 **Pipelines** : 1
-**Run Started** : 00:00:01
-**Last Updated** : 00:22:00
+**Run Started** : 00:00:00
+**Last Updated** : 00:00:00
 **Status** : IN PROGRESS 🔄
 
 ---
@@ -14,7 +14,7 @@
 
 | Pipeline | Source | Target | Workbench | Status |
 |----------|--------|--------|-----------|--------|
-| P1 | ORACLE | SNOWFLAKE | ORACLE to Snowflake (WB ID: 128) | IN PROGRESS 🔄 |
+| P1 | ORACLE | SNOWFLAKE | ORACLE to Snowflake | PENDING ⏳ |
 
 ---
 
@@ -22,10 +22,10 @@
 
 | Task | Required | Status |
 |------|----------|--------|
-| ANALYZE | Yes | COMPLETED ✅ |
-| DOCUMENT | Yes | COMPLETED ✅ |
-| CONVERT | Yes | COMPLETED ✅ |
-| FUNCTIONAL_TEST | Yes | IN PROGRESS 🔄 |
+| ANALYSE | Yes | PENDING ⏳ |
+| DOCUMENT | Yes | PENDING ⏳ |
+| CONVERT | Yes | PENDING ⏳ |
+| FUNCTIONAL_TEST | Yes | PENDING ⏳ |
 | UNIT_TEST | Yes | PENDING ⏳ |
 | RECONCILIATION | Yes | PENDING ⏳ |
 | CONVERSION_TEST | Yes | PENDING ⏳ |
@@ -37,37 +37,22 @@
 
 | Step | Pipeline | Action | Detail | Status | Time |
 |------|----------|--------|--------|--------|------|
-| 1 | — | Inputs Validated | All 4 inputs confirmed | COMPLETED ✅ | 00:00:01 |
-| 2 | P1 | Generate Access Token | Token generated successfully | COMPLETED ✅ | 00:01:00 |
-| 3 | P1 | Fetch Domain File List (pre-upload) | screen=analyze, WB=128 — 0 files found | COMPLETED ✅ | 00:02:00 |
-| 4 | P1 | Upload File | Silver_Schema_DDL.txt uploaded successfully | COMPLETED ✅ | 00:02:30 |
-| 5 | P1 | Fetch Domain File List (post-upload poll attempt 1) | Silver_Schema_DDL.txt confirmed — domainId=931, status=UPLOADED | COMPLETED ✅ | 00:03:30 |
-| 6 | P1 | ANALYZE — Submit | domainId=931, executionId=f69043a9-56f6-4636-8731-febbc1190747 | SUBMITTED 🔄 | 00:04:00 |
-| 7 | P1 | ANALYZE — Poll attempt 1 | status=IN_PROGRESS | IN PROGRESS 🔄 | 00:04:30 |
-| 8 | P1 | ANALYZE — Poll attempt 2 | status=COMPLETED (WORKFLOW_COMPLETED confirmed in logs) | COMPLETED ✅ | 00:05:00 |
-| 9 | P1 | Fetch Domain File List (poll attempts 1-4) | Polling until DOCUMENTED — status=DOCUMENTED confirmed | COMPLETED ✅ | 00:08:00 |
-| 10 | P1 | Fetch Domain File List for CONVERT (poll attempt 1) | status=DOCUMENTED — file visible in convert screen | COMPLETED ✅ | 00:08:30 |
-| 11 | P1 | CONVERT — Submit | domainId=931, objectName=Silver_Schema_DDL, executionId=7e4eb1c4-be9e-4da2-8a2b-87068ca3b4ef | SUBMITTED 🔄 | 00:09:00 |
-| 12 | P1 | CONVERT — Poll attempt 1 | status=SUCCESS (WORKFLOW_COMPLETED confirmed in logs) | COMPLETED ✅ | 00:10:00 |
-| 13 | P1 | Fetch Execution Result (convert) | Convert Request success | COMPLETED ✅ | 00:21:00 |
-| 14 | P1 | Fetch Domain File List for testing (polling) | convertStatus=CONVERT_IN_PROGRESS — backend updating, proceeding with testing | COMPLETED ✅ | 00:21:30 |
-| 15 | P1 | FUNCTIONAL_TEST — Submit | domainId=931, objectName=Silver_Schema_DDL, executionId=bed3fb19-cacd-4cb7-88dd-84bb5f0a36f7 | SUBMITTED 🔄 | 00:22:00 |
+| 1 | — | Inputs validated | All 4 inputs confirmed | COMPLETED ✅ | 00:00:00 |
 
 ---
 
 ## ERRORS AND WARNINGS
 
-- Fetch Execution Result: testcase=analyze and testcase=analysis both returned 400 (Unsupported testcase). Result confirmed via workflow logs.
-- CONVERT workflow completed (SUCCESS in execution logs) but domain file list showed CONVERT_IN_PROGRESS — backend update lag. Proceeded after result confirmed via /domain/result endpoint.
+None so far
 
 ---
 
 ## UPLOAD SUMMARY
 
-| Pipeline | Mode | Files | Domain ID |
-|----------|------|-------|-----------|
-| P1 | SPECIFIC | Silver_Schema_DDL.txt | 931 |
+| Pipeline | Mode | Files |
+|----------|------|-------|
+| P1 | SPECIFIC | Silver_Schema_DDL.txt |
 
 ---
 
-*Last updated: 00:22:00*
+*Last updated: 00:00:00*
