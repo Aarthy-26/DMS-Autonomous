@@ -5,7 +5,7 @@
 **Model Used** : GPT-4o
 **Pipelines** : 1
 **Run Started** : 07:00:00
-**Last Updated** : 07:02:00
+**Last Updated** : 07:04:00
 **Status** : IN PROGRESS 🔄
 
 ---
@@ -22,7 +22,7 @@
 
 | Task | Required | Status |
 |------|----------|--------|
-| ANALYSE | Yes | PENDING ⏳ |
+| ANALYSE | Yes | IN PROGRESS 🔄 |
 | DOCUMENT | Yes | PENDING ⏳ |
 | CONVERT | Yes | PENDING ⏳ |
 | FUNCTIONAL_TEST | Yes | PENDING ⏳ |
@@ -45,7 +45,10 @@
 | 6 | P1 | Load Mapped Target Tech | ORACLE → SNOWFLAKE confirmed | COMPLETED ✅ | 07:00:12 |
 | 7 | P1 | Create Workbench (attempt 1) | Name conflict — ORACLE to Snowflake exists | FAILED ❌ | 07:01:00 |
 | 8 | P1 | Create Workbench (attempt 2) | ORACLE to Snowflake1 created — ID: 152 | COMPLETED ✅ | 07:02:00 |
-| 9 | P1 | Fetch Domain File List (pre-upload) | Checking workbench 152 | IN PROGRESS 🔄 | 07:02:05 |
+| 9 | P1 | Fetch Domain File List (pre-upload) | Empty — workbench 152 | COMPLETED ✅ | 07:02:05 |
+| 10 | P1 | Upload File | Silver_Schema_DDL.txt → domain: Sales | COMPLETED ✅ | 07:03:00 |
+| 11 | P1 | Fetch Domain File List (post-upload) | Silver_Schema_DDL confirmed — domainId: 372 | COMPLETED ✅ | 07:03:30 |
+| 12 | P1 | ANALYSE — Submit | domainId: 372 | IN PROGRESS 🔄 | 07:04:00 |
 
 ---
 
@@ -63,4 +66,4 @@
 
 ---
 
-*Last updated: 07:02:05*
+*Last updated: 07:04:00*
