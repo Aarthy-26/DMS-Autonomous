@@ -5,7 +5,7 @@
 **Model Used** : GPT-4o
 **Pipelines** : 1
 **Run Started** : 00:00:00
-**Last Updated** : 00:05:00
+**Last Updated** : 00:06:00
 **Status** : IN PROGRESS 🔄
 
 ---
@@ -43,7 +43,7 @@
 | 4 | P1 | Upload File | Silver_Schema_DDL.txt — File already exists (id:931), confirmed present | COMPLETED ✅ | 00:03:00 |
 | 5 | P1 | Fetch Domain Names | Domains: ORACLE, Sales — ORACLE confirmed | COMPLETED ✅ | 00:04:00 |
 | 6 | P1 | ANALYSE — Submit | executionId: 3d66a2aa-d79f-47f6-bf02-3a0724ab6fba | SUBMITTED 🔄 | 00:05:00 |
-| 7 | P1 | ANALYSE — Poll Attempt 1 | Polling executionId: 3d66a2aa-d79f-47f6-bf02-3a0724ab6fba | IN PROGRESS 🔄 | 00:05:00 |
+| 7 | P1 | ANALYSE — Poll Attempt 1 | Status: IN_PROGRESS — workflow running, file read in progress | IN PROGRESS 🔄 | 00:06:00 |
 
 ---
 
@@ -61,4 +61,4 @@
 
 ---
 
-*Last updated: 00:05:00*
+*Last updated: 00:06:00*
