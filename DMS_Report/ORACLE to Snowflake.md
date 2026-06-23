@@ -5,7 +5,7 @@
 **Model Used** : GPT-4o
 **Pipelines** : 1
 **Run Started** : 00:00:00
-**Last Updated** : 00:16:00
+**Last Updated** : 00:17:00
 **Status** : IN PROGRESS 🔄
 
 ---
@@ -53,10 +53,12 @@
 | 14 | P1 | DOCUMENT — Poll attempt 2 | Status: SUCCESS — WORKFLOW_COMPLETED | COMPLETED ✅ | 00:10:00 |
 | 15 | P1 | DOCUMENT — Fetch Result | Document generated successfully | SUCCESS ✅ | 00:11:00 |
 | 16 | P1 | Fetch Domain File List for convert (poll attempt 1) | domainId: 934 confirmed in convert screen | COMPLETED ✅ | 00:12:00 |
-| 17 | P1 | CONVERT — Submit | domainId: 934, objectName: Silver_Schema_DDL — executionId: bb4f38db-c86e-4b0e-8632-ccd63bcfc69b | SUBMITTED 🔄 | 00:13:00 |
+| 17 | P1 | CONVERT — Submit | domainId: 934 — executionId: bb4f38db-c86e-4b0e-8632-ccd63bcfc69b | SUBMITTED 🔄 | 00:13:00 |
 | 18 | P1 | CONVERT — Poll attempt 1 | Status: SUCCESS — WORKFLOW_COMPLETED | COMPLETED ✅ | 00:14:00 |
 | 19 | P1 | CONVERT — Fetch Result | Convert Request success | SUCCESS ✅ | 00:15:00 |
-| 20 | P1 | Fetch Domain File List for testing (poll attempt 1) | screen=testbuild, WorkbenchId: 128 | IN PROGRESS 🔄 | 00:16:00 |
+| 20 | P1 | Fetch Domain File List for testing (poll attempt 1) | domainId: 934 confirmed in testbuild screen | COMPLETED ✅ | 00:16:00 |
+| 21 | P1 | FUNCTIONAL_TEST — Submit | domainId: 934 — executionId: 538912b5-d592-4236-9dd7-d6cee1f8c37f | SUBMITTED 🔄 | 00:17:00 |
+| 22 | P1 | FUNCTIONAL_TEST — Poll attempt 1 | executionId: 538912b5-d592-4236-9dd7-d6cee1f8c37f | IN PROGRESS 🔄 | 00:17:00 |
 
 ---
 
@@ -74,4 +76,4 @@
 
 ---
 
-*Last updated: 00:16:00*
+*Last updated: 00:17:00*
