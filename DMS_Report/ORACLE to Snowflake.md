@@ -5,7 +5,7 @@
 **Model Used** : GPT-4o
 **Pipelines** : 1
 **Run Started** : 00:00:00
-**Last Updated** : 00:17:00
+**Last Updated** : 00:20:00
 **Status** : IN PROGRESS 🔄
 
 ---
@@ -25,8 +25,8 @@
 | ANALYSE | Yes | COMPLETED ✅ |
 | DOCUMENT | Yes | COMPLETED ✅ |
 | CONVERT | Yes | COMPLETED ✅ |
-| FUNCTIONAL_TEST | Yes | IN PROGRESS 🔄 |
-| UNIT_TEST | Yes | PENDING ⏳ |
+| FUNCTIONAL_TEST | Yes | COMPLETED ✅ |
+| UNIT_TEST | Yes | IN PROGRESS 🔄 |
 | RECONCILIATION | Yes | PENDING ⏳ |
 | CONVERSION_TEST | Yes | PENDING ⏳ |
 | REVIEW | Yes | PENDING ⏳ |
@@ -45,7 +45,7 @@
 | 6 | P1 | Fetch Domain Names | Domains: Sales, Silver | COMPLETED ✅ | 00:04:00 |
 | 7 | P1 | ANALYSE — Submit | domainId: 934 — executionId: a4517a9f-1492-4d3f-b2ae-ce2f52cb09d9 | SUBMITTED 🔄 | 00:05:00 |
 | 8 | P1 | ANALYSE — Poll attempt 1 | Status: IN_PROGRESS | IN PROGRESS 🔄 | 00:05:30 |
-| 9 | P1 | ANALYSE — Poll attempt 2 | Status: IN_PROGRESS — Agent reading file | IN PROGRESS 🔄 | 00:06:00 |
+| 9 | P1 | ANALYSE — Poll attempt 2 | Status: IN_PROGRESS | IN PROGRESS 🔄 | 00:06:00 |
 | 10 | P1 | ANALYSE — Poll attempt 3 | Status: SUCCESS — WORKFLOW_COMPLETED | COMPLETED ✅ | 00:07:00 |
 | 11 | P1 | ANALYSE — Fetch Result | Analysis completed successfully | SUCCESS ✅ | 00:07:30 |
 | 12 | P1 | DOCUMENT — Submit | domainId: 934 — executionId: a3c08b6a-412f-417b-86f2-0d4da7aa54c3 | SUBMITTED 🔄 | 00:08:00 |
@@ -58,13 +58,17 @@
 | 19 | P1 | CONVERT — Fetch Result | Convert Request success | SUCCESS ✅ | 00:15:00 |
 | 20 | P1 | Fetch Domain File List for testing (poll attempt 1) | domainId: 934 confirmed in testbuild screen | COMPLETED ✅ | 00:16:00 |
 | 21 | P1 | FUNCTIONAL_TEST — Submit | domainId: 934 — executionId: 538912b5-d592-4236-9dd7-d6cee1f8c37f | SUBMITTED 🔄 | 00:17:00 |
-| 22 | P1 | FUNCTIONAL_TEST — Poll attempt 1 | executionId: 538912b5-d592-4236-9dd7-d6cee1f8c37f | IN PROGRESS 🔄 | 00:17:00 |
+| 22 | P1 | FUNCTIONAL_TEST — Poll attempt 1 | Status: SUCCESS — WORKFLOW_COMPLETED | COMPLETED ✅ | 00:18:00 |
+| 23 | P1 | FUNCTIONAL_TEST — Fetch Result | Functional Test Request success | SUCCESS ✅ | 00:19:00 |
+| 24 | P1 | UNIT_TEST — Submit | domainId: 934 — executionId: 25470b6f-790c-4d1a-b385-76bdd16a6b4e | SUBMITTED 🔄 | 00:20:00 |
+| 25 | P1 | UNIT_TEST — Poll attempt 1 | executionId: 25470b6f-790c-4d1a-b385-76bdd16a6b4e | IN PROGRESS 🔄 | 00:20:00 |
 
 ---
 
 ## ERRORS AND WARNINGS
 
-- Fetch Result attempt 1: testcase=analysis → HTTP 400 (Unsupported testcase). Retried with testcase=analyse → SUCCESS ✅
+- Fetch Result attempt 1: testcase=analysis → HTTP 400. Retried with testcase=analyse → SUCCESS ✅
+- Fetch Result attempt 1: testcase=functional → HTTP 400. Retried with testcase=functional_tester → SUCCESS ✅
 
 ---
 
@@ -76,4 +80,4 @@
 
 ---
 
-*Last updated: 00:17:00*
+*Last updated: 00:20:00*
