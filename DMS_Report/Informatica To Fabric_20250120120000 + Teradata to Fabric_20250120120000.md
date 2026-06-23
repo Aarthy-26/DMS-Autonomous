@@ -5,7 +5,7 @@
 **Model Used**   : GPT-4
 **Pipelines**    : 2
 **Run Started**  : 12:00:00
-**Last Updated** : 12:11:00
+**Last Updated** : 12:12:00
 **Status**       : IN PROGRESS 🔄
 
 ---
@@ -48,7 +48,7 @@
 | Pipeline | Mode | Files | Domain ID |
 |----------|------|-------|-----------|
 | P1 | SPECIFIC | Inventory_Stage_Load_Mapping.xml | 364 |
-| P2 | SPECIFIC | FACT_SALES_LOAD.btq | TBD |
+| P2 | SPECIFIC | FACT_SALES_LOAD.btq | 365 |
 
 ---
 
@@ -69,6 +69,7 @@
 | 11 | P2 | Fetch Domain File List (pre-upload) | {"screen":"analyze","workBenchId":145,"limit":100,"offset":0} | {"data":[],"status":"SUCCESS"} | 200 | COMPLETED ✅ | 12:09:00 |
 | 12 | P2 | Upload File | email=aarthy.jr@ascendion.com&domainName=Sales&workBenchId=145&override=No&platform=aws | FACT_SALES_LOAD.btq uploaded successfully | 200 | COMPLETED ✅ | 12:10:00 |
 | 13 | P2 | Poll Domain File List (attempt 1) | {"screen":"analyze","workBenchId":145,"limit":100,"offset":0} | 502 Bad Gateway | 502 | IN PROGRESS 🔄 | 12:11:00 |
+| 14 | P2 | Poll Domain File List (attempt 2) | {"screen":"analyze","workBenchId":145,"limit":100,"offset":0} | {"data":[{"id":365,"objectName":"FACT_SALES_LOAD","status":"UPLOADED","domainName":"Sales","fileType":".btq"}],"status":"SUCCESS"} | 200 | COMPLETED ✅ | 12:12:00 |
 
 ---
 
@@ -76,8 +77,8 @@
 
 | Step | Pipeline | Action | Request | Error Response | HTTP Status | Time |
 |------|----------|--------|---------|---------------|-------------|------|
-| 13 | P2 | Poll Domain File List (attempt 1) | {"screen":"analyze","workBenchId":145} | 502 Bad Gateway - retrying | 502 | 12:11:00 |
+| 13 | P2 | Poll Domain File List (attempt 1) | {"screen":"analyze","workBenchId":145} | 502 Bad Gateway - retried successfully | 502 | 12:11:00 |
 
 ---
 
-*Last updated: 12:11:00*
+*Last updated: 12:12:00*
