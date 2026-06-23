@@ -5,7 +5,7 @@
 **Model Used**   : GPT-4o
 **Pipelines**    : 1
 **Run Started**  : 07:00:00
-**Last Updated** : 07:22:00
+**Last Updated** : 07:23:00
 **Status**       : IN PROGRESS 🔄
 
 ---
@@ -69,7 +69,8 @@
 | 12b | P1 | ANALYZE — Fetch Result (testcase=analysis) | executionId=8667d30d, domainId=368 | {"message":"Unsupported testcase: analysis"} | 400 | FAILED ❌ (non-blocking) | 07:17:45 |
 | 12c | P1 | ANALYZE — Fetch Result (testcase=ANALYSIS) | executionId=8667d30d, domainId=368 | {"message":"Unsupported testcase: ANALYSIS"} | 400 | FAILED ❌ (non-blocking) | 07:18:00 |
 | 13 | P1 | DOCUMENT — Submit | {"workBenchId":148,"domainIds":[368],"platform":"aws"} | {"executionId":"842ea09d-0965-4702-8fe3-b7d39beae720","success":true} | 200 | SUBMITTED 🔄 | 07:19:00 |
-| 14 | P1 | DOCUMENT — Poll attempt 1 | executionId=842ea09d | WORKFLOW_COMPLETED confirmed — 7 tables documented | 200 | COMPLETED ✅ | 07:22:00 |
+| 14 | P1 | DOCUMENT — Poll attempt 1 | executionId=842ea09d | WORKFLOW_COMPLETED confirmed | 200 | COMPLETED ✅ | 07:22:00 |
+| 15 | P1 | Fetch Domain File List for convert (poll attempt 1) | {"screen":"convert","workBenchId":148} | {"data":[{"id":368,"analysisStatus":"ANALYSE_PROCESSING","docStatus":"DOCUMENT_IN_PROGRESS"}]} | 200 | IN PROGRESS 🔄 — still processing | 07:23:00 |
 
 ---
 
@@ -84,4 +85,4 @@
 
 ---
 
-*Last updated: 07:22:00*
+*Last updated: 07:23:00*
