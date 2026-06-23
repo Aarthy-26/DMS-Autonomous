@@ -5,7 +5,7 @@
 **Model Used** : GPT-4o
 **Pipelines** : 1
 **Run Started** : 00:00:00
-**Last Updated** : 00:20:00
+**Last Updated** : 00:22:00
 **Status** : IN PROGRESS 🔄
 
 ---
@@ -27,8 +27,8 @@
 | CONVERT | Yes | COMPLETED ✅ |
 | FUNCTIONAL_TEST | Yes | COMPLETED ✅ |
 | UNIT_TEST | Yes | FAILED ❌ |
-| RECONCILIATION | Yes | IN PROGRESS 🔄 |
-| CONVERSION_TEST | Yes | PENDING ⏳ |
+| RECONCILIATION | Yes | COMPLETED ✅ |
+| CONVERSION_TEST | Yes | IN PROGRESS 🔄 |
 | REVIEW | Yes | PENDING ⏳ |
 
 ---
@@ -59,7 +59,9 @@
 | 20 | P1 | FUNCTIONAL_TEST — Fetch Result | Workflow confirmed SUCCESS via poll | SUCCESS ✅ | 00:17:00 |
 | 21 | P1 | UNIT_TEST — Submit | HTTP 500 — Failed to load source/target files — logged, continuing | FAILED ❌ | 00:18:00 |
 | 22 | P1 | RECONCILIATION — Submit | executionId: b4a3f98d-5cf9-40af-b5a3-7f1b3b063873 | SUBMITTED 🔄 | 00:20:00 |
-| 23 | P1 | RECONCILIATION — Poll Attempt 1 | Polling executionId: b4a3f98d-5cf9-40af-b5a3-7f1b3b063873 | IN PROGRESS 🔄 | 00:20:00 |
+| 23 | P1 | RECONCILIATION — Poll Attempt 1 | Status: SUCCESS — WORKFLOW_COMPLETED | COMPLETED ✅ | 00:21:00 |
+| 24 | P1 | CONVERSION_TEST — Submit | executionId: d541ab64-d1ba-43ad-a4bd-13a38cadd7bf | SUBMITTED 🔄 | 00:22:00 |
+| 25 | P1 | CONVERSION_TEST — Poll Attempt 1 | Polling executionId: d541ab64-d1ba-43ad-a4bd-13a38cadd7bf | IN PROGRESS 🔄 | 00:22:00 |
 
 ---
 
@@ -67,7 +69,7 @@
 
 - P1: Upload returned "File Already exists" — file confirmed present with id:931. Not a failure.
 - P1: Fetch Result with testcase=analysis returned 400 — retried with testcase=analyse — SUCCESS.
-- P1: FUNCTIONAL_TEST result fetch returned 400 for testcase=functional and testcase=functional-tester — workflow itself confirmed COMPLETED via poll.
+- P1: FUNCTIONAL_TEST result fetch returned 400 — workflow itself confirmed COMPLETED via poll.
 - P1: UNIT_TEST returned HTTP 500 "Failed to load source/target files" — logged and continuing.
 
 ---
@@ -80,4 +82,4 @@
 
 ---
 
-*Last updated: 00:20:00*
+*Last updated: 00:22:00*
