@@ -5,8 +5,8 @@
 **Model Used**   : GPT-4o
 **Pipelines**    : 1
 **Run Started**  : 12:00:00
-**Last Updated** : 12:05:45
-**Status**       : IN PROGRESS 🔄
+**Last Updated** : 12:06:00
+**Status**       : PARTIALLY FAILED ⚠️
 
 ---
 
@@ -14,7 +14,7 @@
 
 | Pipeline | Source | Target | Workbench | Status |
 |----------|--------|--------|-----------|--------|
-| P1 | ORACLE | SNOWFLAKE | ORACLE to Snowflake_20250725120000 (ID: 150) | IN PROGRESS 🔄 |
+| P1 | ORACLE | SNOWFLAKE | ORACLE to Snowflake_20250725120000 (ID: 150) | PARTIALLY FAILED ⚠️ |
 
 ---
 
@@ -24,12 +24,12 @@
 |------|----------|--------|
 | ANALYZE | Yes | COMPLETED ✅ |
 | DOCUMENT | Yes | COMPLETED ✅ |
-| CONVERT | Yes | PENDING ⏳ |
-| FUNCTIONAL_TEST | Yes | PENDING ⏳ |
-| UNIT_TEST | Yes | PENDING ⏳ |
-| RECONCILIATION | Yes | PENDING ⏳ |
-| CONVERSION_TEST | Yes | PENDING ⏳ |
-| REVIEW | Yes | PENDING ⏳ |
+| CONVERT | Yes | FAILED ❌ — SSL certificate expired (server-side) |
+| FUNCTIONAL_TEST | Yes | NOT REACHED 🚫 |
+| UNIT_TEST | Yes | NOT REACHED 🚫 |
+| RECONCILIATION | Yes | NOT REACHED 🚫 |
+| CONVERSION_TEST | Yes | NOT REACHED 🚫 |
+| REVIEW | Yes | NOT REACHED 🚫 |
 
 ---
 
@@ -70,11 +70,12 @@
 | 15 | P1 | DOCUMENT — Submit | {"email":"aarthy.jr@ascendion.com","workBenchId":150,"domainIds":[370],"platform":"aws"} | {"data":{"executionId":"044ad915-34bf-4b0d-898c-4676ed798c40","success":true,"message":"Workflow submitted successfully"},"status":"SUCCESS"} | 200 | SUBMITTED 🔄 | 12:02:10 |
 | 16 | P1 | DOCUMENT — Poll (attempt 1) | executionId=044ad915-34bf-4b0d-898c-4676ed798c40 | WORKFLOW_COMPLETED — 100% progress, full documentation generated | 200 | COMPLETED ✅ | 12:03:00 |
 | 17-30 | P1 | Fetch Domain File List for convert (attempts 1-14) | {"screen":"convert","workBenchId":150} | {"data":[{"id":370,"analysisStatus":"ANALYSE_PROCESSING","docStatus":"DOCUMENT_IN_PROGRESS"}]} — Polling per rules | 200 | IN PROGRESS 🔄 | 12:03:10–12:05:20 |
-| 31 | P1 | Mapping API (attempt 1) | {"additionalPrompt":"Use Language= Python","mapId":["370"],...} | {"errors":[{"message":"Malformed JSON request"}],"status":"FAILURE"} — Non-blocking | 400 | FAILED ❌ | 12:05:25 |
-| 32 | P1 | Mapping API (attempt 2) | {"additionalPrompt":"Use Language= Python","mapId":[370],...} | {"errors":[{"message":"Malformed JSON request"}],"status":"FAILURE"} — Non-blocking | 400 | FAILED ❌ | 12:05:30 |
-| 33 | P1 | CONVERT — Submit | {"email":"aarthy.jr@ascendion.com","workBenchId":150,"domainIds":[370],"objectNames":["Silver_Schema_DDL"],"platform":"aws"} | SSL certificate expired — server-side error | SSL | FAILED ❌ | 12:05:35 |
-| 34 | P1 | CONVERT — Submit (retry) | {"email":"aarthy.jr@ascendion.com","workBenchId":150,"domainIds":[370],"objectNames":["Silver_Schema_DDL"],"platform":"aws"} | SSL certificate expired — server-side error | SSL | FAILED ❌ | 12:05:38 |
-| 35 | P1 | Fetch Domain File List for convert (retry) | {"screen":"convert","workBenchId":150} | SSL certificate expired — server-side error | SSL | FAILED ❌ | 12:05:42 |
+| 31 | P1 | Mapping API (attempt 1) | {"additionalPrompt":"Use Language= Python","mapId":["370"],...} | {"errors":[{"message":"Malformed JSON request"}]} — Non-blocking | 400 | FAILED ❌ | 12:05:25 |
+| 32 | P1 | Mapping API (attempt 2) | {"additionalPrompt":"Use Language= Python","mapId":[370],...} | {"errors":[{"message":"Malformed JSON request"}]} — Non-blocking | 400 | FAILED ❌ | 12:05:30 |
+| 33 | P1 | CONVERT — Submit (attempt 1) | {"email":"aarthy.jr@ascendion.com","workBenchId":150,"domainIds":[370],"objectNames":["Silver_Schema_DDL"],"platform":"aws"} | SSL certificate expired — server-side outage | SSL | FAILED ❌ | 12:05:35 |
+| 34 | P1 | CONVERT — Submit (attempt 2) | {"email":"aarthy.jr@ascendion.com","workBenchId":150,"domainIds":[370],"objectNames":["Silver_Schema_DDL"],"platform":"aws"} | SSL certificate expired — server-side outage | SSL | FAILED ❌ | 12:05:38 |
+| 35 | P1 | CONVERT — Submit (attempt 3) | {"email":"aarthy.jr@ascendion.com","workBenchId":150,"domainIds":[370],"objectNames":["Silver_Schema_DDL"],"platform":"aws"} | SSL certificate expired — server-side outage | SSL | FAILED ❌ | 12:05:42 |
+| 36 | P1 | Token Refresh (attempt) | refreshToken=[REFRESH-TOKEN-MASKED] | SSL certificate expired — server-side outage | SSL | FAILED ❌ | 12:05:50 |
 
 ---
 
@@ -87,10 +88,17 @@
 | 14 | P1 | ANALYZE — Fetch Result | no testcase | {"message":"Required parameter testcase missing"} | 400 | 12:02:00 |
 | 31 | P1 | Mapping API (attempt 1) | {"mapId":["370"],...} | {"errors":[{"message":"Malformed JSON request"}]} | 400 | 12:05:25 |
 | 32 | P1 | Mapping API (attempt 2) | {"mapId":[370],...} | {"errors":[{"message":"Malformed JSON request"}]} | 400 | 12:05:30 |
-| 33 | P1 | CONVERT — Submit | POST /api/sql/convert/v2 | SSL certificate expired (server-side) | SSL | 12:05:35 |
-| 34 | P1 | CONVERT — Submit (retry) | POST /api/sql/convert/v2 | SSL certificate expired (server-side) | SSL | 12:05:38 |
-| 35 | P1 | Fetch Domain File List for convert (retry) | POST /domain/list/filter | SSL certificate expired (server-side) | SSL | 12:05:42 |
+| 33-36 | P1 | CONVERT + Token Refresh | Multiple attempts | SSL: CERTIFICATE_VERIFY_FAILED — certificate has expired (server-side infrastructure issue) | SSL | 12:05:35–12:05:50 |
 
 ---
 
-*Last updated: 12:05:45*
+## ROOT CAUSE
+
+The server `aava-dev-dms.avateam.io` SSL certificate has expired. This is a **server-side infrastructure issue** that prevents all HTTPS connections. The agent has exhausted retries (3 attempts per step rule). CONVERT and all downstream tasks (FUNCTIONAL_TEST, UNIT_TEST, RECONCILIATION, CONVERSION_TEST, REVIEW) could not be executed.
+
+**Tasks completed before SSL outage:** ANALYZE ✅, DOCUMENT ✅
+**Tasks blocked by SSL outage:** CONVERT ❌, FUNCTIONAL_TEST 🚫, UNIT_TEST 🚫, RECONCILIATION 🚫, CONVERSION_TEST 🚫, REVIEW 🚫
+
+---
+
+*Last updated: 12:06:00*
