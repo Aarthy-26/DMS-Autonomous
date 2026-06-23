@@ -4,8 +4,8 @@
 **Date** : 2025-07-25
 **Model Used** : GPT-4o
 **Pipelines** : 1
-**Run Started** : 00:00:00
-**Last Updated** : 00:31:00
+**Run Started** : 07:00:00
+**Last Updated** : 07:00:00
 **Status** : IN PROGRESS 🔄
 
 ---
@@ -14,7 +14,7 @@
 
 | Pipeline | Source | Target | Workbench | Status |
 |----------|--------|--------|-----------|--------|
-| P1 | ORACLE | SNOWFLAKE | ORACLE to Snowflake (WB ID: 128) | IN PROGRESS 🔄 |
+| P1 | ORACLE | SNOWFLAKE | ORACLE to Snowflake | PENDING ⏳ |
 
 ---
 
@@ -22,14 +22,14 @@
 
 | Task | Required | Status |
 |------|----------|--------|
-| ANALYSE | Yes | COMPLETED ✅ |
-| DOCUMENT | Yes | COMPLETED ✅ |
-| CONVERT | Yes | COMPLETED ✅ |
-| FUNCTIONAL_TEST | Yes | COMPLETED ✅ |
-| UNIT_TEST | Yes | COMPLETED ✅ |
-| RECONCILIATION | Yes | COMPLETED ✅ |
-| CONVERSION_TEST | Yes | COMPLETED ✅ |
-| REVIEW | Yes | IN PROGRESS 🔄 |
+| ANALYSE | Yes | PENDING ⏳ |
+| DOCUMENT | Yes | PENDING ⏳ |
+| CONVERT | Yes | PENDING ⏳ |
+| FUNCTIONAL_TEST | Yes | PENDING ⏳ |
+| UNIT_TEST | Yes | PENDING ⏳ |
+| RECONCILIATION | Yes | PENDING ⏳ |
+| CONVERSION_TEST | Yes | PENDING ⏳ |
+| REVIEW | Yes | PENDING ⏳ |
 
 ---
 
@@ -37,51 +37,16 @@
 
 | Step | Pipeline | Action | Detail | Status | Time |
 |------|----------|--------|--------|--------|------|
-| 1 | — | Inputs validated | All 4 inputs confirmed | COMPLETED ✅ | 00:00:00 |
-| 2 | P1 | Generate Access Token | Token generated successfully | COMPLETED ✅ | 00:01:00 |
-| 3 | P1 | Fetch Domain File List (pre-upload) | WorkbenchId: 128 — 1 existing file found | COMPLETED ✅ | 00:02:00 |
-| 4 | P1 | Upload File | Silver_Schema_DDL.txt uploaded successfully (SPECIFIC mode) | COMPLETED ✅ | 00:03:00 |
-| 5 | P1 | Fetch Domain File List (post-upload poll attempt 1) | Silver_Schema_DDL.txt confirmed — domainId: 934 | COMPLETED ✅ | 00:03:30 |
-| 6 | P1 | Fetch Domain Names | Domains: Sales, Silver | COMPLETED ✅ | 00:04:00 |
-| 7 | P1 | ANALYSE — Submit | domainId: 934 — executionId: a4517a9f-1492-4d3f-b2ae-ce2f52cb09d9 | SUBMITTED 🔄 | 00:05:00 |
-| 8 | P1 | ANALYSE — Poll attempt 1 | Status: IN_PROGRESS | IN PROGRESS 🔄 | 00:05:30 |
-| 9 | P1 | ANALYSE — Poll attempt 2 | Status: IN_PROGRESS | IN PROGRESS 🔄 | 00:06:00 |
-| 10 | P1 | ANALYSE — Poll attempt 3 | Status: SUCCESS — WORKFLOW_COMPLETED | COMPLETED ✅ | 00:07:00 |
-| 11 | P1 | ANALYSE — Fetch Result | Analysis completed successfully | SUCCESS ✅ | 00:07:30 |
-| 12 | P1 | DOCUMENT — Submit | domainId: 934 — executionId: a3c08b6a-412f-417b-86f2-0d4da7aa54c3 | SUBMITTED 🔄 | 00:08:00 |
-| 13 | P1 | DOCUMENT — Poll attempt 1 | Status: IN_PROGRESS | IN PROGRESS 🔄 | 00:09:00 |
-| 14 | P1 | DOCUMENT — Poll attempt 2 | Status: SUCCESS — WORKFLOW_COMPLETED | COMPLETED ✅ | 00:10:00 |
-| 15 | P1 | DOCUMENT — Fetch Result | Document generated successfully | SUCCESS ✅ | 00:11:00 |
-| 16 | P1 | Fetch Domain File List for convert (poll attempt 1) | domainId: 934 confirmed in convert screen | COMPLETED ✅ | 00:12:00 |
-| 17 | P1 | CONVERT — Submit | domainId: 934 — executionId: bb4f38db-c86e-4b0e-8632-ccd63bcfc69b | SUBMITTED 🔄 | 00:13:00 |
-| 18 | P1 | CONVERT — Poll attempt 1 | Status: SUCCESS — WORKFLOW_COMPLETED | COMPLETED ✅ | 00:14:00 |
-| 19 | P1 | CONVERT — Fetch Result | Convert Request success | SUCCESS ✅ | 00:15:00 |
-| 20 | P1 | Fetch Domain File List for testing (poll attempt 1) | domainId: 934 confirmed in testbuild screen | COMPLETED ✅ | 00:16:00 |
-| 21 | P1 | FUNCTIONAL_TEST — Submit | domainId: 934 — executionId: 538912b5-d592-4236-9dd7-d6cee1f8c37f | SUBMITTED 🔄 | 00:17:00 |
-| 22 | P1 | FUNCTIONAL_TEST — Poll attempt 1 | Status: SUCCESS — WORKFLOW_COMPLETED | COMPLETED ✅ | 00:18:00 |
-| 23 | P1 | FUNCTIONAL_TEST — Fetch Result | Functional Test Request success | SUCCESS ✅ | 00:19:00 |
-| 24 | P1 | UNIT_TEST — Submit | domainId: 934 — executionId: 25470b6f-790c-4d1a-b385-76bdd16a6b4e | SUBMITTED 🔄 | 00:20:00 |
-| 25 | P1 | UNIT_TEST — Poll attempt 1 | Status: IN_PROGRESS | IN PROGRESS 🔄 | 00:20:30 |
-| 26 | P1 | UNIT_TEST — Poll attempt 2 | Status: IN_PROGRESS | IN PROGRESS 🔄 | 00:21:00 |
-| 27 | P1 | UNIT_TEST — Poll attempt 3 | Status: SUCCESS — WORKFLOW_COMPLETED | COMPLETED ✅ | 00:22:00 |
-| 28 | P1 | UNIT_TEST — Fetch Result | Unit-Test Request success | SUCCESS ✅ | 00:23:00 |
-| 29 | P1 | RECONCILIATION — Submit | domainId: 934 — executionId: 92f25f2a-b39b-463f-88c8-6f9a0aba31f0 | SUBMITTED 🔄 | 00:24:00 |
-| 30 | P1 | RECONCILIATION — Poll attempt 1 | Status: IN_PROGRESS | IN PROGRESS 🔄 | 00:24:30 |
-| 31 | P1 | RECONCILIATION — Poll attempt 2 | Status: SUCCESS — WORKFLOW_COMPLETED | COMPLETED ✅ | 00:25:00 |
-| 32 | P1 | RECONCILIATION — Fetch Result | Recon Test Request success | SUCCESS ✅ | 00:26:00 |
-| 33 | P1 | CONVERSION_TEST — Submit | domainId: 934 — executionId: 3d4d0fa4-0e70-4748-ae53-ba43a488784d | SUBMITTED 🔄 | 00:27:00 |
-| 34 | P1 | CONVERSION_TEST — Poll attempt 1 | Status: SUCCESS — WORKFLOW_COMPLETED | COMPLETED ✅ | 00:28:00 |
-| 35 | P1 | CONVERSION_TEST — Fetch Result | Conversion Test Request success | SUCCESS ✅ | 00:29:00 |
-| 36 | P1 | REVIEW — Submit | domainId: 934 — executionId: 48e28fe7-5e84-44a9-ab3c-036b4dcc91e6 | SUBMITTED 🔄 | 00:30:00 |
-| 37 | P1 | REVIEW — Poll attempt 1 | executionId: 48e28fe7-5e84-44a9-ab3c-036b4dcc91e6 | IN PROGRESS 🔄 | 00:31:00 |
+| 1 | — | Inputs Validated | All 4 inputs confirmed | COMPLETED ✅ | 07:00:00 |
+| 2 | P1 | Source-Target Validation | ORACLE → SNOWFLAKE valid | COMPLETED ✅ | 07:00:00 |
+| 3 | P1 | GitHub Folder Matched | DMS_Input/ORACLE to Snowflake | COMPLETED ✅ | 07:00:00 |
+| 4 | P1 | Generate Access Token | Calling /dms/auth/gettoken | IN PROGRESS 🔄 | 07:00:01 |
 
 ---
 
 ## ERRORS AND WARNINGS
 
-- Fetch Result attempt 1: testcase=analysis → HTTP 400. Retried with testcase=analyse → SUCCESS ✅
-- Fetch Result attempt 1: testcase=functional → HTTP 400. Retried with testcase=functional_tester → SUCCESS ✅
-- Fetch Result attempt 1: testcase=recon_tester → HTTP 400. Retried with testcase=reconciliation → SUCCESS ✅
+None so far.
 
 ---
 
@@ -89,8 +54,8 @@
 
 | Pipeline | Mode | Files |
 |----------|------|-------|
-| P1 | SPECIFIC | Silver_Schema_DDL.txt — UPLOADED ✅ |
+| P1 | SPECIFIC | Silver_Schema_DDL.txt |
 
 ---
 
-*Last updated: 00:31:00*
+*Last updated: 07:00:01*
