@@ -5,7 +5,7 @@
 **Model Used** : GPT-4o
 **Pipelines** : 1
 **Run Started** : 00:00:01
-**Last Updated** : 00:08:00
+**Last Updated** : 00:09:00
 **Status** : IN PROGRESS 🔄
 
 ---
@@ -24,7 +24,7 @@
 |------|----------|--------|
 | ANALYZE | Yes | COMPLETED ✅ |
 | DOCUMENT | Yes | COMPLETED ✅ |
-| CONVERT | Yes | PENDING ⏳ |
+| CONVERT | Yes | IN PROGRESS 🔄 |
 | FUNCTIONAL_TEST | Yes | PENDING ⏳ |
 | UNIT_TEST | Yes | PENDING ⏳ |
 | RECONCILIATION | Yes | PENDING ⏳ |
@@ -49,7 +49,8 @@
 | 10 | P1 | Fetch Domain File List (poll attempt 2) | analysisStatus=ANALYSE_PROCESSING, docStatus=DOCUMENT_IN_PROGRESS | IN PROGRESS 🔄 | 00:06:30 |
 | 11 | P1 | Fetch Domain File List (poll attempt 3) | analysisStatus=ANALYSE_PROCESSING, docStatus=DOCUMENT_IN_PROGRESS | IN PROGRESS 🔄 | 00:07:00 |
 | 12 | P1 | Fetch Domain File List (poll attempt 4) | status=DOCUMENTED, docStatus=DOCUMENTED — ANALYZE+DOCUMENT COMPLETED | COMPLETED ✅ | 00:08:00 |
-| 13 | P1 | Fetch Domain File List for CONVERT | screen=convert — polling for file visibility | IN PROGRESS 🔄 | 00:08:05 |
+| 13 | P1 | Fetch Domain File List for CONVERT (poll attempt 1) | status=DOCUMENTED — file visible in convert screen | COMPLETED ✅ | 00:08:30 |
+| 14 | P1 | CONVERT — Submit | domainId=931, objectName=Silver_Schema_DDL, executionId=7e4eb1c4-be9e-4da2-8a2b-87068ca3b4ef | SUBMITTED 🔄 | 00:09:00 |
 
 ---
 
@@ -67,4 +68,4 @@
 
 ---
 
-*Last updated: 00:08:00*
+*Last updated: 00:09:00*
