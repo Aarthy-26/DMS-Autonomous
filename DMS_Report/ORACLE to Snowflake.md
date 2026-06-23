@@ -5,7 +5,7 @@
 **Model Used**   : Claude
 **Pipelines**    : 1
 **Run Started**  : 2024-02-20 10:30:00
-**Last Updated** : 2024-02-20 10:30:15
+**Last Updated** : 2024-02-20 10:30:30
 **Status**       : IN PROGRESS 🔄
 
 ---
@@ -47,6 +47,7 @@
 |------|----------|--------|-----------------|----------|-------------|--------|------|
 | 1 | — | Inputs validated | — | All 4 inputs confirmed | — | COMPLETED ✅ | 10:30:00 |
 | 2 | P1 | Generate Token | refreshToken=[REFRESH-TOKEN-MASKED] | {"data":{"accessToken":"[ACCESS-TOKEN-MASKED]","refreshToken":"[REFRESH-TOKEN-MASKED]","userName":"Aarthy Jr","email":"aarthy.jr@ascendion.com","expiresIn":4655},"status":"SUCCESS"} | 200 | COMPLETED ✅ | 10:30:15 |
+| 3 | P1 | Fetch Domain File List (pre-upload) | {"limit":100,"offset":0,"screen":"analyze","status":["UPLOADED","ANALYZED","CONVERTED","ANALYSE_PROCESSING","DOCUMENTED","FUNCTIONAL_TESTED","UNIT_TESTED","RECON_TESTED","CONVERSION_TESTED","REVIEWED","VALIDATED","CODE_COMPARED"],"workBenchId":128} | {"data":[],"status":"SUCCESS"} | 200 | COMPLETED ✅ | 10:30:30 |
 
 ---
 
@@ -64,4 +65,4 @@ None so far
 
 ---
 
-*Last updated: 2024-02-20 10:30:15*
+*Last updated: 2024-02-20 10:30:30*
