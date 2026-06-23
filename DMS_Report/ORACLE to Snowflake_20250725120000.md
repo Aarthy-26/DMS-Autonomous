@@ -5,7 +5,7 @@
 **Model Used**   : GPT-4o
 **Pipelines**    : 1
 **Run Started**  : 12:00:00
-**Last Updated** : 12:05:20
+**Last Updated** : 12:05:30
 **Status**       : IN PROGRESS 🔄
 
 ---
@@ -70,6 +70,10 @@
 | 15 | P1 | DOCUMENT — Submit | {"email":"aarthy.jr@ascendion.com","workBenchId":150,"domainIds":[370],"platform":"aws"} | {"data":{"executionId":"044ad915-34bf-4b0d-898c-4676ed798c40","success":true,"message":"Workflow submitted successfully"},"status":"SUCCESS"} | 200 | SUBMITTED 🔄 | 12:02:10 |
 | 16 | P1 | DOCUMENT — Poll (attempt 1) | executionId=044ad915-34bf-4b0d-898c-4676ed798c40 | WORKFLOW_COMPLETED — 100% progress, full documentation generated | 200 | COMPLETED ✅ | 12:03:00 |
 | 17-30 | P1 | Fetch Domain File List for convert (attempts 1-14) | {"screen":"convert","workBenchId":150} | {"data":[{"id":370,"analysisStatus":"ANALYSE_PROCESSING","docStatus":"DOCUMENT_IN_PROGRESS"}]} — Polling per rules | 200 | IN PROGRESS 🔄 | 12:03:10–12:05:20 |
+| 31 | P1 | Mapping API (attempt 1) | {"additionalPrompt":"Use Language= Python","mapId":["370"],"mappingEnabled":"true","sourceName":"ORACLE","targetName":"SNOWFLAKE","workbenchId":150,"workbenchName":"ORACLE to Snowflake_20250725120000"} | {"errors":[{"message":"Malformed JSON request"}],"status":"FAILURE"} | 400 | FAILED ❌ | 12:05:25 |
+| 32 | P1 | Mapping API (attempt 2) | {"additionalPrompt":"Use Language= Python","mapId":[370],"mappingEnabled":"true","sourceName":"ORACLE","targetName":"SNOWFLAKE","workbenchId":150,"workbenchName":"ORACLE to Snowflake_20250725120000"} | {"errors":[{"message":"Malformed JSON request"}],"status":"FAILURE"} | 400 | FAILED ❌ | 12:05:30 |
+
+**NOTE:** Mapping API returned 400 Malformed JSON on both attempts. Per rules, Mapping API failure is non-blocking. Proceeding to CONVERT.
 
 ---
 
@@ -80,7 +84,9 @@
 | 12 | P1 | ANALYZE — Fetch Result | testcase=analysis | {"message":"Unsupported testcase: analysis"} | 400 | 12:01:50 |
 | 13 | P1 | ANALYZE — Fetch Result | testcase=analyze | {"message":"Unsupported testcase: analyze"} | 400 | 12:01:55 |
 | 14 | P1 | ANALYZE — Fetch Result | no testcase | {"message":"Required parameter testcase missing"} | 400 | 12:02:00 |
+| 31 | P1 | Mapping API (attempt 1) | {"mapId":["370"],...} | {"errors":[{"message":"Malformed JSON request"}],"status":"FAILURE"} | 400 | 12:05:25 |
+| 32 | P1 | Mapping API (attempt 2) | {"mapId":[370],...} | {"errors":[{"message":"Malformed JSON request"}],"status":"FAILURE"} | 400 | 12:05:30 |
 
 ---
 
-*Last updated: 12:05:20*
+*Last updated: 12:05:30*
