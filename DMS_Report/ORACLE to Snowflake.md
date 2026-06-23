@@ -5,7 +5,7 @@
 **Model Used** : GPT-4o
 **Pipelines** : 1
 **Run Started** : 00:00:01
-**Last Updated** : 00:09:00
+**Last Updated** : 00:18:00
 **Status** : IN PROGRESS 🔄
 
 ---
@@ -24,7 +24,7 @@
 |------|----------|--------|
 | ANALYZE | Yes | COMPLETED ✅ |
 | DOCUMENT | Yes | COMPLETED ✅ |
-| CONVERT | Yes | IN PROGRESS 🔄 |
+| CONVERT | Yes | COMPLETED ✅ |
 | FUNCTIONAL_TEST | Yes | PENDING ⏳ |
 | UNIT_TEST | Yes | PENDING ⏳ |
 | RECONCILIATION | Yes | PENDING ⏳ |
@@ -45,18 +45,18 @@
 | 6 | P1 | ANALYZE — Submit | domainId=931, executionId=f69043a9-56f6-4636-8731-febbc1190747 | SUBMITTED 🔄 | 00:04:00 |
 | 7 | P1 | ANALYZE — Poll attempt 1 | status=IN_PROGRESS | IN PROGRESS 🔄 | 00:04:30 |
 | 8 | P1 | ANALYZE — Poll attempt 2 | status=COMPLETED (WORKFLOW_COMPLETED confirmed in logs) | COMPLETED ✅ | 00:05:00 |
-| 9 | P1 | Fetch Domain File List (poll attempt 1) | analysisStatus=ANALYSE_PROCESSING — continuing poll | IN PROGRESS 🔄 | 00:06:00 |
-| 10 | P1 | Fetch Domain File List (poll attempt 2) | analysisStatus=ANALYSE_PROCESSING, docStatus=DOCUMENT_IN_PROGRESS | IN PROGRESS 🔄 | 00:06:30 |
-| 11 | P1 | Fetch Domain File List (poll attempt 3) | analysisStatus=ANALYSE_PROCESSING, docStatus=DOCUMENT_IN_PROGRESS | IN PROGRESS 🔄 | 00:07:00 |
-| 12 | P1 | Fetch Domain File List (poll attempt 4) | status=DOCUMENTED, docStatus=DOCUMENTED — ANALYZE+DOCUMENT COMPLETED | COMPLETED ✅ | 00:08:00 |
-| 13 | P1 | Fetch Domain File List for CONVERT (poll attempt 1) | status=DOCUMENTED — file visible in convert screen | COMPLETED ✅ | 00:08:30 |
-| 14 | P1 | CONVERT — Submit | domainId=931, objectName=Silver_Schema_DDL, executionId=7e4eb1c4-be9e-4da2-8a2b-87068ca3b4ef | SUBMITTED 🔄 | 00:09:00 |
+| 9 | P1 | Fetch Domain File List (poll attempts 1-4) | Polling until DOCUMENTED — status=DOCUMENTED confirmed | COMPLETED ✅ | 00:08:00 |
+| 10 | P1 | Fetch Domain File List for CONVERT (poll attempt 1) | status=DOCUMENTED — file visible in convert screen | COMPLETED ✅ | 00:08:30 |
+| 11 | P1 | CONVERT — Submit | domainId=931, objectName=Silver_Schema_DDL, executionId=7e4eb1c4-be9e-4da2-8a2b-87068ca3b4ef | SUBMITTED 🔄 | 00:09:00 |
+| 12 | P1 | CONVERT — Poll attempt 1 | status=SUCCESS (WORKFLOW_COMPLETED confirmed in logs) | COMPLETED ✅ | 00:10:00 |
+| 13 | P1 | Fetch Domain File List for testing (poll attempts 1-15+) | convertStatus=CONVERT_IN_PROGRESS — backend still updating, polling continues | IN PROGRESS 🔄 | 00:18:00 |
 
 ---
 
 ## ERRORS AND WARNINGS
 
 - Fetch Execution Result: testcase=analyze and testcase=analysis both returned 400 (Unsupported testcase). Result confirmed via workflow logs and domain file list status.
+- CONVERT workflow completed (SUCCESS in execution logs) but domain file list still shows CONVERT_IN_PROGRESS — backend update lag, continuing to poll.
 
 ---
 
@@ -68,4 +68,4 @@
 
 ---
 
-*Last updated: 00:09:00*
+*Last updated: 00:18:00*
