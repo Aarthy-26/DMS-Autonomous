@@ -5,7 +5,7 @@
 **Model Used** : GPT-4o
 **Pipelines** : 1
 **Run Started** : 07:00:00
-**Last Updated** : 07:05:00
+**Last Updated** : 07:08:00
 **Status** : IN PROGRESS 🔄
 
 ---
@@ -22,8 +22,8 @@
 
 | Task | Required | Status |
 |------|----------|--------|
-| ANALYSE | Yes | IN PROGRESS 🔄 |
-| DOCUMENT | Yes | PENDING ⏳ |
+| ANALYSE | Yes | COMPLETED ✅ |
+| DOCUMENT | Yes | IN PROGRESS 🔄 |
 | CONVERT | Yes | PENDING ⏳ |
 | FUNCTIONAL_TEST | Yes | PENDING ⏳ |
 | UNIT_TEST | Yes | PENDING ⏳ |
@@ -51,12 +51,16 @@
 | 12 | P1 | ANALYSE — Submit | executionId: 24e70a5f-87ec-4b93-8197-9ffc5d2da49c | SUBMITTED 🔄 | 07:04:00 |
 | 13 | P1 | ANALYSE — Poll Attempt 1 | Status: IN_PROGRESS | IN PROGRESS 🔄 | 07:04:30 |
 | 14 | P1 | ANALYSE — Poll Attempt 2 | Status: IN_PROGRESS | IN PROGRESS 🔄 | 07:05:00 |
+| 15 | P1 | ANALYSE — Poll Attempt 3 | Status: COMPLETED (WORKFLOW_FINISHED) | COMPLETED ✅ | 07:06:00 |
+| 16 | P1 | ANALYSE — Fetch Result | Analysis completed successfully | SUCCESS ✅ | 07:07:00 |
+| 17 | P1 | DOCUMENT — Submit | domainId: 372 | IN PROGRESS 🔄 | 07:08:00 |
 
 ---
 
 ## ERRORS AND WARNINGS
 
 - Step 7: Workbench name "ORACLE to Snowflake" already exists. Retried with "ORACLE to Snowflake1" — SUCCESS.
+- Step 16 (first attempt): testcase=analysis returned ERR-400 Unsupported. Retried with testcase=analyse — SUCCESS.
 
 ---
 
@@ -68,4 +72,4 @@
 
 ---
 
-*Last updated: 07:05:00*
+*Last updated: 07:08:00*
