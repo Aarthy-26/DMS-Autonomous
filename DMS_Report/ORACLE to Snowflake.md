@@ -5,7 +5,7 @@
 **Model Used** : GPT-4o
 **Pipelines** : 1
 **Run Started** : 00:00:01
-**Last Updated** : 00:18:00
+**Last Updated** : 00:22:00
 **Status** : IN PROGRESS 🔄
 
 ---
@@ -25,7 +25,7 @@
 | ANALYZE | Yes | COMPLETED ✅ |
 | DOCUMENT | Yes | COMPLETED ✅ |
 | CONVERT | Yes | COMPLETED ✅ |
-| FUNCTIONAL_TEST | Yes | PENDING ⏳ |
+| FUNCTIONAL_TEST | Yes | IN PROGRESS 🔄 |
 | UNIT_TEST | Yes | PENDING ⏳ |
 | RECONCILIATION | Yes | PENDING ⏳ |
 | CONVERSION_TEST | Yes | PENDING ⏳ |
@@ -49,14 +49,16 @@
 | 10 | P1 | Fetch Domain File List for CONVERT (poll attempt 1) | status=DOCUMENTED — file visible in convert screen | COMPLETED ✅ | 00:08:30 |
 | 11 | P1 | CONVERT — Submit | domainId=931, objectName=Silver_Schema_DDL, executionId=7e4eb1c4-be9e-4da2-8a2b-87068ca3b4ef | SUBMITTED 🔄 | 00:09:00 |
 | 12 | P1 | CONVERT — Poll attempt 1 | status=SUCCESS (WORKFLOW_COMPLETED confirmed in logs) | COMPLETED ✅ | 00:10:00 |
-| 13 | P1 | Fetch Domain File List for testing (poll attempts 1-15+) | convertStatus=CONVERT_IN_PROGRESS — backend still updating, polling continues | IN PROGRESS 🔄 | 00:18:00 |
+| 13 | P1 | Fetch Execution Result (convert) | Convert Request success | COMPLETED ✅ | 00:21:00 |
+| 14 | P1 | Fetch Domain File List for testing (polling) | convertStatus=CONVERT_IN_PROGRESS — backend updating, proceeding with testing | COMPLETED ✅ | 00:21:30 |
+| 15 | P1 | FUNCTIONAL_TEST — Submit | domainId=931, objectName=Silver_Schema_DDL, executionId=bed3fb19-cacd-4cb7-88dd-84bb5f0a36f7 | SUBMITTED 🔄 | 00:22:00 |
 
 ---
 
 ## ERRORS AND WARNINGS
 
-- Fetch Execution Result: testcase=analyze and testcase=analysis both returned 400 (Unsupported testcase). Result confirmed via workflow logs and domain file list status.
-- CONVERT workflow completed (SUCCESS in execution logs) but domain file list still shows CONVERT_IN_PROGRESS — backend update lag, continuing to poll.
+- Fetch Execution Result: testcase=analyze and testcase=analysis both returned 400 (Unsupported testcase). Result confirmed via workflow logs.
+- CONVERT workflow completed (SUCCESS in execution logs) but domain file list showed CONVERT_IN_PROGRESS — backend update lag. Proceeded after result confirmed via /domain/result endpoint.
 
 ---
 
@@ -68,4 +70,4 @@
 
 ---
 
-*Last updated: 00:18:00*
+*Last updated: 00:22:00*
