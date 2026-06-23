@@ -5,7 +5,7 @@
 **Model Used** : GPT-4o
 **Pipelines** : 1
 **Run Started** : 00:00:01
-**Last Updated** : 00:06:00
+**Last Updated** : 00:08:00
 **Status** : IN PROGRESS 🔄
 
 ---
@@ -22,8 +22,8 @@
 
 | Task | Required | Status |
 |------|----------|--------|
-| ANALYZE | Yes | IN PROGRESS 🔄 |
-| DOCUMENT | Yes | PENDING ⏳ |
+| ANALYZE | Yes | COMPLETED ✅ |
+| DOCUMENT | Yes | COMPLETED ✅ |
 | CONVERT | Yes | PENDING ⏳ |
 | FUNCTIONAL_TEST | Yes | PENDING ⏳ |
 | UNIT_TEST | Yes | PENDING ⏳ |
@@ -45,14 +45,17 @@
 | 6 | P1 | ANALYZE — Submit | domainId=931, executionId=f69043a9-56f6-4636-8731-febbc1190747 | SUBMITTED 🔄 | 00:04:00 |
 | 7 | P1 | ANALYZE — Poll attempt 1 | status=IN_PROGRESS | IN PROGRESS 🔄 | 00:04:30 |
 | 8 | P1 | ANALYZE — Poll attempt 2 | status=COMPLETED (WORKFLOW_COMPLETED confirmed in logs) | COMPLETED ✅ | 00:05:00 |
-| 9 | P1 | Fetch Execution Result (analyze) | Workflow COMPLETED — analysisStatus=ANALYSE_PROCESSING (backend updating) | IN PROGRESS 🔄 | 00:05:30 |
-| 10 | P1 | Fetch Domain File List (poll attempt 1 — waiting for ANALYZED) | analysisStatus=ANALYSE_PROCESSING — continuing poll | IN PROGRESS 🔄 | 00:06:00 |
+| 9 | P1 | Fetch Domain File List (poll attempt 1) | analysisStatus=ANALYSE_PROCESSING — continuing poll | IN PROGRESS 🔄 | 00:06:00 |
+| 10 | P1 | Fetch Domain File List (poll attempt 2) | analysisStatus=ANALYSE_PROCESSING, docStatus=DOCUMENT_IN_PROGRESS | IN PROGRESS 🔄 | 00:06:30 |
+| 11 | P1 | Fetch Domain File List (poll attempt 3) | analysisStatus=ANALYSE_PROCESSING, docStatus=DOCUMENT_IN_PROGRESS | IN PROGRESS 🔄 | 00:07:00 |
+| 12 | P1 | Fetch Domain File List (poll attempt 4) | status=DOCUMENTED, docStatus=DOCUMENTED — ANALYZE+DOCUMENT COMPLETED | COMPLETED ✅ | 00:08:00 |
+| 13 | P1 | Fetch Domain File List for CONVERT | screen=convert — polling for file visibility | IN PROGRESS 🔄 | 00:08:05 |
 
 ---
 
 ## ERRORS AND WARNINGS
 
-- Fetch Execution Result: testcase=analyze and testcase=analysis both returned 400 (Unsupported testcase). Result confirmed via workflow logs directly.
+- Fetch Execution Result: testcase=analyze and testcase=analysis both returned 400 (Unsupported testcase). Result confirmed via workflow logs and domain file list status.
 
 ---
 
@@ -64,4 +67,4 @@
 
 ---
 
-*Last updated: 00:06:00*
+*Last updated: 00:08:00*
