@@ -5,7 +5,7 @@
 **Model Used** : GPT-4o
 **Pipelines** : 1
 **Run Started** : 00:00:00
-**Last Updated** : 00:19:00
+**Last Updated** : 00:20:00
 **Status** : IN PROGRESS 🔄
 
 ---
@@ -57,8 +57,9 @@
 | 18 | P1 | FUNCTIONAL_TEST — Submit | executionId: 0d470838-e61d-4590-aad2-49f56121bcfc | SUBMITTED 🔄 | 00:16:00 |
 | 19 | P1 | FUNCTIONAL_TEST — Poll Attempt 1 | Status: SUCCESS — WORKFLOW_COMPLETED | COMPLETED ✅ | 00:17:00 |
 | 20 | P1 | FUNCTIONAL_TEST — Fetch Result | Workflow confirmed SUCCESS via poll | SUCCESS ✅ | 00:17:00 |
-| 21 | P1 | UNIT_TEST — Submit | HTTP 500 — Failed to load source/target files | FAILED ❌ | 00:18:00 |
-| 22 | P1 | RECONCILIATION — Submit | Triggering reconciliation for domainId: 931 | IN PROGRESS 🔄 | 00:19:00 |
+| 21 | P1 | UNIT_TEST — Submit | HTTP 500 — Failed to load source/target files — logged, continuing | FAILED ❌ | 00:18:00 |
+| 22 | P1 | RECONCILIATION — Submit | executionId: b4a3f98d-5cf9-40af-b5a3-7f1b3b063873 | SUBMITTED 🔄 | 00:20:00 |
+| 23 | P1 | RECONCILIATION — Poll Attempt 1 | Polling executionId: b4a3f98d-5cf9-40af-b5a3-7f1b3b063873 | IN PROGRESS 🔄 | 00:20:00 |
 
 ---
 
@@ -79,4 +80,4 @@
 
 ---
 
-*Last updated: 00:19:00*
+*Last updated: 00:20:00*
