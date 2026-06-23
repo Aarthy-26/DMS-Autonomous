@@ -5,7 +5,7 @@
 **Model Used** : GPT-4o
 **Pipelines** : 1
 **Run Started** : 00:00:00
-**Last Updated** : 00:03:00
+**Last Updated** : 00:04:00
 **Status** : IN PROGRESS 🔄
 
 ---
@@ -22,7 +22,7 @@
 
 | Task | Required | Status |
 |------|----------|--------|
-| ANALYSE | Yes | PENDING ⏳ |
+| ANALYSE | Yes | IN PROGRESS 🔄 |
 | DOCUMENT | Yes | PENDING ⏳ |
 | CONVERT | Yes | PENDING ⏳ |
 | FUNCTIONAL_TEST | Yes | PENDING ⏳ |
@@ -41,7 +41,9 @@
 | 2 | P1 | Generate Access Token | Token generated successfully | COMPLETED ✅ | 00:01:00 |
 | 3 | P1 | Fetch Domain File List (pre-upload) | WorkbenchId: 128 — 1 existing file found | COMPLETED ✅ | 00:02:00 |
 | 4 | P1 | Upload File | Silver_Schema_DDL.txt uploaded successfully (SPECIFIC mode) | COMPLETED ✅ | 00:03:00 |
-| 5 | P1 | Fetch Domain File List (post-upload poll attempt 1) | Polling for Silver_Schema_DDL.txt | IN PROGRESS 🔄 | 00:03:00 |
+| 5 | P1 | Fetch Domain File List (post-upload poll attempt 1) | Silver_Schema_DDL.txt confirmed — domainId: 934 | COMPLETED ✅ | 00:03:30 |
+| 6 | P1 | Fetch Domain Names | Domains: Sales, Silver | COMPLETED ✅ | 00:04:00 |
+| 7 | P1 | ANALYSE — Submit | domainId: 934 | SUBMITTED 🔄 | 00:04:00 |
 
 ---
 
@@ -59,4 +61,4 @@ None so far
 
 ---
 
-*Last updated: 00:03:00*
+*Last updated: 00:04:00*
