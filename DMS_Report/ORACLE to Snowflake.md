@@ -5,7 +5,7 @@
 **Model Used**   : Claude Sonnet 4.5
 **Pipelines**    : 1
 **Run Started**  : 2025-07-25 00:00:00
-**Last Updated** : 2025-07-25 00:00:20
+**Last Updated** : 2025-07-25 00:00:22
 **Status**       : IN PROGRESS 🔄
 
 ---
@@ -65,7 +65,8 @@
 | 18 | P1 | Mapping API | {"additionalPrompt":"Use Language= Python","mapId":[928],"mappingEnabled":"true","sourceName":"ORACLE","targetName":"SNOWFLAKE","workbenchId":128,"workbenchName":"ORACLE to Snowflake"} | {"errors":[{"status":400,"code":"ERR-5001","message":"Malformed JSON request"}],"status":"FAILURE"} — Non-blocking | 400 | FAILED ❌ (non-blocking) | 00:00:18 |
 | 19 | P1 | CONVERT — Submit | {"email":"aarthy.jr@ascendion.com","workBenchId":128,"domainIds":[928],"objectNames":["Silver_Schema_DDL"],"platform":"aws"} | {"data":{"executionId":"00b5a468-b045-4861-8521-705fda926669","success":true,"message":"Workflow submitted successfully"},"status":"SUCCESS"} | 200 | SUBMITTED 🔄 | 00:00:19 |
 | 20 | P1 | CONVERT — Poll attempt 1 | executionId=00b5a468-b045-4861-8521-705fda926669 | WORKFLOW_COMPLETED — status=SUCCESS | 200 | COMPLETED ✅ | 00:00:20 |
-| 21 | P1 | Fetch Domain File List for testing (poll attempt 1) | {"screen":"testbuild","workBenchId":128,"limit":50,"offset":0} | {"data":[{"id":928,"objectName":"Silver_Schema_DDL","convertStatus":"CONVERT_IN_PROGRESS","docStatus":"DOCUMENTED","status":"DOCUMENTED"}],"status":"SUCCESS"} | 200 | IN PROGRESS 🔄 | 00:00:20 |
+| 21 | P1 | Fetch Domain File List for testing (poll attempt 1) | {"screen":"testbuild","workBenchId":128,"limit":50,"offset":0} | {"data":[{"id":928,"convertStatus":"CONVERT_IN_PROGRESS","docStatus":"DOCUMENTED","status":"DOCUMENTED"}],"status":"SUCCESS"} | 200 | IN PROGRESS 🔄 | 00:00:20 |
+| 22 | P1 | Fetch Domain File List for testing (poll attempt 2) | {"screen":"testbuild","workBenchId":128,"limit":50,"offset":0} | {"data":[{"id":928,"convertStatus":"CONVERT_IN_PROGRESS","docStatus":"DOCUMENTED","status":"DOCUMENTED"}],"status":"SUCCESS"} | 200 | IN PROGRESS 🔄 | 00:00:22 |
 
 ---
 
@@ -90,4 +91,4 @@
 
 ---
 
-*Last updated: 2025-07-25 00:00:20*
+*Last updated: 2025-07-25 00:00:22*
