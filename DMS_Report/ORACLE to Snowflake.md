@@ -5,7 +5,7 @@
 **Model Used**   : Claude Sonnet 4.5
 **Pipelines**    : 1
 **Run Started**  : 2025-07-25 00:00:00
-**Last Updated** : 2025-07-25 00:00:02
+**Last Updated** : 2025-07-25 00:00:03
 **Status**       : IN PROGRESS 🔄
 
 ---
@@ -14,7 +14,7 @@
 
 | Pipeline | Source | Target | Workbench | Status |
 |----------|--------|--------|-----------|--------|
-| P1 | ORACLE | SNOWFLAKE | ORACLE to Snowflake | IN PROGRESS 🔄 |
+| P1 | ORACLE | SNOWFLAKE | ORACLE to Snowflake (WB: 128) | IN PROGRESS 🔄 |
 
 ---
 
@@ -47,6 +47,7 @@
 |------|----------|--------|-----------------|----------|-------------|--------|------|
 | 1 | — | Inputs validated | All 4 inputs confirmed | All inputs present and valid | — | COMPLETED ✅ | 00:00:00 |
 | 2 | P1 | Generate Token | refreshToken=[REFRESH-TOKEN-MASKED] | {"accessToken":"[ACCESS-TOKEN-MASKED]","userName":"Aarthy Jr","email":"aarthy.jr@ascendion.com","expiresIn":4076} | 200 | COMPLETED ✅ | 00:00:01 |
+| 3 | P1 | Fetch Domain File List (pre-upload) | {"screen":"analyze","workBenchId":128,"limit":50,"offset":0,"status":[...]} | {"data":[],"status":"SUCCESS"} | 200 | COMPLETED ✅ | 00:00:03 |
 
 ---
 
@@ -64,4 +65,4 @@ None so far.
 
 ---
 
-*Last updated: 2025-07-25 00:00:02*
+*Last updated: 2025-07-25 00:00:03*
