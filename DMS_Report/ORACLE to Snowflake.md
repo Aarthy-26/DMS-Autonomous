@@ -5,7 +5,7 @@
 **Model Used** : GPT-4o
 **Pipelines** : 1
 **Run Started** : 00:00:00
-**Last Updated** : 00:21:00
+**Last Updated** : 00:24:00
 **Status** : IN PROGRESS 🔄
 
 ---
@@ -26,8 +26,8 @@
 | DOCUMENT | Yes | COMPLETED ✅ |
 | CONVERT | Yes | COMPLETED ✅ |
 | FUNCTIONAL_TEST | Yes | COMPLETED ✅ |
-| UNIT_TEST | Yes | IN PROGRESS 🔄 |
-| RECONCILIATION | Yes | PENDING ⏳ |
+| UNIT_TEST | Yes | COMPLETED ✅ |
+| RECONCILIATION | Yes | IN PROGRESS 🔄 |
 | CONVERSION_TEST | Yes | PENDING ⏳ |
 | REVIEW | Yes | PENDING ⏳ |
 
@@ -61,8 +61,12 @@
 | 22 | P1 | FUNCTIONAL_TEST — Poll attempt 1 | Status: SUCCESS — WORKFLOW_COMPLETED | COMPLETED ✅ | 00:18:00 |
 | 23 | P1 | FUNCTIONAL_TEST — Fetch Result | Functional Test Request success | SUCCESS ✅ | 00:19:00 |
 | 24 | P1 | UNIT_TEST — Submit | domainId: 934 — executionId: 25470b6f-790c-4d1a-b385-76bdd16a6b4e | SUBMITTED 🔄 | 00:20:00 |
-| 25 | P1 | UNIT_TEST — Poll attempt 1 | Status: IN_PROGRESS — Agent reading files | IN PROGRESS 🔄 | 00:20:30 |
-| 26 | P1 | UNIT_TEST — Poll attempt 2 | Status: IN_PROGRESS — Agent processing | IN PROGRESS 🔄 | 00:21:00 |
+| 25 | P1 | UNIT_TEST — Poll attempt 1 | Status: IN_PROGRESS | IN PROGRESS 🔄 | 00:20:30 |
+| 26 | P1 | UNIT_TEST — Poll attempt 2 | Status: IN_PROGRESS | IN PROGRESS 🔄 | 00:21:00 |
+| 27 | P1 | UNIT_TEST — Poll attempt 3 | Status: SUCCESS — WORKFLOW_COMPLETED | COMPLETED ✅ | 00:22:00 |
+| 28 | P1 | UNIT_TEST — Fetch Result | Unit-Test Request success | SUCCESS ✅ | 00:23:00 |
+| 29 | P1 | RECONCILIATION — Submit | domainId: 934 — executionId: 92f25f2a-b39b-463f-88c8-6f9a0aba31f0 | SUBMITTED 🔄 | 00:24:00 |
+| 30 | P1 | RECONCILIATION — Poll attempt 1 | executionId: 92f25f2a-b39b-463f-88c8-6f9a0aba31f0 | IN PROGRESS 🔄 | 00:24:00 |
 
 ---
 
@@ -81,4 +85,4 @@
 
 ---
 
-*Last updated: 00:21:00*
+*Last updated: 00:24:00*
