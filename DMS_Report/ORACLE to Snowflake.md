@@ -5,7 +5,7 @@
 **Model Used** : GPT-4o
 **Pipelines** : 1
 **Run Started** : 00:00:00
-**Last Updated** : 00:05:00
+**Last Updated** : 00:06:00
 **Status** : IN PROGRESS 🔄
 
 ---
@@ -44,7 +44,8 @@
 | 5 | P1 | Fetch Domain File List (post-upload poll attempt 1) | Silver_Schema_DDL.txt confirmed — domainId: 934 | COMPLETED ✅ | 00:03:30 |
 | 6 | P1 | Fetch Domain Names | Domains: Sales, Silver | COMPLETED ✅ | 00:04:00 |
 | 7 | P1 | ANALYSE — Submit | domainId: 934 — executionId: a4517a9f-1492-4d3f-b2ae-ce2f52cb09d9 | SUBMITTED 🔄 | 00:05:00 |
-| 8 | P1 | ANALYSE — Poll attempt 1 | executionId: a4517a9f-1492-4d3f-b2ae-ce2f52cb09d9 | IN PROGRESS 🔄 | 00:05:00 |
+| 8 | P1 | ANALYSE — Poll attempt 1 | Status: IN_PROGRESS | IN PROGRESS 🔄 | 00:05:30 |
+| 9 | P1 | ANALYSE — Poll attempt 2 | Status: IN_PROGRESS — Agent reading file | IN PROGRESS 🔄 | 00:06:00 |
 
 ---
 
@@ -62,4 +63,4 @@ None so far
 
 ---
 
-*Last updated: 00:05:00*
+*Last updated: 00:06:00*
