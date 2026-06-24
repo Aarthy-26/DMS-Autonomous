@@ -5,7 +5,7 @@
 **Model Used**   : Claude Sonnet 4.5
 **Pipelines**    : 1
 **Run Started**  : 00:00:01
-**Last Updated** : 00:00:14
+**Last Updated** : 00:00:17
 **Status**       : IN PROGRESS 🔄
 
 ---
@@ -23,8 +23,8 @@
 | Task | Required | Status |
 |------|----------|--------|
 | ANALYSE | Yes | COMPLETED ✅ |
-| DOCUMENT | Yes | IN PROGRESS 🔄 |
-| CONVERT | Yes | PENDING ⏳ |
+| DOCUMENT | Yes | COMPLETED ✅ |
+| CONVERT | Yes | IN PROGRESS 🔄 |
 | FUNCTIONAL_TEST | Yes | PENDING ⏳ |
 | UNIT_TEST | Yes | PENDING ⏳ |
 | RECONCILIATION | Yes | PENDING ⏳ |
@@ -60,6 +60,9 @@
 | 13 | P1 | ANALYSE — Poll attempt 2 | Status: SUCCESS (COMPLETED) | COMPLETED ✅ | 00:00:11 |
 | 14 | P1 | ANALYSE — Fetch Result | domainId=373 — Analysis completed successfully | SUCCESS ✅ | 00:00:12 |
 | 15 | P1 | DOCUMENT — Submit | executionId=51ee4e78-0cb0-4383-85e3-9e4ebe8de88c | SUBMITTED 🔄 | 00:00:14 |
+| 16 | P1 | DOCUMENT — Poll attempt 1 | Status: SUCCESS (COMPLETED) | COMPLETED ✅ | 00:00:15 |
+| 17 | P1 | DOCUMENT — Fetch Result | domainId=373 — Document generated successfully | SUCCESS ✅ | 00:00:16 |
+| 18 | P1 | Fetch Domain File List for Convert (attempt 1) | Polling for convert-ready files | IN PROGRESS 🔄 | 00:00:17 |
 
 ---
 
@@ -80,4 +83,4 @@
 
 ---
 
-*Last updated: 00:00:14*
+*Last updated: 00:00:17*
