@@ -5,7 +5,7 @@
 **Model Used**   : Claude Sonnet 4.5
 **Pipelines**    : 1
 **Run Started**  : 00:00:01
-**Last Updated** : 00:00:10
+**Last Updated** : 00:00:13
 **Status**       : IN PROGRESS 🔄
 
 ---
@@ -22,8 +22,8 @@
 
 | Task | Required | Status |
 |------|----------|--------|
-| ANALYSE | Yes | IN PROGRESS 🔄 |
-| DOCUMENT | Yes | PENDING ⏳ |
+| ANALYSE | Yes | COMPLETED ✅ |
+| DOCUMENT | Yes | IN PROGRESS 🔄 |
 | CONVERT | Yes | PENDING ⏳ |
 | FUNCTIONAL_TEST | Yes | PENDING ⏳ |
 | UNIT_TEST | Yes | PENDING ⏳ |
@@ -57,6 +57,8 @@
 | 10 | P1 | Fetch Domain File List (post-upload, attempt 1) | Silver_Schema_DDL.txt confirmed — domainId=373, status=UPLOADED | COMPLETED ✅ | 00:00:08 |
 | 11 | P1 | ANALYSE — Submit | executionId=75224762-dfdb-426c-a644-0121b3ecb2b8 | SUBMITTED 🔄 | 00:00:09 |
 | 12 | P1 | ANALYSE — Poll attempt 1 | Status: IN_PROGRESS | IN PROGRESS 🔄 | 00:00:10 |
+| 13 | P1 | ANALYSE — Poll attempt 2 | Status: SUCCESS (COMPLETED) | COMPLETED ✅ | 00:00:11 |
+| 14 | P1 | ANALYSE — Fetch Result | domainId=373 — Analysis completed successfully | SUCCESS ✅ | 00:00:12 |
 
 ---
 
@@ -65,6 +67,7 @@
 - Workbench name "ORACLE to Snowflake" already existed — retried with suffix
 - Workbench name "ORACLE to Snowflake1" already existed — retried with suffix
 - Workbench name "ORACLE to Snowflake2" accepted ✅
+- Fetch Result with testcase=analysis returned 400 — retried with testcase=analyse ✅
 
 ---
 
@@ -76,4 +79,4 @@
 
 ---
 
-*Last updated: 00:00:10*
+*Last updated: 00:00:13*
