@@ -5,7 +5,7 @@
 **Model Used**   : Claude Sonnet 4.5
 **Pipelines**    : 2
 **Run Started**  : 2025-07-25 00:00:00
-**Last Updated** : 2025-07-25 00:01:00
+**Last Updated** : 2025-07-25 00:02:00
 **Status**       : IN PROGRESS 🔄
 
 ---
@@ -53,22 +53,27 @@
 | 4 | P1 | Load Mapped Target Tech | INFORMATICA → Fabric confirmed | COMPLETED ✅ | 00:00:15 |
 | 5 | P1 | Create Workbench | "Informatica to Fabric" → workbenchId=154 | COMPLETED ✅ | 00:00:20 |
 | 6 | P2 | Create Workbench | "Informatica to Fabric1" → workbenchId=155 | COMPLETED ✅ | 00:00:25 |
+| 7 | P1 | Fetch Domain File List (pre-upload) | workbenchId=154 — empty, ready for upload | COMPLETED ✅ | 00:00:30 |
+| 8 | P1 | Upload File | Inventory_Stage_Load_Mapping.xml → workbenchId=154 | COMPLETED ✅ | 00:00:40 |
+| 9 | P1 | Fetch Domain File List (post-upload) | domainId=374 confirmed UPLOADED | COMPLETED ✅ | 00:00:45 |
+| 10 | P2 | Upload File | Inventory_Stage_Load_Mapping.xml → workbenchId=155 | COMPLETED ✅ | 00:00:55 |
+| 11 | P2 | Fetch Domain File List (post-upload) | domainId=375 confirmed UPLOADED | COMPLETED ✅ | 00:01:00 |
 
 ---
 
 ## ERRORS AND WARNINGS
 
-None so far
+- P1 Upload attempt 1: Folder path "DMS_Input/Informatica to Fabric" not found (404). Retried with "DMS_Input/Informatica To Fabric" — SUCCESS.
 
 ---
 
 ## UPLOAD SUMMARY
 
-| Pipeline | Mode | Files |
-|----------|------|-------|
-| P1 | SPECIFIC | Inventory_Stage_Load_Mapping.xml |
-| P2 | SPECIFIC | Inventory_Stage_Load_Mapping.xml |
+| Pipeline | Mode | Files | DomainId |
+|----------|------|-------|----------|
+| P1 | SPECIFIC | Inventory_Stage_Load_Mapping.xml | 374 |
+| P2 | SPECIFIC | Inventory_Stage_Load_Mapping.xml | 375 |
 
 ---
 
-*Last updated: 2025-07-25 00:01:00*
+*Last updated: 2025-07-25 00:02:00*
