@@ -5,17 +5,17 @@
 **Model Used**   : Claude Sonnet 4.5
 **Pipelines**    : 2
 **Run Started**  : 2025-07-25 00:00:00
-**Last Updated** : 2025-07-25 00:00:00
+**Last Updated** : 2025-07-25 00:01:00
 **Status**       : IN PROGRESS 🔄
 
 ---
 
 ## PIPELINE SUMMARY
 
-| Pipeline | Source | Target | Workbench | Status |
-|----------|--------|--------|-----------|--------|
-| P1 | INFORMATICA | FABRIC | Informatica to Fabric | PENDING ⏳ |
-| P2 | INFORMATICA | FABRIC | Informatica to Fabric1 | PENDING ⏳ |
+| Pipeline | Source | Target | Workbench | WorkbenchId | Status |
+|----------|--------|--------|-----------|-------------|--------|
+| P1 | INFORMATICA | Fabric | Informatica to Fabric | 154 | IN PROGRESS 🔄 |
+| P2 | INFORMATICA | Fabric | Informatica to Fabric1 | 155 | PENDING ⏳ |
 
 ---
 
@@ -48,7 +48,11 @@
 | Step | Pipeline | Action | Detail | Status | Time |
 |------|----------|--------|--------|--------|------|
 | 1 | — | Inputs validated | All 4 inputs confirmed | COMPLETED ✅ | 00:00:00 |
-| 2 | — | Generate Access Token | Calling /dms/auth/gettoken | IN PROGRESS 🔄 | 00:00:01 |
+| 2 | — | Generate Access Token | /dms/auth/gettoken | COMPLETED ✅ | 00:00:01 |
+| 3 | P1 | Load Initial Tech Options | /dms/tech/list | COMPLETED ✅ | 00:00:10 |
+| 4 | P1 | Load Mapped Target Tech | INFORMATICA → Fabric confirmed | COMPLETED ✅ | 00:00:15 |
+| 5 | P1 | Create Workbench | "Informatica to Fabric" → workbenchId=154 | COMPLETED ✅ | 00:00:20 |
+| 6 | P2 | Create Workbench | "Informatica to Fabric1" → workbenchId=155 | COMPLETED ✅ | 00:00:25 |
 
 ---
 
@@ -67,4 +71,4 @@ None so far
 
 ---
 
-*Last updated: 2025-07-25 00:00:01*
+*Last updated: 2025-07-25 00:01:00*
