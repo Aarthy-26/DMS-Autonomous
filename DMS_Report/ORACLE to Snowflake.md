@@ -5,7 +5,7 @@
 **Model Used**   : Claude Sonnet 4.5
 **Pipelines**    : 1
 **Run Started**  : 00:00:01
-**Last Updated** : 00:00:07
+**Last Updated** : 00:00:08
 **Status**       : IN PROGRESS 🔄
 
 ---
@@ -22,7 +22,7 @@
 
 | Task | Required | Status |
 |------|----------|--------|
-| ANALYSE | Yes | PENDING ⏳ |
+| ANALYSE | Yes | IN PROGRESS 🔄 |
 | DOCUMENT | Yes | PENDING ⏳ |
 | CONVERT | Yes | PENDING ⏳ |
 | FUNCTIONAL_TEST | Yes | PENDING ⏳ |
@@ -54,6 +54,7 @@
 | 7 | P1 | Create Workbench (attempt: ORACLE to Snowflake2) | workbenchId = 153 | COMPLETED ✅ | 00:00:05 |
 | 8 | P1 | Fetch Domain File List (pre-upload) | workbenchId=153 — 0 files (empty, expected) | COMPLETED ✅ | 00:00:06 |
 | 9 | P1 | Upload File | Silver_Schema_DDL.txt → workbenchId=153, domain=Sales | COMPLETED ✅ | 00:00:07 |
+| 10 | P1 | Fetch Domain File List (post-upload, attempt 1) | Silver_Schema_DDL.txt confirmed — domainId=373, status=UPLOADED | COMPLETED ✅ | 00:00:08 |
 
 ---
 
@@ -69,8 +70,8 @@
 
 | Pipeline | Mode | Files |
 |----------|------|-------|
-| P1 | SPECIFIC | Silver_Schema_DDL.txt |
+| P1 | SPECIFIC | Silver_Schema_DDL.txt (domainId=373) |
 
 ---
 
-*Last updated: 00:00:07*
+*Last updated: 00:00:08*
