@@ -5,7 +5,7 @@
 **Model Used**   : Claude Sonnet 4.5
 **Pipelines**    : 1
 **Run Started**  : 00:00:01
-**Last Updated** : 00:00:20
+**Last Updated** : 00:00:22
 **Status**       : IN PROGRESS 🔄
 
 ---
@@ -24,8 +24,8 @@
 |------|----------|--------|
 | ANALYSE | Yes | COMPLETED ✅ |
 | DOCUMENT | Yes | COMPLETED ✅ |
-| CONVERT | Yes | IN PROGRESS 🔄 |
-| FUNCTIONAL_TEST | Yes | PENDING ⏳ |
+| CONVERT | Yes | COMPLETED ✅ |
+| FUNCTIONAL_TEST | Yes | IN PROGRESS 🔄 |
 | UNIT_TEST | Yes | PENDING ⏳ |
 | RECONCILIATION | Yes | PENDING ⏳ |
 | CONVERSION_TEST | Yes | PENDING ⏳ |
@@ -65,6 +65,9 @@
 | 18 | P1 | Fetch Domain File List for Convert (attempt 1) | Silver_Schema_DDL confirmed — status=DOCUMENTED, domainId=373 | COMPLETED ✅ | 00:00:17 |
 | 19 | P1 | MAPPING — Silver_Schema_DDL.txt | additionalPrompt="Use Language= Python" — mapId confirmed | COMPLETED ✅ | 00:00:19 |
 | 20 | P1 | CONVERT — Submit | executionId=357969e1-a81c-4cba-98ce-4418525ccf56 | SUBMITTED 🔄 | 00:00:20 |
+| 21 | P1 | CONVERT — Poll attempt 1 | Status: SUCCESS (COMPLETED) | COMPLETED ✅ | 00:00:21 |
+| 22 | P1 | CONVERT — Fetch Result | domainId=373 — Convert Request success | SUCCESS ✅ | 00:00:22 |
+| 23 | P1 | Fetch Domain File List for Testing (attempt 1) | Polling for test-ready files | IN PROGRESS 🔄 | 00:00:22 |
 
 ---
 
@@ -85,4 +88,4 @@
 
 ---
 
-*Last updated: 00:00:20*
+*Last updated: 00:00:22*
