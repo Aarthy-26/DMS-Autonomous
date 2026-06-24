@@ -5,7 +5,7 @@
 **Model Used**   : Claude Sonnet 4.5
 **Pipelines**    : 1
 **Run Started**  : 00:00:01
-**Last Updated** : 00:00:24
+**Last Updated** : 00:00:26
 **Status**       : IN PROGRESS 🔄
 
 ---
@@ -25,8 +25,8 @@
 | ANALYSE | Yes | COMPLETED ✅ |
 | DOCUMENT | Yes | COMPLETED ✅ |
 | CONVERT | Yes | COMPLETED ✅ |
-| FUNCTIONAL_TEST | Yes | IN PROGRESS 🔄 |
-| UNIT_TEST | Yes | PENDING ⏳ |
+| FUNCTIONAL_TEST | Yes | COMPLETED ✅ |
+| UNIT_TEST | Yes | IN PROGRESS 🔄 |
 | RECONCILIATION | Yes | PENDING ⏳ |
 | CONVERSION_TEST | Yes | PENDING ⏳ |
 | REVIEW | Yes | PENDING ⏳ |
@@ -69,6 +69,8 @@
 | 22 | P1 | CONVERT — Fetch Result | domainId=373 — Convert Request success | SUCCESS ✅ | 00:00:22 |
 | 23 | P1 | Fetch Domain File List for Testing (attempt 1) | Silver_Schema_DDL confirmed — status=CONVERTED, domainId=373 | COMPLETED ✅ | 00:00:23 |
 | 24 | P1 | FUNCTIONAL_TEST — Submit | executionId=961ba068-55dc-4c42-b889-48c96ef6617f | SUBMITTED 🔄 | 00:00:24 |
+| 25 | P1 | FUNCTIONAL_TEST — Poll attempt 1 | Status: SUCCESS (COMPLETED) | COMPLETED ✅ | 00:00:25 |
+| 26 | P1 | FUNCTIONAL_TEST — Fetch Result | domainId=373 — Functional Test Request success | SUCCESS ✅ | 00:00:26 |
 
 ---
 
@@ -89,4 +91,4 @@
 
 ---
 
-*Last updated: 00:00:24*
+*Last updated: 00:00:26*
