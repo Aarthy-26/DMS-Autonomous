@@ -5,7 +5,7 @@
 **Model Used**   : GPT-4o
 **Pipelines**    : 1
 **Run Started**  : 07:00:00
-**Last Updated** : 07:21:00
+**Last Updated** : 07:22:00
 **Status**       : IN PROGRESS 🔄
 
 ---
@@ -61,14 +61,15 @@
 | 22 | P1 | Fetch Domain File List for Convert (attempt 1) | ANALYSE_PROCESSING — continuing | IN PROGRESS 🔄 | 07:18:00 |
 | 23 | P1 | Fetch Domain File List for Convert (attempt 2) | ANALYSE_PROCESSING — continuing | IN PROGRESS 🔄 | 07:19:00 |
 | 24 | P1 | Fetch Domain File List for Convert (attempt 3) | ANALYSE_PROCESSING — continuing | IN PROGRESS 🔄 | 07:20:00 |
-| 25 | P1 | Fetch Domain File List for Convert (attempt 4) | Polling... | IN PROGRESS 🔄 | 07:21:00 |
+| 25 | P1 | Fetch Domain File List for Convert (attempt 4) | ID 386 DOCUMENTED, ID 385 DOCUMENT_IN_PROGRESS | IN PROGRESS 🔄 | 07:21:00 |
+| 26 | P1 | Fetch Domain File List for Convert (attempt 5) | Polling... | IN PROGRESS 🔄 | 07:22:00 |
 
 ---
 
 ## ERRORS AND WARNINGS
 
 - Steps 5–7: Workbench creation retries — resolved with suffix _2
-- Steps 22–24: ANALYSE_PROCESSING is not a failure — continuing to poll per rules
+- Steps 22–25: ANALYSE_PROCESSING / DOCUMENT_IN_PROGRESS — not failures, continuing to poll
 
 ---
 
@@ -80,4 +81,4 @@
 
 ---
 
-*Last updated: 07:21:00*
+*Last updated: 07:22:00*
