@@ -5,7 +5,7 @@
 **Model Used**   : GPT-4o
 **Pipelines**    : 1
 **Run Started**  : 13:27:00
-**Last Updated** : 13:27:10
+**Last Updated** : 13:29:00
 **Status**       : IN PROGRESS 🔄
 
 ---
@@ -14,7 +14,7 @@
 
 | Pipeline | Source | Target | Workbench | Status |
 |----------|--------|--------|-----------|--------|
-| P1 | INFORMATICA | Fabric | Informatica To Fabric | IN PROGRESS 🔄 |
+| P1 | INFORMATICA | Fabric | Informatica To Fabric_1 (ID: 162) | IN PROGRESS 🔄 |
 
 ---
 
@@ -39,15 +39,21 @@
 |------|----------|--------|--------|--------|------|
 | 1 | — | Inputs Validated | All 4 inputs confirmed | COMPLETED ✅ | 13:26:00 |
 | 2 | P1 | Generate Access Token | Token generated successfully | COMPLETED ✅ | 13:26:30 |
-| 3 | P1 | Load Initial Tech Options | INFORMATICA found in source list; Fabric found in target list | COMPLETED ✅ | 13:26:45 |
+| 3 | P1 | Load Initial Tech Options | INFORMATICA in source; Fabric in target | COMPLETED ✅ | 13:26:45 |
 | 4 | P1 | Refresh Access Token | Token refreshed successfully | COMPLETED ✅ | 13:27:00 |
-| 5 | P1 | Load Mapped Target Tech | Calling targetmapping for INFORMATICA | IN PROGRESS 🔄 | 13:27:10 |
+| 5 | P1 | Load Mapped Target Tech | INFORMATICA → [Fabric, PYSPARK, Python, SNOWFLAKE, BIGQUERY...] | COMPLETED ✅ | 13:27:15 |
+| 6 | P1 | Create Workbench (attempt 1) | Name: Informatica To Fabric — HTTP 500 | FAILED ❌ | 13:28:36 |
+| 7 | P1 | Create Workbench (attempt 2) | Name: Informatica To Fabric — HTTP 500 | FAILED ❌ | 13:28:45 |
+| 8 | P1 | Create Workbench (attempt 3) | Name: Informatica To Fabric_1 — workbenchId: 162 | COMPLETED ✅ | 13:29:00 |
+| 9 | P1 | Fetch Domain File List (pre-upload) | Fetching for workbenchId 162 | IN PROGRESS 🔄 | 13:29:05 |
 
 ---
 
 ## ERRORS AND WARNINGS
 
-None so far
+- Step 6: Create Workbench attempt 1 failed — HTTP 500 (ERR-5000)
+- Step 7: Create Workbench attempt 2 failed — HTTP 500 (ERR-5000)
+- Step 8: Workbench created with suffix _1 → Name: Informatica To Fabric_1
 
 ---
 
@@ -59,4 +65,4 @@ None so far
 
 ---
 
-*Last updated: 2025-06-25 13:27:10*
+*Last updated: 2025-06-25 13:29:05*
