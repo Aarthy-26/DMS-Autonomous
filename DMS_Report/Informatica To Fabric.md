@@ -5,7 +5,7 @@
 **Model Used**   : GPT-4o
 **Pipelines**    : 1
 **Run Started**  : 07:00:00
-**Last Updated** : 07:34:00
+**Last Updated** : 07:35:00
 **Status**       : IN PROGRESS 🔄
 
 ---
@@ -48,21 +48,13 @@
 | 9 | P1 | Fetch Domain File List (pre-upload) | Empty — no files yet | COMPLETED ✅ | 07:05:00 |
 | 10 | P1 | Upload Files (SPECIFIC) | 2 files uploaded successfully | COMPLETED ✅ | 07:06:00 |
 | 11 | P1 | Poll Domain File List (attempt 1) | 2 files visible — ID 385, ID 386 | COMPLETED ✅ | 07:06:30 |
-| 12 | P1 | ANALYZE — Submit (domainId=385) | executionId=06023710-3641-42f3-9c3e-709e4f77e12a | SUBMITTED 🔄 | 07:07:00 |
-| 13 | P1 | ANALYZE — Poll attempt 1 (domainId=385) | Status=IN_PROGRESS | IN PROGRESS 🔄 | 07:07:30 |
-| 14 | P1 | ANALYZE — Poll attempt 2 (domainId=385) | WORKFLOW_COMPLETED ✅ | SUCCESS ✅ | 07:08:30 |
-| 15 | P1 | ANALYZE — Submit (domainId=386) | executionId=a7e02242-160b-48ae-863b-64302b9bb1e2 | SUBMITTED 🔄 | 07:10:00 |
-| 16 | P1 | ANALYZE — Poll attempt 1 (domainId=386) | WORKFLOW_COMPLETED ✅ | SUCCESS ✅ | 07:11:30 |
-| 17 | P1 | DOCUMENT — Submit (domainId=385) | executionId=d2d6f5a4-131d-4400-9320-b893f789ed59 | SUBMITTED 🔄 | 07:13:00 |
-| 18 | P1 | DOCUMENT — Poll attempt 1 (domainId=385) | Status=IN_PROGRESS | IN PROGRESS 🔄 | 07:14:00 |
-| 19 | P1 | DOCUMENT — Poll attempt 2 (domainId=385) | WORKFLOW_COMPLETED ✅ | SUCCESS ✅ | 07:15:00 |
-| 20 | P1 | DOCUMENT — Submit (domainId=386) | executionId=11bb0849-8d25-4327-b7de-45bd412a95c6 | SUBMITTED 🔄 | 07:16:00 |
-| 21 | P1 | DOCUMENT — Poll attempt 1 (domainId=386) | WORKFLOW_COMPLETED ✅ | SUCCESS ✅ | 07:17:00 |
-| 22–35 | P1 | Fetch Domain File List for Convert (attempts 1–14) | ANALYSE_PROCESSING / DOCUMENT_IN_PROGRESS — continuing | IN PROGRESS 🔄 | 07:18–07:31 |
+| 12–16 | P1 | ANALYZE — Both files | WORKFLOW_COMPLETED ✅ | SUCCESS ✅ | 07:07–07:12 |
+| 17–21 | P1 | DOCUMENT — Both files | WORKFLOW_COMPLETED ✅ | SUCCESS ✅ | 07:13–07:17 |
+| 22–35 | P1 | Fetch Domain File List for Convert (attempts 1–14) | ANALYSE_PROCESSING / DOCUMENT_IN_PROGRESS | IN PROGRESS 🔄 | 07:18–07:31 |
 | 36 | P1 | CONVERT — Submit (domainId=386) | executionId=fe902569-93d9-43b9-9424-d4a983813c68 | SUBMITTED 🔄 | 07:32:00 |
-| 37 | P1 | CONVERT — Poll attempt 1 (domainId=386) | IN_PROGRESS | IN PROGRESS 🔄 | 07:32:30 |
-| 38 | P1 | CONVERT — Poll attempt 2 (domainId=386) | WORKFLOW_COMPLETED ✅ | SUCCESS ✅ | 07:33:00 |
-| 39 | P1 | CONVERT — Submit (domainId=385) | Submitting conversion for m_Ciim048d_855_Data_Src_Validation_Load | IN PROGRESS 🔄 | 07:34:00 |
+| 37–38 | P1 | CONVERT — Poll (domainId=386) | WORKFLOW_COMPLETED ✅ | SUCCESS ✅ | 07:32–07:33 |
+| 39 | P1 | CONVERT — Submit (domainId=385) | executionId=db928e92-dfdd-46ce-be2b-32d940b37b90 | SUBMITTED 🔄 | 07:34:00 |
+| 40 | P1 | CONVERT — Poll attempt 1 (domainId=385) | Polling... | IN PROGRESS 🔄 | 07:35:00 |
 
 ---
 
@@ -70,7 +62,7 @@
 
 - Steps 5–7: Workbench creation retries — resolved with suffix _2
 - Steps 22–35: ANALYSE_PROCESSING / DOCUMENT_IN_PROGRESS — not failures, continuing to poll
-- Step 38: GitHub write in CONVERT agent failed with Bad credentials (external repo token issue) — non-blocking, conversion code was generated
+- GitHub write in CONVERT agent failed with Bad credentials (external repo token issue) — non-blocking
 
 ---
 
@@ -82,4 +74,4 @@
 
 ---
 
-*Last updated: 07:34:00*
+*Last updated: 07:35:00*
