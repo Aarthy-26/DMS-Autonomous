@@ -5,7 +5,7 @@
 **Model Used**   : GPT-4o
 **Pipelines**    : 1
 **Run Started**  : 07:00:00
-**Last Updated** : 07:33:00
+**Last Updated** : 07:34:00
 **Status**       : IN PROGRESS 🔄
 
 ---
@@ -60,8 +60,9 @@
 | 21 | P1 | DOCUMENT — Poll attempt 1 (domainId=386) | WORKFLOW_COMPLETED ✅ | SUCCESS ✅ | 07:17:00 |
 | 22–35 | P1 | Fetch Domain File List for Convert (attempts 1–14) | ANALYSE_PROCESSING / DOCUMENT_IN_PROGRESS — continuing | IN PROGRESS 🔄 | 07:18–07:31 |
 | 36 | P1 | CONVERT — Submit (domainId=386) | executionId=fe902569-93d9-43b9-9424-d4a983813c68 | SUBMITTED 🔄 | 07:32:00 |
-| 37 | P1 | CONVERT — Poll attempt 1 (domainId=386) | IN_PROGRESS — code generated, GitHub write attempted | IN PROGRESS 🔄 | 07:32:30 |
-| 38 | P1 | CONVERT — Poll attempt 2 (domainId=386) | Polling... | IN PROGRESS 🔄 | 07:33:00 |
+| 37 | P1 | CONVERT — Poll attempt 1 (domainId=386) | IN_PROGRESS | IN PROGRESS 🔄 | 07:32:30 |
+| 38 | P1 | CONVERT — Poll attempt 2 (domainId=386) | WORKFLOW_COMPLETED ✅ | SUCCESS ✅ | 07:33:00 |
+| 39 | P1 | CONVERT — Submit (domainId=385) | Submitting conversion for m_Ciim048d_855_Data_Src_Validation_Load | IN PROGRESS 🔄 | 07:34:00 |
 
 ---
 
@@ -69,7 +70,7 @@
 
 - Steps 5–7: Workbench creation retries — resolved with suffix _2
 - Steps 22–35: ANALYSE_PROCESSING / DOCUMENT_IN_PROGRESS — not failures, continuing to poll
-- Step 37: GitHub write in CONVERT agent failed with Bad credentials (external repo token issue) — non-blocking, conversion code was generated
+- Step 38: GitHub write in CONVERT agent failed with Bad credentials (external repo token issue) — non-blocking, conversion code was generated
 
 ---
 
@@ -81,4 +82,4 @@
 
 ---
 
-*Last updated: 07:33:00*
+*Last updated: 07:34:00*
