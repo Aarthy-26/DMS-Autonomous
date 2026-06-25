@@ -5,7 +5,7 @@
 **Model Used**   : GPT-4o
 **Pipelines**    : 1
 **Run Started**  : 07:00:00
-**Last Updated** : 07:17:00
+**Last Updated** : 07:18:00
 **Status**       : IN PROGRESS 🔄
 
 ---
@@ -23,8 +23,8 @@
 | Task | Required | Status |
 |------|----------|--------|
 | ANALYZE | Yes | SUCCESS ✅ |
-| DOCUMENT | Yes | IN PROGRESS 🔄 |
-| CONVERT | Yes | PENDING ⏳ |
+| DOCUMENT | Yes | SUCCESS ✅ |
+| CONVERT | Yes | IN PROGRESS 🔄 |
 | FUNCTIONAL_TEST | Yes | PENDING ⏳ |
 | UNIT_TEST | Yes | PENDING ⏳ |
 | RECONCILIATION | Yes | PENDING ⏳ |
@@ -57,7 +57,8 @@
 | 18 | P1 | DOCUMENT — Poll attempt 1 (domainId=385) | Status=IN_PROGRESS | IN PROGRESS 🔄 | 07:14:00 |
 | 19 | P1 | DOCUMENT — Poll attempt 2 (domainId=385) | WORKFLOW_COMPLETED ✅ | SUCCESS ✅ | 07:15:00 |
 | 20 | P1 | DOCUMENT — Submit (domainId=386) | executionId=11bb0849-8d25-4327-b7de-45bd412a95c6 | SUBMITTED 🔄 | 07:16:00 |
-| 21 | P1 | DOCUMENT — Poll attempt 1 (domainId=386) | Polling... | IN PROGRESS 🔄 | 07:17:00 |
+| 21 | P1 | DOCUMENT — Poll attempt 1 (domainId=386) | WORKFLOW_COMPLETED ✅ | SUCCESS ✅ | 07:17:00 |
+| 22 | P1 | Fetch Domain File List for Convert (attempt 1) | Polling for DOCUMENTED status | IN PROGRESS 🔄 | 07:18:00 |
 
 ---
 
@@ -75,4 +76,4 @@
 
 ---
 
-*Last updated: 07:17:00*
+*Last updated: 07:18:00*
