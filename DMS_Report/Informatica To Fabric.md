@@ -1,11 +1,11 @@
 # DMS AGENT EXECUTION REPORT
 
-**Run ID**       : RUN-20250625-001
-**Date**         : 2025-06-25
+**Run ID**       : RUN-20250725-001
+**Date**         : 2025-07-25
 **Model Used**   : GPT-4o
 **Pipelines**    : 1
-**Run Started**  : 13:27:00
-**Last Updated** : 13:47:15
+**Run Started**  : 07:00:00
+**Last Updated** : 07:13:00
 **Status**       : IN PROGRESS 🔄
 
 ---
@@ -14,7 +14,7 @@
 
 | Pipeline | Source | Target | Workbench | Status |
 |----------|--------|--------|-----------|--------|
-| P1 | INFORMATICA | Fabric | Informatica To Fabric_1 (ID: 162) | IN PROGRESS 🔄 |
+| P1 | INFORMATICA | Fabric | Informatica To Fabric_2 (ID: 163) | IN PROGRESS 🔄 |
 
 ---
 
@@ -23,8 +23,8 @@
 | Task | Required | Status |
 |------|----------|--------|
 | ANALYZE | Yes | SUCCESS ✅ |
-| DOCUMENT | Yes | SUCCESS ✅ |
-| CONVERT | Yes | IN PROGRESS 🔄 |
+| DOCUMENT | Yes | IN PROGRESS 🔄 |
+| CONVERT | Yes | PENDING ⏳ |
 | FUNCTIONAL_TEST | Yes | PENDING ⏳ |
 | UNIT_TEST | Yes | PENDING ⏳ |
 | RECONCILIATION | Yes | PENDING ⏳ |
@@ -37,45 +37,29 @@
 
 | Step | Pipeline | Action | Detail | Status | Time |
 |------|----------|--------|--------|--------|------|
-| 1 | — | Inputs Validated | All 4 inputs confirmed | COMPLETED ✅ | 13:26:00 |
-| 2 | P1 | Generate Access Token | Token generated | COMPLETED ✅ | 13:26:30 |
-| 3 | P1 | Load Initial Tech Options | INFORMATICA in source; Fabric in target | COMPLETED ✅ | 13:26:45 |
-| 4 | P1 | Refresh Access Token | Token refreshed | COMPLETED ✅ | 13:27:00 |
-| 5 | P1 | Load Mapped Target Tech | INFORMATICA → [Fabric, PYSPARK...] | COMPLETED ✅ | 13:27:15 |
-| 6 | P1 | Create Workbench (attempt 1) | HTTP 500 | FAILED ❌ | 13:28:36 |
-| 7 | P1 | Create Workbench (attempt 2) | HTTP 500 | FAILED ❌ | 13:28:45 |
-| 8 | P1 | Create Workbench (attempt 3) | workbenchId: 162 | COMPLETED ✅ | 13:29:00 |
-| 9 | P1 | Fetch Domain File List (pre-upload) | 0 files | COMPLETED ✅ | 13:29:05 |
-| 10 | P1 | Upload Files | 2 files — ID 384, ID 383 | COMPLETED ✅ | 13:29:30 |
-| 11 | P1 | Poll Domain File List (attempt 1) | 2 files visible — UPLOADED | COMPLETED ✅ | 13:30:00 |
-| 12 | P1 | ANALYZE Submit — domainId 383 | executionId: 1a90cd28 | SUBMITTED 🔄 | 13:30:30 |
-| 13 | P1 | ANALYZE Poll — domainId 383 — Attempt 1 | IN_PROGRESS | IN PROGRESS 🔄 | 13:30:35 |
-| 14 | P1 | ANALYZE Poll — domainId 383 — Attempt 2 | SUCCESS | COMPLETED ✅ | 13:31:40 |
-| 15 | P1 | ANALYZE Result — domainId 383 | m_Ciim048d confirmed | SUCCESS ✅ | 13:32:00 |
-| 16 | P1 | ANALYZE Submit — domainId 384 | executionId: b6449afa | SUBMITTED 🔄 | 13:33:15 |
-| 17 | P1 | ANALYZE Poll — domainId 384 — Attempt 1 | SUCCESS | COMPLETED ✅ | 13:34:20 |
-| 18 | P1 | ANALYZE Result — domainId 384 | m_Vendor_Cnt confirmed | SUCCESS ✅ | 13:34:25 |
-| 19 | P1 | DOCUMENT Submit — domainId 383 | executionId: a285adb7 | SUBMITTED 🔄 | 13:34:30 |
-| 20 | P1 | DOCUMENT Poll — domainId 383 — Attempt 1 | IN_PROGRESS | IN PROGRESS 🔄 | 13:35:50 |
-| 21 | P1 | DOCUMENT Poll — domainId 383 — Attempt 2 | SUCCESS | COMPLETED ✅ | 13:36:20 |
-| 22 | P1 | DOCUMENT Result — domainId 383 | m_Ciim048d Documentation confirmed | SUCCESS ✅ | 13:36:25 |
-| 23 | P1 | DOCUMENT Submit — domainId 384 | executionId: 3bb61c1d | SUBMITTED 🔄 | 13:36:30 |
-| 24 | P1 | DOCUMENT Poll — domainId 384 — Attempt 1 | SUCCESS | COMPLETED ✅ | 13:39:20 |
-| 25 | P1 | DOCUMENT Result — domainId 384 | m_Vendor_Cnt Documentation confirmed | SUCCESS ✅ | 13:39:25 |
-| 26-31 | P1 | Fetch Convert File List — Attempts 1-6 | DOCUMENT_IN_PROGRESS — continued | COMPLETED ✅ | 13:39:30-13:40:45 |
-| 32 | P1 | CONVERT Submit — domainId 383 | executionId: dc125370 | SUBMITTED 🔄 | 13:41:00 |
-| 33 | P1 | CONVERT Poll — domainId 383 — Attempt 1 | IN_PROGRESS | IN PROGRESS 🔄 | 13:45:25 |
-| 34 | P1 | CONVERT Poll — domainId 383 — Attempt 2 | SUCCESS — WORKFLOW_COMPLETED | COMPLETED ✅ | 13:47:03 |
-| 35 | P1 | CONVERT Result — domainId 383 | m_Ciim048d PySpark+SQL conversion confirmed | SUCCESS ✅ | 13:47:10 |
-| 36 | P1 | CONVERT Submit — domainId 384 | Submitting convert for m_Vendor_Cnt | IN PROGRESS 🔄 | 13:47:15 |
+| 1 | — | Inputs Validated | All 4 inputs confirmed. INFORMATICA→Fabric ✅ | COMPLETED ✅ | 07:00:00 |
+| 2 | P1 | Generate Access Token | Token generated successfully | COMPLETED ✅ | 07:00:05 |
+| 3 | P1 | Load Initial Tech Options | INFORMATICA in source list ✅ | COMPLETED ✅ | 07:01:00 |
+| 4 | P1 | Load Mapped Target Tech | Fabric confirmed in INFORMATICA targets ✅ | COMPLETED ✅ | 07:02:00 |
+| 5 | P1 | Create Workbench (attempt 1) | HTTP 500 — unexpected error | FAILED ❌ | 07:03:00 |
+| 6 | P1 | Create Workbench (attempt 2) | HTTP 500 — unexpected error | FAILED ❌ | 07:03:30 |
+| 7 | P1 | Create Workbench (suffix _1) | HTTP 400 — already exists | FAILED ❌ | 07:04:00 |
+| 8 | P1 | Create Workbench (suffix _2) | workbenchId=163 created | COMPLETED ✅ | 07:04:30 |
+| 9 | P1 | Fetch Domain File List (pre-upload) | Empty — no files yet | COMPLETED ✅ | 07:05:00 |
+| 10 | P1 | Upload Files (SPECIFIC) | 2 files uploaded successfully | COMPLETED ✅ | 07:06:00 |
+| 11 | P1 | Poll Domain File List (attempt 1) | 2 files visible — ID 385, ID 386 | COMPLETED ✅ | 07:06:30 |
+| 12 | P1 | ANALYZE — Submit (domainId=385) | executionId=06023710-3641-42f3-9c3e-709e4f77e12a | SUBMITTED 🔄 | 07:07:00 |
+| 13 | P1 | ANALYZE — Poll attempt 1 (domainId=385) | Status=IN_PROGRESS | IN PROGRESS 🔄 | 07:07:30 |
+| 14 | P1 | ANALYZE — Poll attempt 2 (domainId=385) | WORKFLOW_COMPLETED ✅ | SUCCESS ✅ | 07:08:30 |
+| 15 | P1 | ANALYZE — Submit (domainId=386) | executionId=a7e02242-160b-48ae-863b-64302b9bb1e2 | SUBMITTED 🔄 | 07:10:00 |
+| 16 | P1 | ANALYZE — Poll attempt 1 (domainId=386) | WORKFLOW_COMPLETED ✅ | SUCCESS ✅ | 07:11:30 |
+| 17 | P1 | DOCUMENT — Submit (domainId=385) | Submitting documentation for m_Ciim048d_855_Data_Src_Validation_Load | IN PROGRESS 🔄 | 07:13:00 |
 
 ---
 
 ## ERRORS AND WARNINGS
 
-- Step 6: Create Workbench attempt 1 failed — HTTP 500
-- Step 7: Create Workbench attempt 2 failed — HTTP 500
-- Step 8: Workbench created with suffix _1
+- Steps 5–7: Workbench creation retries — resolved with suffix _2
 
 ---
 
@@ -83,8 +67,8 @@
 
 | Pipeline | Mode | Files |
 |----------|------|-------|
-| P1 | SPECIFIC | m_Vendor_Cnt_stage_load.XML (ID: 384), m_Ciim048d_855_Data_Src_Validation_Load.XML (ID: 383) |
+| P1 | SPECIFIC | m_Vendor_Cnt_stage_load.XML, m_Ciim048d_855_Data_Src_Validation_Load.XML |
 
 ---
 
-*Last updated: 2025-06-25 13:47:15*
+*Last updated: 07:13:00*
