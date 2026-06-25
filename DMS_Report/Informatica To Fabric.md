@@ -5,7 +5,7 @@
 **Model Used**   : GPT-4o
 **Pipelines**    : 1
 **Run Started**  : 13:27:00
-**Last Updated** : 13:30:00
+**Last Updated** : 13:30:30
 **Status**       : IN PROGRESS 🔄
 
 ---
@@ -47,7 +47,9 @@
 | 8 | P1 | Create Workbench (attempt 3) | Name: Informatica To Fabric_1 — workbenchId: 162 | COMPLETED ✅ | 13:29:00 |
 | 9 | P1 | Fetch Domain File List (pre-upload) | workbenchId 162 — 0 files (empty, expected) | COMPLETED ✅ | 13:29:05 |
 | 10 | P1 | Upload Files | m_Vendor_Cnt_stage_load.XML, m_Ciim048d_855_Data_Src_Validation_Load.XML — 2 files uploaded | COMPLETED ✅ | 13:29:30 |
-| 11 | P1 | Poll Domain File List (attempt 1) | 2 files visible: ID 384 (m_Vendor_Cnt_stage_load), ID 383 (m_Ciim048d_855_Data_Src_Validation_Load) — status UPLOADED | COMPLETED ✅ | 13:30:00 |
+| 11 | P1 | Poll Domain File List (attempt 1) | 2 files visible: ID 384, ID 383 — status UPLOADED | COMPLETED ✅ | 13:30:00 |
+| 12 | P1 | ANALYZE Submit — domainId 383 | executionId: 1a90cd28-abe9-42fa-ae52-85c0df8fc4a1 | SUBMITTED 🔄 | 13:30:30 |
+| 13 | P1 | ANALYZE Poll — domainId 383 — Attempt 1 | Polling status... | IN PROGRESS 🔄 | 13:30:35 |
 
 ---
 
@@ -67,4 +69,4 @@
 
 ---
 
-*Last updated: 2025-06-25 13:30:00*
+*Last updated: 2025-06-25 13:30:35*
