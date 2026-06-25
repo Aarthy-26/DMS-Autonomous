@@ -5,7 +5,7 @@
 **Model Used**   : GPT-4o
 **Pipelines**    : 1
 **Run Started**  : 07:00:00
-**Last Updated** : 07:08:00
+**Last Updated** : 07:10:00
 **Status**       : IN PROGRESS 🔄
 
 ---
@@ -49,14 +49,16 @@
 | 10 | P1 | Upload Files (SPECIFIC) | 2 files uploaded successfully | COMPLETED ✅ | 07:06:00 |
 | 11 | P1 | Poll Domain File List (attempt 1) | 2 files visible — ID 385, ID 386 | COMPLETED ✅ | 07:06:30 |
 | 12 | P1 | ANALYZE — Submit (domainId=385) | executionId=06023710-3641-42f3-9c3e-709e4f77e12a | SUBMITTED 🔄 | 07:07:00 |
-| 13 | P1 | ANALYZE — Poll attempt 1 | Status=IN_PROGRESS | IN PROGRESS 🔄 | 07:07:30 |
-| 14 | P1 | ANALYZE — Poll attempt 2 | Polling... | IN PROGRESS 🔄 | 07:08:00 |
+| 13 | P1 | ANALYZE — Poll attempt 1 (domainId=385) | Status=IN_PROGRESS | IN PROGRESS 🔄 | 07:07:30 |
+| 14 | P1 | ANALYZE — Poll attempt 2 (domainId=385) | Status=SUCCESS — WORKFLOW_COMPLETED | SUCCESS ✅ | 07:08:30 |
+| 15 | P1 | ANALYZE — Submit (domainId=386) | Submitting analysis for m_Vendor_Cnt_stage_load | IN PROGRESS 🔄 | 07:10:00 |
 
 ---
 
 ## ERRORS AND WARNINGS
 
-- Steps 5–7: Workbench creation retries (HTTP 500 x2, HTTP 400 x1) — resolved with suffix _2
+- Steps 5–7: Workbench creation retries — resolved with suffix _2
+- Step 14: Result fetch with testcase=analyze returned HTTP 400 (unsupported) — result confirmed via execution logs (WORKFLOW_COMPLETED)
 
 ---
 
@@ -68,4 +70,4 @@
 
 ---
 
-*Last updated: 07:08:00*
+*Last updated: 07:10:00*
